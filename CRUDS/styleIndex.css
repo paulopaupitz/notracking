@@ -2,11 +2,18 @@ html{
 font-family: "Roboto";
 }
 
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
 body{
     margin: 0;
+    
 }
-
-
 .container-login{
 
     width: 569px;
@@ -71,7 +78,51 @@ body{
     border: 2px solid #000000
 }
 
+.test{
+    background-color:#d14b12;
+    margin: 0; /* Remove margens padrão */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+    font-family: sans-serif;
+    text-align: center;
+}
 
+
+.container{
+
+    width: 96%;
+    gap:1.8rem;
+
+
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Linha para header, linha para conteúdo (flexível), linha para footer */
+    grid-template-columns: 200px 1fr 200px; /* Largura para nav, main (flexível), aside */
+    font-display: grid;
+    grid-template-columns: 14rem auto 14rem;
+    grid-template-areas: 
+        "nav header header"
+        "nav    main   main"
+        "nav    main   main";
+}
+header { grid-area: header; }
+nav    { grid-area: nav;    }
+main   { grid-area: main;   }
+
+
+
+
+.container > header {
+    background-color: aliceblue; 
+    color: #ffae42; 
+    padding: 20px; 
+}
+.container > nav    {
+     background-color: #98fb98; 
+     padding: 20px; 
+} /* Verde claro */
+ .container > main   { 
+    background-color: #fffacd; 
+    padding: 20px; 
+} /* Amarelo claro (LemonChiffon) */
 
 
 
