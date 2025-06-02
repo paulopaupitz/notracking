@@ -1,13 +1,15 @@
-html{
-  height: 100%; /* Garante que ambos ocupem 100% da altura */
+html {
+  height: 100%;
+  /* Garante que ambos ocupem 100% da altura */
 }
-.body-login{
-    margin 0;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
+
+.body-login {
+  margin 0;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 .container-login {
@@ -16,10 +18,11 @@ html{
   flex-direction: column;
   align-items: center;
   width: auto;
-  max-width: 400px; /* Ajuste conforme necessário */
+  max-width: 400px;
+  /* Ajuste conforme necessário */
   padding: 30px;
   background-color: rgb(237, 231, 231);
-  border: 10px solid transparent #000000; 
+  border: 10px solid transparent #000000;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -31,9 +34,12 @@ html{
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Changed from flex-start to center the buttons */
-  gap: 15px; /* Espaçamento entre os botões, ajuste conforme necessário */
-  width: 100%; /* Ensures the container uses the form's width for alignment */
+  align-items: center;
+  /* Changed from flex-start to center the buttons */
+  gap: 15px;
+  /* Espaçamento entre os botões, ajuste conforme necessário */
+  width: 100%;
+  /* Ensures the container uses the form's width for alignment */
 }
 
 .form {
@@ -41,122 +47,148 @@ html{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px; 
+  gap: 20px;
 }
-.form input { 
-  background-color: rgb(237, 231, 231);  
-  position: initial; 
-  width: 343px; 
+
+.form input {
+  background-color: rgb(237, 231, 231);
+  position: initial;
+  width: 343px;
   height: 52px;
-  border: 8px solid transparent; 
+  border: 8px solid transparent;
   border-radius: 8px;
   border-image-slice: 1;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
+
 .placeholder {
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 
-    color: #00000080;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+  color: #00000080;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 
-/* From Uiverse.io by TCdesign-dev */ 
+/* From Uiverse.io by TCdesign-dev */
 .bottone5 {
- align-items: center;
- background-color: #FFFFFF;
- border: 1px solid rgba(0, 0, 0, 0.1);
- border-radius: .25rem;
- box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
- box-sizing: border-box;
- color: rgba(0, 0, 0, 0.85);
- cursor: pointer;
- display: inline-flex;
- font-family: system-ui,-apple-system,system-ui,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-size: 15px;
- font-weight: 600;
- justify-content: center;
- line-height: 1.25;
- min-height: 3rem;
- padding: calc(.875rem - 1px) calc(1.5rem - 1px);
- text-decoration: none;
- transition: all 250ms;
- user-select: none;
- -webkit-user-select: none;
- touch-action: manipulation;
- vertical-align: baseline;
- width: 350px;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 350px;
 }
 
 .action-button {
-  width: 343px; /* Consistent with input fields */
-  padding: 14px 20px; /* Ample padding for clickability */
+  width: 343px;
+  /* Consistent with input fields */
+  padding: 14px 20px;
+  /* Ample padding for clickability */
   font-size: 16px;
-  font-weight: 600; /* Bolder text for clarity */
-  border-radius: 8px; /* Consistent with input fields */
+  font-weight: 600;
+  /* Bolder text for clarity */
+  border-radius: 8px;
+  /* Consistent with input fields */
   cursor: pointer;
   text-align: center;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-  box-sizing: border-box; /* Ensures padding/border are included in width/height */
-  border: 2px solid transparent; /* Base border, specific styles will override */
+  box-sizing: border-box;
+  /* Ensures padding/border are included in width/height */
+  border: 2px solid transparent;
+  /* Base border, specific styles will override */
 }
 
 /* Primary button: Entrar */
 #enterButton {
-  background-color: #007bff; /* Vibrant blue for primary action */
-  color: white; /* White text for contrast */
-  border-color: #007bff; /* Border matches background */
+  background-color: #007bff;
+  /* Vibrant blue for primary action */
+  color: white;
+  /* White text for contrast */
+  border-color: #007bff;
+  /* Border matches background */
 }
 
 #enterButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
   border-color: #0056b3;
-  transform: translateY(-2px); /* Slight upward movement on hover */
+  transform: translateY(-2px);
+  /* Slight upward movement on hover */
 }
 
 #enterButton:active {
-  background-color: #004085; /* Even darker blue when pressed */
+  background-color: #004085;
+  /* Even darker blue when pressed */
   border-color: #004085;
-  transform: translateY(0px); /* Returns to original position when pressed */
+  transform: translateY(0px);
+  /* Returns to original position when pressed */
 }
 
 /* Secondary button: Registrar */
 #cadastroButton {
-  background-color: #e9ecef; /* Light gray for secondary action, harmonizes with container */
-  color: #212529; /* Dark text for readability */
-  border-color: #ced4da; /* Slightly darker gray border */
+  background-color: #e9ecef;
+  /* Light gray for secondary action, harmonizes with container */
+  color: #212529;
+  /* Dark text for readability */
+  border-color: #ced4da;
+  /* Slightly darker gray border */
 }
 
 #cadastroButton:hover {
-  background-color: #d3d9df; /* Darker light gray on hover */
+  background-color: #d3d9df;
+  /* Darker light gray on hover */
   border-color: #b6bfc8;
-  color: #000000; /* Darken text slightly on hover for emphasis */
-  transform: translateY(-2px); /* Slight upward movement on hover */
+  color: #000000;
+  /* Darken text slightly on hover for emphasis */
+  transform: translateY(-2px);
+  /* Slight upward movement on hover */
 }
 
 #cadastroButton:active {
-  background-color: #c0c7cf; /* Even darker light gray when pressed */
+  background-color: #c0c7cf;
+  /* Even darker light gray when pressed */
   border-color: #a9b1b9;
-  transform: translateY(0px); /* Returns to original position when pressed */
+  transform: translateY(0px);
+  /* Returns to original position when pressed */
 }
 
 /* Button Container - Adjust align-items for centering fixed-width buttons */
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Changed from flex-start to center the buttons */
-  gap: 15px; /* Espaçamento entre os botões, ajuste conforme necessário */
-  width: 100%; /* Ensures the container uses the form's width for alignment */
+  align-items: center;
+  /* Changed from flex-start to center the buttons */
+  gap: 15px;
+  /* Espaçamento entre os botões, ajuste conforme necessário */
+  width: 100%;
+  /* Ensures the container uses the form's width for alignment */
 }
 
 
@@ -189,131 +221,187 @@ html{
 
 
 .test {
-    background-color: whitesmoke;
-    text-align: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-align: center;
+  background-color: whitesmoke;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .container {
-    height: 100vh;
-    width: 100%;
-    margin: 20px auto;
-    gap: 1.8rem;
-    display: grid;
-    width: 96%;
-    gap: 1.8rem;
-    font-display: grid;
-    margin: 0;
-    padding: 0;
-    grid-template-rows: 70px 1fr 1fr;
-    grid-template-columns: 250px 1fr 1fr;
-    grid-template-areas:
-        "nav header header"
-        "nav main main"
-        "nav main main";
+  height: 100vh;
+  width: 100%;
+  margin: 20px auto;
+  gap: 1.8rem;
+  display: grid;
+  width: 96%;
+  gap: 1.8rem;
+  font-display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-rows: 70px 1fr 1fr;
+  grid-template-columns: 250px 1fr 1fr;
+  grid-template-areas:
+    "nav header header"
+    "nav main main"
+    "nav main main";
 }
 
 header {
-    grid-area: header;
+  grid-area: header;
 }
 
 nav {
-    grid-area: nav;
+  grid-area: nav;
 }
 
 main {
-    grid-area: main;
+  grid-area: main;
 }
 
-.container > header {
-    background-color: #EDEDED;
-    color: #ffae42;
-    padding: 20px;
+.container>header {
+  display: flex;
+  background-color: #EDEDED;
+  color: #ffae42;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.container > nav {
-    display: flex;
-    background-color: #FFFFFF;
-    padding: 30px;
-    box-sizing: border-box;
-    flex-direction: column;
+
+
+
+
+
+
+.container>nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+
 }
 
-.container > nav .logo {}
+.container>nav .logo {
 
-.container > nav .sidebar a {
-    display: flex;
-    align-items: center;
-    padding: 15px 10px;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
-    flex-direction: column;
-    border-bottom: 1px solid #e0e0e0;
-    width: 100%;
-    box-sizing: border-box;
+  margin-top: 1px;
 }
 
-.container > nav .topo {
-    text-align: center;
-    margin-bottom: 30px;
+.container>nav .sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.container > nav .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px 0;
-    color: #333;
+
+.container>nav .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+
+  color: #333;
 }
 
-.container > main {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    padding: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pesquisar {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  background-color: rgb(237, 231, 231);
+  position: relative;
+  width: 404px;
+  height: 40px;
+  border: 10px solid transparent;
+  border-radius: 8px;
+  border-image-slice: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+
+
+.container>main {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 .card {
-    height: 300px;
-    background-color: rgb(240, 237, 233);
-    border: 1px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: sans-serif;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 150px;
+  background-color: #f5f1f1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cadastros-container {
-    overflow-y: auto;
-    background-color: #FFFFFF;
-    flex-grow: 1;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    border: 1px solid #000000;
-    padding: 15px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  border: 10px solid transparent;
+  border-radius: 8px;
+  border-image-slice: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 15px;
 }
-
-.sidebar {}

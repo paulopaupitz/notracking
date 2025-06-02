@@ -18,3 +18,16 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+
+FAZER CRUD  E EDITAR USUARIO 
+
+ LOGIN - CAMPO NOME E SENHA OBRIGATÓRIO E SE NÃO PREENCHER SERÁ AVISADO
+
+CADASTRO - TER 4 ETAPAS COMO FATOS E DADOS, INTERESSES, SENTIMENTOS, VALORES
+
+PAGINA DE DASHBOARD -> LISTAGEM DE DASHBOARD
+MINIMO DE 3 ELEMENTOS
+
+
+UTILIZAR INPUTS, TEXTAREAS, SELECT, ETC.
