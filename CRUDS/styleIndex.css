@@ -62,8 +62,8 @@ html {
 /* Estilo do texto placeholder */
 .placeholder {
     font-family: Roboto;
-    font-weight: 400; /* Peso da fonte */
-    font-size: 15px;
+    font-weight: 500; /* Peso da fonte */
+    font-size: 20px;
     line-height: 100%; /* Altura da linha */
     letter-spacing: 0%; /* Espaçamento entre letras */
     vertical-align: middle; /* Alinhamento vertical */
@@ -258,6 +258,10 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
 }
+
+
+
+
 
 /* Estilo da área principal */
 .container>main {
