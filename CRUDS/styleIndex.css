@@ -1,100 +1,103 @@
+/* Estilos base */
 html {
-    height: 100%;
+    height: 100%; /* Define altura total da página */
 }
 
+/* Container principal do login */
 .body-login {
-    margin: 0;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
+    margin: 0; /* Remove margens padrão */
+    min-height: 100%; /* Garante altura mínima total */
+    display: flex; /* Ativa o modelo flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #E0E0E0;
 }
 
+/* Container do formulário de login */
 .container-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Ativa o modelo flexbox */
+    flex-direction: column; /* Organiza elementos em coluna */
+    align-items: center; /* Centraliza itens horizontalmente */
     width: auto;
     max-width: 400px;
     padding: 30px;
-    background-color: rgb(237, 231, 231);
+    background-color: #F5F5F5;
     border: 10px solid transparent #000000;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Arredonda as bordas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
+/* Container dos botões */
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: flex; /* Ativa o modelo flexbox */
+    flex-direction: column; /* Organiza botões em coluna */
+    align-items: center; /* Centraliza botões */
+    gap: 15px; /* Espaço entre botões */
     width: 100%;
 }
 
+/* Estilo do formulário */
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Ativa o modelo flexbox */
+    flex-direction: column; /* Organiza campos em coluna */
+    align-items: center; /* Centraliza campos */
     width: 100%;
-    gap: 20px;
+    gap: 20px; /* Espaço entre campos */
 }
 
+/* Estilo dos campos de input */
 .form input {
     background-color: rgb(237, 231, 231);
     position: initial;
     width: 343px;
     height: 52px;
     border: 8px solid transparent;
-    border-radius: 8px;
+    border-radius: 8px; /* Arredonda as bordas */
     border-image-slice: 1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
 }
 
+/* Estilo do texto placeholder */
 .placeholder {
     font-family: Roboto;
-    font-weight: 400;
+    font-weight: 400; /* Peso da fonte */
     font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+    line-height: 100%; /* Altura da linha */
+    letter-spacing: 0%; /* Espaçamento entre letras */
+    vertical-align: middle; /* Alinhamento vertical */
     color: #00000080;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
 }
 
+/* Estilo do botão genérico */
 .bottone5 {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    border-radius: .25rem; /* Arredonda as bordas */
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0; /* Adiciona sombra suave */
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.85);
-    cursor: pointer;
-    display: inline-flex;
+    cursor: pointer; /* Muda cursor ao passar mouse */
+    display: inline-flex; /* Layout flexbox inline */
     font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
-    font-weight: 600;
-    justify-content: center;
+    font-weight: 600; /* Peso da fonte */
+    justify-content: center; /* Centraliza conteúdo */
     line-height: 1.25;
     min-height: 3rem;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
     text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
+    transition: all 250ms; /* Efeito de transição */
+    user-select: none; /* Previne seleção de texto */
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
     width: 350px;
 }
 
+/* Estilo do botão de ação */
 .action-button {
     width: 343px;
     padding: 14px 20px;
@@ -103,35 +106,40 @@ html {
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out; /* Efeitos de transição */
     box-sizing: border-box;
     border: 2px solid transparent;
 }
 
+/* Estilo do botão de entrar */
 #enterButton {
-    background-color: #007bff;
+    background-color: #2C3E50; /* Azul corporativo escuro - transmite confiança e profissionalismo */
     color: white;
-    border-color: #007bff;
+    border-color: #2C3E50;
 }
 
+/* Efeito hover do botão entrar */
 #enterButton:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-    transform: translateY(-2px);
+    background-color: #34495E; /* Azul mais claro no hover - mantém a elegância */
+    border-color: #34495E;
+    transform: translateY(-2px); /* Move botão para cima */
 }
 
+/* Efeito active do botão entrar */
 #enterButton:active {
-    background-color: #004085;
-    border-color: #004085;
-    transform: translateY(0px);
+    background-color: #1A252F; /* Azul mais escuro no active - feedback visual do clique */
+    border-color: #1A252F;
+    transform: translateY(0px); /* Retorna à posição original */
 }
 
+/* Estilo do botão de cadastro */
 #cadastroButton {
     background-color: #e9ecef;
     color: #212529;
     border-color: #ced4da;
 }
 
+/* Efeito hover do botão cadastro */
 #cadastroButton:hover {
     background-color: #d3d9df;
     border-color: #b6bfc8;
@@ -139,62 +147,57 @@ html {
     transform: translateY(-2px);
 }
 
+/* Efeito active do botão cadastro */
 #cadastroButton:active {
     background-color: #c0c7cf;
     border-color: #a9b1b9;
     transform: translateY(0px);
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-}
-
+/* Layout da página principal */
 .test {
     background-color: whitesmoke;
     text-align: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Altura mínima da viewport */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    text-align: center;
 }
 
+/* Container principal com grid */
 .container {
     height: 100vh;
     width: 100%;
     margin: 20px auto;
-    gap: 1.8rem;
-    display: grid;
+    gap: 1.8rem; /* Espaço entre elementos do grid */
+    display: grid; /* Ativa o modelo grid */
     width: 96%;
-    gap: 1.8rem;
     font-display: grid;
     margin: 0;
     padding: 0;
-    grid-template-rows: 70px 1fr 1fr;
-    grid-template-columns: 250px 1fr 1fr;
-    grid-template-areas:
+    grid-template-rows: 70px 1fr 1fr; /* Define altura das linhas */
+    grid-template-columns: 250px 1fr 1fr; /* Define largura das colunas */
+    grid-template-areas: /* Define áreas do grid */
         "nav header header"
         "nav main main"
         "nav main main";
 }
 
+/* Áreas do grid */
 header {
-    grid-area: header;
+    grid-area: header; /* Define área do cabeçalho */
 }
 
 nav {
-    grid-area: nav;
+    grid-area: nav; /* Define área da navegação */
 }
 
 main {
-    grid-area: main;
+    grid-area: main; /* Define área principal */
 }
 
+/* Estilo do cabeçalho */
 .container>header {
     display: flex;
     background-color: #EDEDED;
@@ -203,18 +206,21 @@ main {
     border-radius: 5px;
 }
 
+/* Estilo da navegação */
 .container>nav {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr; /* Uma coluna */
+    grid-template-rows: auto 1fr; /* Altura automática e flexível */
     background-color: #FFFFFF;
     box-sizing: border-box;
 }
 
+/* Estilo do logo */
 .container>nav .logo {
     margin-top: 1px;
 }
 
+/* Estilo dos links da navegação */
 .container>nav .sidebar a {
     display: flex;
     align-items: center;
@@ -223,13 +229,14 @@ main {
     text-decoration: none;
     border-radius: 5px;
     margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Efeito de transição */
     flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
     width: 100%;
     box-sizing: border-box;
 }
 
+/* Estilo da barra lateral */
 .container>nav .sidebar {
     display: flex;
     flex-direction: column;
@@ -237,6 +244,7 @@ main {
     color: #333;
 }
 
+/* Estilo do campo de pesquisa */
 .pesquisar {
     margin-left: 10px;
     margin-bottom: 5px;
@@ -251,6 +259,7 @@ main {
     box-sizing: border-box;
 }
 
+/* Estilo da área principal */
 .container>main {
     display: flex;
     flex-direction: column;
@@ -259,15 +268,17 @@ main {
     border-radius: 5px;
 }
 
+/* Container dos cards */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    gap: 20px; /* Espaço entre cards */
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 30px;
 }
 
+/* Estilo dos cards */
 .card {
     height: 150px;
     background-color: #f5f1f1;
@@ -286,11 +297,11 @@ main {
     text-align: center;
 }
 
+/* Container de cadastros */
 .cadastros-container {
-    overflow-y: auto;
+    overflow-y: auto; /* Permite rolagem vertical */
     background-color: #FFFFFF;
-    flex-grow: 1;
-    background-color: #FFFFFF;
+    flex-grow: 1; /* Cresce para preencher espaço disponível */
     border: 10px solid transparent;
     border-radius: 8px;
     border-image-slice: 1;
