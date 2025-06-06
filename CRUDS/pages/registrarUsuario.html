@@ -5,11 +5,14 @@
     <title>InsightBridge</title>
     <link rel="icon" href="/CRUDS/Img/LogoInsideBridge - Apenas Logo_ICO.png" type="favicon"> 
     <link rel="stylesheet" href="/CRUDS/style.css">
+
+    
+    
 </head>
 <body class="body-register">
     <main>
         <div class="container-register">  
-            <form class="form-register"> 
+            <form id="form-register"> 
                 <div class="form-input">
                     <label for="txtNome">Nome:</label>
                     <input class="input" id="txtNome" type="text" name="nome" placeholder="Nome" required>
@@ -22,7 +25,7 @@
                 
                 <div class="form-input">
                     <label for="CHECKativo">Ativo:</label>
-                    <input id="CHECKativo" type="checkbox" name="ativo" required>
+                    <input id="CHECKativo" type="checkbox" name="ativo">
                 </div>
 
                 <div class="form-input">
@@ -56,9 +59,10 @@
                     <label for="txtValores">Valores:</label>
                     <textarea id="txtValores" name="valores" placeholder="Ex: Protagonismo, Determinação, Prosperidade, Cuidado, Assertividade" required rows="4"></textarea>
                 </div>
-                <button id="registroButton"class="bottone5" >Registrar</button>
+                <button id="cadastroButton"class="bottone5" >Registrar</button>
             </form> 
         </div> 
     </main>
+    <script src="/CRUDS/js/new-register.js"></script>
 </body>
 </html>

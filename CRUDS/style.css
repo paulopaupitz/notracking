@@ -35,7 +35,7 @@ footer {}
     max-width: 400px;
     padding: 30px;
     background-color: #F5F5F5;
-    border: 10px solid transparent #000000;
+    border: 10px solid transparent;
     text-align: center;
     border-radius: 8px;
     /* Arredonda as bordas */
@@ -218,7 +218,7 @@ footer {}
     width: 100%;
     margin: 20px auto;
     display: grid;
-    font-display: grid;
+
     margin: 0;
     padding: 0;
     grid-template-rows: 70px 1fr;
@@ -405,7 +405,7 @@ main {
     max-width: 400px;
     padding: 30px;
     background-color: #F5F5F5;
-    border: 10px solid transparent #000000;
+    border: 10px solid transparent;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -421,6 +421,7 @@ main {
     background-color: #E0E0E0;
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 .form-register {}
 =======
@@ -480,3 +481,10 @@ textarea {
 
 }
 >>>>>>> Stashed changes
+=======
+.form-register {}
+
+#registroButton{
+    
+}
+>>>>>>> de8620c475e980788b8b1cb4e59dd35c4ca7075c

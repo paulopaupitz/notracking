@@ -1,4 +1,6 @@
-document.getElementById("registroButton").addEventListener("click",function() {
+document.getElementById("cadastroButton").addEventListener("click",function(event) {
+    event.preventDefault(); 
+   
 
     const nome = document.getElementById("txtNome").value;
     const sobrenome = document.getElementById("txtSobrenome").value;
@@ -27,16 +29,6 @@ document.getElementById("registroButton").addEventListener("click",function() {
     
     
 
-
-
-
-
-
-
-
-
-
-
-
-
+    console.log("Cliente adicionado:", novoCliente);
+    console.log("Todos os clientes:", clientes);
 });
