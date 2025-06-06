@@ -9,10 +9,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/CRUDS/style.css">
-</head>
+        <link rel="stylesheet" href="/CRUDS/style.css">
+        <link rel="stylesheet" href="/CRUDS/styles/dashboard.css">
+    </head>
 
-<body class="body-dashboard">
+<body id="body-dashboard">
 
         <!-- começo container -->
     <div class="container">
@@ -23,10 +24,7 @@
 
             
             <h4>PROFILE</h4>
-
-
-
-            <a class="sair" href="login.html">
+            <a id="sair" href="login.html">
                 <span class="material-symbols-outlined">logout</span>
                 <h3>Sair</h3>
             </a>
@@ -43,7 +41,7 @@
                         <span class="material-symbols-outlined">home</span>
                         <h3>Home</h3>
                     </a>
-                    <a href="/CRUDS/pages/registrarUsuario.html">
+                    <a href="/CRUDS/pages/registrarCliente.html">
                         <span class="material-symbols-outlined">group_add</span>
                         <h3>Cadastro</h3>
                     </a>
@@ -79,9 +77,9 @@
 
 
         <!-- COMEÇO LISTA -->
-    <div class="cadastros-container">
+    <div class="lista-cadastros-container">
         <h2>Últimos cadastros</h2>
-        <table>
+        <table id="tabela-cadastros">
             <thead>
                 <tr>
                     <th>NOME</th>
@@ -89,7 +87,31 @@
                     <th>STATUS</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="dados-tabela">
+                <tr>
+                    <td>Stephanie Nichols</td>
+                    <td>stephanienichols@gmail.com</td>
+                    <td>Ativo</td>
+                </tr>
+
+                <tr>
+                    <td>Stephanie Nichols</td>
+                    <td>stephanienichols@gmail.com</td>
+                    <td>Ativo</td>
+                </tr>
+
+                <tr>
+                    <td>Stephanie Nichols</td>
+                    <td>stephanienichols@gmail.com</td>
+                    <td>Ativo</td>
+                </tr>
+
+                <tr>
+                    <td>Stephanie Nichols</td>
+                    <td>stephanienichols@gmail.com</td>
+                    <td>Ativo</td>
+                </tr>
+
                 <tr>
                     <td>Stephanie Nichols</td>
                     <td>stephanienichols@gmail.com</td>
@@ -104,6 +126,6 @@
         
     </div>
     <!-- fim container -->
-    </body>
 
+    </body>
 </html>
