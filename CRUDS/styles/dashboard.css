@@ -1,42 +1,16 @@
-html{
-    
-}
-#body-dashboard{
+html {}
 
-}
-
-.container {
-
-}
-
-.pesquisar {
-
-}
-
-#sair {
-
-}
-
-.logo {
-
-}
-
-.sidebar {
-
-}
-
-.cards-container {
-
-}
-
-.card {
-
-}
 
 .lista-cadastros-container {
+    overflow-y: auto;
 
-}
+    background-color: #7c1616;
+    flex-grow: 1;
 
-#tabela-cadastros{
-
+    border: 10px solid transparent;
+    border-radius: 8px;
+    border-image-slice: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    padding: 15px;
 }
