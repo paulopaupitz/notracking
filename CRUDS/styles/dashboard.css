@@ -1,10 +1,7 @@
-html {}
-
-
 .lista-cadastros-container {
     overflow-y: auto;
 
-    background-color: #7c1616;
+    background-color: #FAFAFA;
     flex-grow: 1;
 
     border: 10px solid transparent;
@@ -12,5 +9,90 @@ html {}
     border-image-slice: 1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    padding: 15px;
+    padding: 32px;
+    margin-bottom: 32px;
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Layout da página principal */
+.body-padrao {
+    background-color: #E0E0E0;
+    text-align: center;
+    min-height: 100vh;
+    /* Altura mínima da viewport */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Container dos cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+    padding: 0 32px;
+}
+
+/* Estilo dos cards */
+.card {
+    height: 150px;
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+    font-family: sans-serif;
+    padding: 32px 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container .lista-cadastros-container {
+    background-color: #FAFAFA;
+}
+
+#tabela-cadastros {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 17px;
+    color: #444;
+}
+
+#tabela-cadastros thead th {
+    text-align: center;
+    font-weight: 600;
+    color: #888;
+    background: none;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 8px;
+    letter-spacing: 1px;
+}
+
+#tabela-cadastros tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+#tabela-cadastros tbody td {
+    padding: 12px 8px;
+    font-weight: 400;
+}
+
+.status-ativo {
+    color: #444;
+}
+
+.status-inativo {
+    color: #bbb;
 }

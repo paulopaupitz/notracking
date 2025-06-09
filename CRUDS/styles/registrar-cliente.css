@@ -6,21 +6,21 @@
     width: 94%;
     height: 87%;
     padding: 30px;
-    background-color: #F5F5F5;
+    background-color: #FAFAFA;
     border: 10px solid transparent;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.body-register {
+#body-register {
 
     margin: 0;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E0E0E0;
+    background-color: #FAFAFA;
 }
 
 #form-register {

@@ -15,3 +15,68 @@ refactor(auth): otimizar processamento de dados na função de login
 Se a mudança adicionou uma pequena melhoria ou nova capacidade na função de login:
 
 feat(login): adicionar log detalhado para tentativas de login falhas
+
+
+
+        CORES
+
+### Paleta Sugerida
+
+- **#2C3E50** (Azul escuro sóbrio)
+- **#E0E0E0** (Cinza claro)
+- **#F5F5F5** (Branco gelo)
+- **#B0B8C1** (Cinza azulado intermediário — variação para contraste)
+- **#FFFFFF** (Branco puro — para áreas de maior destaque e contraste)
+- **#C2AD9A**
+---
+
+### Sugestão de aplicação para cada cor
+
+1. **#2C3E50**  
+   **Uso:**  
+   - Header (cabeçalho)
+   - Footer
+   - Barra lateral (nav)
+   - Botões principais (com texto branco)
+   - Ícones ou textos de destaque
+
+2. **#E0E0E0**  
+   **Uso:**  
+   - Fundo dos cards
+   - Fundo de listas
+   - Bordas suaves de containers
+   - Campos de formulário (inputs, textareas)
+
+3. **#F5F5F5**  
+   **Uso:**  
+   - Fundo principal da página (body)
+   - Áreas de respiro entre containers
+   - Fundo de formulários para destacar do fundo geral
+
+4. **#B0B8C1** (nova cor sugerida para contraste)  
+   **Uso:**  
+   - Hover de botões
+   - Separadores (divisores)
+   - Destaques secundários em cards ou listas
+   - Títulos de seções
+
+5. **#FFFFFF**  
+   **Uso:**  
+   - Fundo de modais
+   - Cards de destaque
+   - Áreas que precisam de máximo contraste e limpeza visual
+
+---
+
+### Resumo de aplicação
+
+- **Header/Nav/Footer:** #2C3E50 com textos e ícones brancos (#FFFFFF)
+- **Fundo geral:** #F5F5F5
+- **Cards, listas, containers:** #E0E0E0 (com bordas ou sombras em #B0B8C1)
+- **Formulários:** Fundo #F5F5F5, campos em #E0E0E0, bordas em #B0B8C1
+- **Botões principais:** #2C3E50, hover em #B0B8C1, texto branco
+- **Separadores/divisores:** #B0B8C1
+
+---
+
+Se quiser, posso gerar exemplos de CSS para cada container ou te ajudar a aplicar essas cores em partes específicas do seu site!
