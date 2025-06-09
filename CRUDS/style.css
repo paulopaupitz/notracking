@@ -4,6 +4,7 @@ html {
     /* Define altura total da página */
 }
 
+
 /* Estilo do formulário */
 .form {
     display: flex;
@@ -174,7 +175,8 @@ main {
     grid-template-areas:
         "nav header "
         "nav main    ";
-        gap: 32px 0; /* Espaçamento vertical maior entre header, cards, listas */
+    gap: 32px 0;
+    /* Espaçamento vertical maior entre header, cards, listas */
     background: #FAFAFA;
 }
 
@@ -196,7 +198,7 @@ main {
 
 .container>header>h4 {
     display: flex;
-    color: rgb(0, 0, 0);
+    color: #F5F5F5;
 }
 
 .pesquisar {
@@ -211,7 +213,7 @@ main {
 }
 
 #sair {
-    color: rgb(0, 0, 0);
+    color: #F5F5F5;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -226,7 +228,8 @@ main {
 }
 
 #sair h3 {
-    color: rgb(0, 0, 0);
+    color: #F5F5F5;
+    font-size:medium ;
 }
 
 /* Estilo da navegação */
@@ -286,7 +289,9 @@ main {
     margin-right: 70px;
 }
 
-.container, .container-register, .lista-cadastros-container {
+.container,
+.container-register,
+.lista-cadastros-container {
     background: #FAFAFA;
 }
 
@@ -309,3 +314,58 @@ main {
     padding: 32px;
 }
 
+
+/* configurações do switch */
+
+.switch-container {
+    display: flex;
+    align-items: end;
+}
+
+/* Esconde o checkbox padrão, pois usaremos o label para a parte visual */
+.switch-input {
+    display: none;
+}
+
+/* O corpo do switch (a 'pista' onde o círculo desliza) */
+.switch-label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #b3b3b3;
+    /* Cinza para o modo 'desligado' (light) */
+    border-radius: 30px;
+    /* Deixa as bordas totalmente redondas */
+    position: relative;
+    /* Necessário para posicionar o círculo interno */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Transição suave de cor */
+}
+
+/* O círculo que se move */
+.switch-label::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    /* Garante que seja um círculo perfeito */
+    background-color: white;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+    /* Animação de deslizamento */
+}
+
+
+.switch-input:checked+.switch-label {
+    background-color: #34495E;
+    /* Azul escuro para o modo 'ligado' (dark) */
+}
+
+/* ...movemos o círculo para a direita */
+.switch-input:checked+.switch-label::before {
+    transform: translateX(30px);
+    /* Move o círculo 30px para a direita */
+}

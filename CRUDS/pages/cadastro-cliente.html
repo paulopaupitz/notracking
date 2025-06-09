@@ -15,7 +15,6 @@
     </head>
 
 <body class="body-padrao">
-
         <!-- começo container -->
     <div class="container">
         <!-- começo header -->
@@ -31,14 +30,13 @@
             </a>
         </header>
         <!-- fim header -->     
-
         <nav>
                 <div class="logo">
                     <img id="logo" src="/CRUDS/Img/Logo_NomeDeLado_NAVBAR.PNG" alt="logo" width="163"/>
                 </div>   
         
                 <div class="sidebar">
-                    <a href="/CRUDS/pages/dashboardTest.html">
+                    <a href="/CRUDS/pages/dashboard.html">
                         <span class="material-symbols-outlined">home</span>
                         <h3>Home</h3>
                     </a>
@@ -46,33 +44,36 @@
                         <span class="material-symbols-outlined">group_add</span>
                         <h3>Cadastro</h3>
                     </a>
-                    <a href="/CRUDS/pages/listaRelatorios.html">
+                    <a href="/CRUDS/pages/relatorios.html">
                         <span class="material-symbols-outlined">analytics</span>
                         <h3>Relatórios</h3>
                     </a>
                 </div>
         </nav>
-
         <!-- COMEÇO DA MAIN -->
         <main>
             <div class="container-register"> 
-                <strong><h3>Novo Cadastro</h3></strong> 
+
                 <form id="form-register"> 
-                    <div class="form-input">
-                        <label for="txtNome">Nome:</label>
-                        <input class="input" id="txtNome" type="text" name="nome" placeholder="Nome" required>
-                    </div>
-    
-                    <div class="form-input">
-                        <label for="txtSobrenome">Sobrenome:</label>
-                        <input class="input" id="txtSobrenome" type="text" name="sobrenome" placeholder="Sobrenome" required>
-                    </div>
+                    <div class="form-row"> 
+                        <div class="form-input">
+                            <label for="txtNome">Nome:</label>
+                            <input class="input" id="txtNome" type="text" name="nome" placeholder="Nome" required>
+                        </div>
+                    
+                        <div class="form-input">
+                            <label for="txtSobrenome">Sobrenome:</label>
+                            <input class="input" id="txtSobrenome" type="text" name="sobrenome" placeholder="Sobrenome" required>
+                        </div>
                     
                     <div class="form-input">
                         <label for="dataNascimento">Data de Nascimento:</label>
                         <input class="input" id="dataNascimento" type="date" name="dataNascimento" required min="1900-01-01" max="2025-06-04">
                     </div>
-    
+                </div>
+
+
+                <div class="form-row">
                     <div class="form-input">
                         <label for="txtEmail">E-mail:</label>
                         <input class="input" id="txtEmail" type="email" name="email" placeholder="Insira um E-mail válido" required> </div>
@@ -81,25 +82,34 @@
                         <label for="txtEndereco">Endereço:</label>
                         <input class="input" id="txtEndereco" type="text" name="endereco" placeholder="Endereço" required>
                     </div>
-                    
+                </div>
+
+                <div class="form-row">
                     <div class="form-input">
                         <label for="txtInfo">Outras Infos:</label>
-                        <textarea id="txtInfo" name="outrasInfos" placeholder="Ex: Necessidades especiais (opcional)" rows="4" required></textarea> </div>
+                        <textarea id="txtInfo" name="outrasInfos" placeholder="Ex: Necessidades especiais (opcional)" rows="3" required></textarea> </div>
                     
                     <div class="form-input">
                         <label for="txtInteresse">Interesses:</label>
-                        <textarea id="txtInteresse" name="interesses" placeholder="Ex: Ler, filmes, esportes" required rows="4" required></textarea> </div>
-                    
+                        <textarea id="txtInteresse" name="interesses" placeholder="Ex: Ler, filmes, esportes" required rows="3" required></textarea> </div>
+                </div>
+
+                <div class="form-row">
                     <div class="form-input">
                         <label for="txtSentimentos">Sentimentos:</label>
-                        <textarea id="txtSentimentos" name="sentimentos" placeholder="Ex: Contente, tranquilo, inspirado" required rows="4"></textarea>
+                        <textarea id="txtSentimentos" name="sentimentos" placeholder="Ex: Woe, Frolic, Dread, Malice" required rows="3"></textarea>
                     </div>
     
                     <div class="form-input">
                         <label for="txtValores">Valores:</label>
-                        <textarea id="txtValores" name="valores" placeholder="Ex: Protagonismo, Determinação, Prosperidade, Cuidado, Assertividade" required rows="4"></textarea>
-                    </div> 
-                    <button id="cadastroButton"class="bottone5" >Registrar</button>
+                        <textarea id="txtValores" name="valores" placeholder="Ex: Protagonismo, Determinação, Prosperidade, Cuidado, Assertividade" required rows="3"></textarea>
+                    </div>
+                </div>
+                    
+                <div class="form-buttons">
+                    <button type="submit" id="buttonCadastrar">CADASTRAR</button>
+                    <button type="reset" id="buttonLimpar">LIMPAR</button>
+                </div>
                 </form> 
             </div> 
             </main>

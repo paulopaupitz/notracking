@@ -81,28 +81,40 @@ feat(login): adicionar log detalhado para tentativas de login falhas
 
 Implementação do Sistema de Autenticação:
 O arquivo login.js já existe, mas precisamos garantir que a autenticação esteja funcionando corretamente
+
+
 Implementar proteção de rotas para páginas que requerem autenticação
+
 Adicionar sistema de logout
+
 Completar o CRUD de Clientes:
+
 O arquivo edit-register.js está vazio e precisa ser implementado
+
 Adicionar funcionalidade de exclusão de registros
+
 Implementar validações de formulário no new-register.js
+
 Melhorias no Dashboard:
 Implementar visualização de dados estatísticos
 Adicionar filtros e busca na listagem de clientes
 Melhorar a interface do usuário
+
 Sistema de Relatórios:
 Implementar a funcionalidade de geração de relatórios
 Adicionar diferentes tipos de relatórios
 Implementar exportação de dados
+
 Segurança e Validações:
 Implementar validações no lado do servidor
 Adicionar proteção contra CSRF
 Implementar sanitização de inputs
+
 Melhorias na Interface:
 Revisar e melhorar o CSS existente
 Implementar responsividade para dispositivos móveis
 Adicionar feedback visual para ações do usuário
+
 Documentação:
 Criar documentação técnica do projeto
 Adicionar comentários no código

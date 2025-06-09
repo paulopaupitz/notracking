@@ -16,7 +16,7 @@
 #body-register {
 
     margin: 0;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,54 +27,94 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
+    gap: 20px;
 }
 
-#form-register .form-input {
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
-    font-family: Roboto;
+.form-input {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    text-align: left;
-    /* Garante que o texto da label fique à esquerda */
     width: 100%;
-    /* Faz o container ocupar todo o espaço */
-
 }
 
-.input {
+.form-input label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4A5568;
+}
+
+
+.form-input .input,
+.form-input textarea {
     background-color: rgb(237, 231, 231);
-    position: initial;
-    width: 343px;
-    height: 52px;
-    border: 8px solid transparent;
-    border-radius: 8px;
-    /* Arredonda as bordas */
-    border-image-slice: 1;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 6px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Adiciona sombra */
     box-sizing: border-box;
-    /* Inclui padding e border no tamanho total */
+    font-size: 16px;
 }
 
 /* Estilo para os Textareas do formulário */
-textarea {
-    background-color: rgb(237, 231, 231);
-    border: 8px solid transparent;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    width: 61%;
-    /* Garante que ocupe a largura do container */
-    min-height: 100px;
-    /* Define uma altura mínima */
-    padding: 10px;
-    /* Adiciona um espaçamento interno para o texto */
-    font-family: inherit;
-    /* Herda a fonte do formulário */
-    font-size: inherit;
+.form-input textarea {
+    min-height: 120px;
     resize: none;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#buttonCadastrar {
+    background-color: #2C3E50;
+    color: #F0F6F7;
+}
+
+#buttonCadastrar:hover {
+    background-color: #34495F;
+    transform: translateY(-2px);
+}
+
+#buttonCadastrar:active {
+    background-color: #1A252F;
+    border-color: #1A252F;
+    transform: translateY(0px);
+}
+
+#buttonLimpar {
+    background-color: #E9ECEF;
+    border-color: #d5dadf;
+    color: #2C3E50;
+}
+
+#buttonLimpar:hover {
+    background-color: #d3d9df;
+    border-color: #b6bfc8;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+#buttonLimpar:active {
+    background-color: #c0c7cf;
+    border-color: #a9b1b9;
+    transform: translateY(0px);
 }

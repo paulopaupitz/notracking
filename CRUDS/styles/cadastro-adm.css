@@ -1,0 +1,21 @@
+.body-terminal {
+    background-color: #1A252F;
+}
+
+.container-terminal {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    background-color: #111921;
+    border:5px black;
+    font-family: ;
+}
+
+.form-register-adm {}
+
+.form-input .input {
+    /* background-color: #78acdf;
+    background: transparent;
+    border: none; */
+}

@@ -12,6 +12,7 @@
     /* Centraliza verticalmente */
     background-color: #E0E0E0;
 }
+
 /* Container do formulário de login */
 .container-login {
     display: flex;
@@ -31,6 +32,9 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Adiciona sombra */
 }
+
+.dark-mode {}
+
 /* Container dos botões */
 .button-container {
     display: flex;
