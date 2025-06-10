@@ -1,26 +1,16 @@
-/* Container principal do login */
 #body-login {
     margin: 0;
-    /* Remove margens padrão */
     min-height: 100%;
-    /* Garante altura mínima total */
     display: flex;
-    /* Ativa o modelo flexbox */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
     background-color: #E0E0E0;
 }
 
-/* Container do formulário de login */
 .container-login {
     display: flex;
-    /* Ativa o modelo flexbox */
     flex-direction: column;
-    /* Organiza elementos em coluna */
     align-items: center;
-    /* Centraliza itens horizontalmente */
     width: auto;
     max-width: 400px;
     padding: 30px;
@@ -28,22 +18,15 @@
     border: 10px solid transparent;
     text-align: center;
     border-radius: 8px;
-    /* Arredonda as bordas */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Adiciona sombra */
 }
 
-.dark-mode {}
+/* .dark-mode {} */
 
-/* Container dos botões */
 .button-container {
     display: flex;
-    /* Ativa o modelo flexbox */
     flex-direction: column;
-    /* Organiza botões em coluna */
     align-items: center;
-    /* Centraliza botões */
     gap: 15px;
-    /* Espaço entre botões */
     width: 100%;
 }

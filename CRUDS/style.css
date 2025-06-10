@@ -1,21 +1,15 @@
-/* Estilos base */
 html {
     height: 100%;
-    /* Define altura total da página */
 }
 
 
 /* Estilo do formulário */
 .form {
     display: flex;
-    /* Ativa o modelo flexbox */
     flex-direction: column;
-    /* Organiza campos em coluna */
     align-items: center;
-    /* Centraliza campos */
     width: 100%;
     gap: 20px;
-    /* Espaço entre campos */
 }
 
 /* Estilo dos campos de input */
@@ -26,26 +20,18 @@ html {
     height: 52px;
     border: 8px solid transparent;
     border-radius: 8px;
-    /* Arredonda as bordas */
     border-image-slice: 1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Adiciona sombra */
     box-sizing: border-box;
-    /* Inclui padding e border no tamanho total */
 }
 
-/* Estilo do texto placeholder */
 .placeholder {
     font-family: Helvetica;
     font-weight: 500;
-    /* Peso da fonte */
     font-size: 20px;
     line-height: 100%;
-    /* Altura da linha */
     letter-spacing: 0%;
-    /* Espaçamento entre letras */
     vertical-align: middle;
-    /* Alinhamento vertical */
     color: #00000080;
 }
 
@@ -55,29 +41,21 @@ html {
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
-    /* Arredonda as bordas */
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    /* Adiciona sombra suave */
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
-    /* Muda cursor ao passar mouse */
     display: inline-flex;
-    /* Layout flexbox inline */
     font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     font-weight: 600;
-    /* Peso da fonte */
     justify-content: center;
-    /* Centraliza conteúdo */
     line-height: 1.25;
     min-height: 3rem;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
     text-decoration: none;
     transition: all 250ms;
-    /* Efeito de transição */
     user-select: none;
-    /* Previne seleção de texto */
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
@@ -94,45 +72,37 @@ html {
     cursor: pointer;
     text-align: center;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-    /* Efeitos de transição */
     box-sizing: border-box;
     border: 2px solid transparent;
 }
 
-/* Estilo do botão de entrar */
+
 #enterButton {
     background-color: #2C3E50;
-    /* Azul corporativo escuro - transmite confiança e profissionalismo */
     color: white;
     border-color: #2C3E50;
 }
 
-/* Efeito hover do botão entrar */
 #enterButton:hover {
     background-color: #34495E;
-    /* Azul mais claro no hover - mantém a elegância */
+
     border-color: #34495E;
     transform: translateY(-2px);
-    /* Move botão para cima */
 }
 
-/* Efeito active do botão entrar */
 #enterButton:active {
     background-color: #1A252F;
-    /* Azul mais escuro no active - feedback visual do clique */
     border-color: #1A252F;
     transform: translateY(0px);
-    /* Retorna à posição original */
 }
 
-/* Estilo do botão de cadastro */
+
 #cadastroButton {
     background-color: #e9ecef;
     color: #212529;
     border-color: #ced4da;
 }
 
-/* Efeito hover do botão cadastro */
 #cadastroButton:hover {
     background-color: #d3d9df;
     border-color: #b6bfc8;
@@ -148,21 +118,6 @@ html {
 }
 
 
-/* Áreas do grid */
-header {
-    grid-area: header;
-    /* Define área do cabeçalho */
-}
-
-nav {
-    grid-area: nav;
-    /* Define área da navegação */
-}
-
-main {
-    grid-area: main;
-    /* Define área principal */
-}
 
 
 /* Container principal com grid */
@@ -173,18 +128,30 @@ main {
     grid-template-rows: 70px 1fr;
     grid-template-columns: 250px 1fr;
     grid-template-areas:
-        "nav header "
+        "nav header  "
         "nav main    ";
     gap: 32px 0;
-    /* Espaçamento vertical maior entre header, cards, listas */
     background: #FAFAFA;
+}
+
+/* Áreas do grid */
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
 }
 
 /* Estilo do cabeçalho */
 .container>header {
     align-items: center;
     display: flex;
-    background-color: #2c3e50e1;
+    background-color: #2C3E50E1;
     border-radius: 5px;
     padding: 0 5px;
     margin-right: 70px;
@@ -229,7 +196,7 @@ main {
 
 #sair h3 {
     color: #F5F5F5;
-    font-size:medium ;
+    font-size: medium;
 }
 
 /* Estilo da navegação */
@@ -287,14 +254,14 @@ main {
     padding: 0 20px;
     border-radius: 5px;
     margin-right: 70px;
-    
+    /* overflow-y: auto; se precisar colocar barra de rolagem no formulário */
 }
 
-.container,
+/* .container,
 .container-register,
 .lista-cadastros-container {
     background: #FAFAFA;
-}
+} */
 
 .cards-container {
     display: grid;
@@ -315,58 +282,45 @@ main {
     padding: 32px;
 }
 
-
-/* configurações do switch */
-
-.switch-container {
+/* .switch-container {
     display: flex;
     align-items: end;
 }
 
-/* Esconde o checkbox padrão, pois usaremos o label para a parte visual */
 .switch-input {
     display: none;
 }
 
-/* O corpo do switch (a 'pista' onde o círculo desliza) */
 .switch-label {
     display: block;
     width: 60px;
     height: 30px;
     background-color: #b3b3b3;
-    /* Cinza para o modo 'desligado' (light) */
     border-radius: 30px;
-    /* Deixa as bordas totalmente redondas */
     position: relative;
-    /* Necessário para posicionar o círculo interno */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    /* Transição suave de cor */
 }
 
-/* O círculo que se move */
+
 .switch-label::before {
     content: '';
     position: absolute;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    /* Garante que seja um círculo perfeito */
     background-color: white;
     top: 3px;
     left: 3px;
     transition: transform 0.3s ease;
-    /* Animação de deslizamento */
 }
 
 
 .switch-input:checked+.switch-label {
     background-color: #34495E;
-    /* Azul escuro para o modo 'ligado' (dark) */
 }
 
-/* ...movemos o círculo para a direita */
+
 .switch-input:checked+.switch-label::before {
     transform: translateX(30px);
-    /* Move o círculo 30px para a direita */
-}
+} */

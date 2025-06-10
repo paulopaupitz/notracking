@@ -1,0 +1,27 @@
+.btnCadastrar {
+    margin-top: auto;
+    width: 150px;
+    height: 50px;
+    background-color: #2C3E50;
+    color: #F0F6F7;
+    border: 2px solid #202e3d;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #1A252F;
+    /* Suaviza todas as transições de efeito */
+    transition: all 0.15s ease-out;
+}
+.btnCadastrar:hover {
+    background-color: #34495F;
+    transform: translateY(-3px);
+    box-shadow: 0 6px #1A252F;
+}
+.btnCadastrar:active {
+    background-color: #1A252F;
+    border-color: #1A252F;
+    transform: translateY(0px);
+}
+.btn-container{
+    display: flex;
+}

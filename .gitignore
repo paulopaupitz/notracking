@@ -1,2 +1,4 @@
 /.vscode
 .prettier
+*.txt
+*.js

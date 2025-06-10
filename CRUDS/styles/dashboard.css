@@ -15,12 +15,10 @@
     padding: 0;
 }
 
-/* Layout da página principal */
 .body-padrao {
     background-color: #E0E0E0;
     text-align: center;
     min-height: 100vh;
-    /* Altura mínima da viewport */
     margin: 0;
     padding: 0;
     box-sizing: border-box;

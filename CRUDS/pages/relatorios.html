@@ -1,67 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InsightBridge</title>
-    <link rel="icon" href="/CRUDS/Img/LogoInsideBridge - Apenas Logo_ICO.png" type="favicon">
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        rel="stylesheet" />
-        <link rel="stylesheet" href="/CRUDS/style.css">
-        <link rel="stylesheet" href="/CRUDS/styles/dashboard.css">
-        <link rel="stylesheet" href="/CRUDS/styles/registrar-cliente.css">
-    </head>
+      rel="icon"
+      href="/CRUDS/Img/LogoInsideBridge - Apenas Logo_ICO.png"
+      type="favicon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CRUDS/style.css" />
+    <link rel="stylesheet" href="/CRUDS/styles/dashboard.css" />
+    <link rel="stylesheet" href="/CRUDS/styles/relatorio.css" />
+  </head>
 
-<body class="body-padrao">
-
-        <!-- começo container -->
+  <body class="body-padrao">
+    <!-- começo container -->
     <div class="container">
-        <!-- começo header -->
-        <header>
-            <img src="/CRUDS/Img/Icone_Pesquisa.png" alt="logo pesquisa">
-            <input class="pesquisar" type="search" name="search" placeholder="Pesquisar..">
+      <!-- começo header -->
+      <header>
+        <img src="/CRUDS/Img/Icone_Pesquisa.png" alt="logo pesquisa" />
+        <input
+          class="pesquisar"
+          type="search"
+          name="search"
+          placeholder="Pesquisar.."
+        />
 
-            
-            <h4>Perfil</h4>
-            <a id="sair" href="login.html">
-                <span class="material-symbols-outlined">logout</span>
-                <h3>Sair</h3>
-            </a>
-        </header>
-        <!-- fim header -->     
+        <h4>Perfil</h4>
+        <a id="sair" href="login.html">
+          <span class="material-symbols-outlined">logout</span>
+          <h3>Sair</h3>
+        </a>
+      </header>
+      <!-- fim header -->
 
-        <nav>
-                <div class="logo">
-                    <img id="logo" src="/CRUDS/Img/Logo_NomeDeLado_NAVBAR.PNG" alt="logo" width="163"/>
-                </div>   
-        
-                <div class="sidebar">
-                    <a href="/CRUDS/pages/dashboard.html">
-                        <span class="material-symbols-outlined">home</span>
-                        <h3>Home</h3>
-                    </a>
-                    <a href="/CRUDS/pages/cadastro-cliente.html">
-                        <span class="material-symbols-outlined">group_add</span>
-                        <h3>Cadastro</h3>
-                    </a>
-                    <a href="#" onclick="location.reload(); return false;">
-                        <span class="material-symbols-outlined">analytics</span>
-                        <h3>Relatórios</h3>
-                    </a>
-                </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img
+            id="logo"
+            src="/CRUDS/Img/Logo_NomeDeLado_NAVBAR.PNG"
+            alt="logo"
+            width="163"
+          />
+        </div>
 
-        <!-- COMEÇO DA MAIN -->
-        <main>      
-            <!-- VAZIOVAZIOVAZIOVAZIOVAZIO -->
-        </main>
-    <!-- FIM main -->
-        
+        <div class="sidebar">
+          <a href="/CRUDS/pages/dashboard.html">
+            <span class="material-symbols-outlined">home</span>
+            <h3>Home</h3>
+          </a>
+          <a href="/CRUDS/pages/cadastro-cliente.html">
+            <span class="material-symbols-outlined">group_add</span>
+            <h3>Cadastro</h3>
+          </a>
+          <a href="#" onclick="location.reload(); return false;">
+            <span class="material-symbols-outlined">analytics</span>
+            <h3>Relatórios</h3>
+          </a>
+        </div>
+      </nav>
+
+      <!-- COMEÇO DA MAIN -->
+      <main>
+        <div class="btn-container">
+          <button class="bottone5 btnCadastrar">Cadastrar</button>
+        </div>
+        <div class="lista-cadastros-container">
+          <table id="tabela-cadastros">
+            <thead>
+              <tr>
+                <th>NOME</th>
+                <th>SOBRENOME</th>
+                <th>E-MAIL</th>
+                <th>DATA NASC</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody id="dados-tabela">
+              <tr>
+                <td>Stephanie</td>
+                <td>Nichols</td>
+                <td>stephanienichols@gmail.com</td>
+                <td>27/04/2002</td>
+                <td class="status-ativo">Ativo</td>
+              </tr>
+              <tr>
+                <td>Jeffrey</td>
+                <td>Kane</td>
+                <td>jeffrey_kane@yahoo.com</td>
+                <td>27/04/2002</td>
+                <td class="status-ativo">Ativo</td>
+              </tr>
+              <tr>
+                <td>Darin</td>
+                <td>Miller</td>
+                <td>darinmiller01@gmail.com</td>
+                <td>27/04/2002</td>
+                <td class="status-ativo">Ativo</td>
+              </tr>
+              <tr>
+                <td>Andrew</td>
+                <td>Stuart</td>
+                <td>andrewstuart@outlook.com</td>
+                <td>27/04/2002</td>
+                <td class="status-ativo">Ativo</td>
+              </tr>
+              <tr>
+                <td>Valerie</td>
+                <td>Aguilar</td>
+                <td>valerie_aguilar@gmail.com</td>
+                <td>27/04/2002</td>
+                <td class="status-inativo">Inativo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!-- FIM main -->
     </div>
     <!-- fim container -->
-
-    
-    </body>
+  </body>
 </html>
