@@ -1,15 +1,17 @@
-.body-terminal {
+#body-terminal {
     background-color: #1A252F;
+    display: grid;
+    height: 100vh; /* pega toda altura da tela */
+    place-items: center;
 }
 
 .container-terminal {
-    display: flex;
+    display: grid;
+    justify-content: center;
     align-items: center;
     height: 350px;
     width: 350px;
     background-color: #111921;
-    border:5px black;
-    font-family: ;
 }
 
 .form-register-adm {}
