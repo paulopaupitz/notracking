@@ -1,3 +1,22 @@
+#dados-tabela>tr:hover {
+    background-color: #d1d4d63b;
+}
+
+#thead {
+    background-color: #99b4ce;
+}
+
+#thead>tr>th {
+    color: #001428;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
 .btnCadastrar {
     margin-top: auto;
     width: 150px;
@@ -12,16 +31,105 @@
     /* Suaviza todas as transições de efeito */
     transition: all 0.15s ease-out;
 }
+
 .btnCadastrar:hover {
     background-color: #34495F;
     transform: translateY(-3px);
     box-shadow: 0 6px #1A252F;
 }
+
 .btnCadastrar:active {
     background-color: #1A252F;
     border-color: #1A252F;
     transform: translateY(0px);
 }
-.btn-container{
+
+
+.btnImprimir {
+    background-color: #89AEC8;
+    margin-top: auto;
+    width: 150px;
+    height: 50px;
+    color: #F0F6F7;
+    border: 2px solid #7099b6;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px #7a9eb7;
+    /* Suaviza todas as transições de efeito */
+    transition: all 0.15s ease-out;
+}
+
+.btnImprimir:hover {
+    background-color: #7099b6;
+    /* Um tom abaixo do original */
+    transform: translateY(-3px);
+    box-shadow: 0 6px #5c7f99;
+}
+
+.btnImprimir:active {
+    background-color: #5c7f99;
+    /* Um tom ainda mais escuro */
+    border-color: #5c7f99;
+    transform: translateY(0px);
+}
+
+.btnImprimir span {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+
+
+
+
+/* ------------------- BOTÃO DE AÇÕES ------------------------- */
+.botoes-acoes {
     display: flex;
+    gap: 8px;
+    justify-content: end;
+    align-items: center;
+}
+
+.botoes-acoes button {
+    height: 36px;
+    padding: 0 12px;
+    /* deixa retangular: mais alto, mais estreito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnView {
+    background-color: #5cb85c;
+}
+
+.btnEditar {
+    background-color: #337ab7;
+}
+
+.btnExcluir {
+    background-color: #dc3545;
+}
+
+
+
+/* --------- HOVERS DAS AÇÕES ------------ */
+
+.btnView:hover {
+    background-color: #1cbb1c;
+}
+
+.btnEditar:hover {
+    background-color: #0f7cd6;
+}
+
+.btnExcluir:hover {
+    background-color: #ed0920;
 }
