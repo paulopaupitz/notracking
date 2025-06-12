@@ -5,15 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     cadastroButton.addEventListener("click", saveClient);
   }
 
+  // carrega dados existentes e adiciona listeners para os botões da tabela
   const tabela = document.querySelector("#dados-tabela");
   if (tabela) {
     updateTable();
+    // delega clicks nos botões Editar e Excluir da tabela
+    tabela.addEventListener("click", editDeleteView);
   }
 
-  
-  const editDeletView = document.querySelector("#dados-tabela");
-  if (editDeletView) {
-    editDeletView.addEventListener("click",editDeleteView);
+  // botão que salva as edições do modal
+  const btnSalvarEdicao = document.getElementById('btnSalvarEdicao');
+  if (btnSalvarEdicao) {
+    btnSalvarEdicao.addEventListener('click', saveEdit);
+  }
+
+  // botão responsável por fechar o modal sem salvar alterações
+  const btnFecharModal = document.getElementById('btnFecharModal');
+  if (btnFecharModal) {
+    btnFecharModal.addEventListener('click', closeModal);
   }
 
 
@@ -124,30 +133,74 @@ const updateClient = (index, client) => {
 //ler cliente
 const readClient = () => getLocalStorage();
 
-//DELETAR CLIENT
+// remove um cliente do localStorage pelo índice
 const deleteClient = (index) => {
   const dbClient = readClient();
   dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
 
-//BOTÕES DE EDITAR E DELETAR E VIEW
-// const editDeleteView = (event) => {
-//   if (event.target.id)
-//     console.log(event.target.id);
-// }
-const editDelete = (event) => {
-  const button = event.target.closest("button");
+// trata os cliques nos botões de editar ou excluir da tabela
+const editDeleteView = (event) => {
+  const button = event.target.closest('button');
   if (!button) return;
-    
-  if (button.classList.contains("btnEditar")) {
-    console.log("Editar");
-  } else if (button.classList.contains("btnExcluir")) {
-    console.log("Excluir");
+
+  const [action, index] = button.id.split('-');
+
+  if (action === 'edit') {
+    // popula o modal com os dados e abre para edição
+    const client = readClient()[index];
+    document.getElementById('modal-form').dataset.index = index;
+    fillModal(client);
+    openModal();
+  } else if (action === 'delete') {
+    // remove o registro e atualiza a listagem
+    deleteClient(index);
+    updateTable();
   }
 };
 
+// exibe o modal de edição
 const openModal = () => document.getElementById('modal').classList.add('active')
+// esconde o modal
 const closeModal = () => document.getElementById('modal').classList.remove('active')
+
+// preenche os inputs do modal com os dados do cliente
+const fillModal = (client) => {
+  document.getElementById('txtNome').value = client.nome;
+  document.getElementById('txtSobrenome').value = client.sobrenome;
+  document.getElementById('dataNascimento').value = client.dtNasc;
+  document.getElementById('txtEmail').value = client.email;
+  document.getElementById('txtEndereco').value = client.endereco;
+  document.getElementById('txtInfo').value = client.outrasInfos;
+  document.getElementById('txtInteresse').value = client.interesses;
+  document.getElementById('txtSentimentos').value = client.sentimentos;
+  document.getElementById('txtValores').value = client.valores;
+};
+
+// valida os campos do modal antes de salvar
+const isValidModalFields = () => document.getElementById('modal-form').reportValidity();
+
+// aplica as alterações feitas no modal ao cliente correspondente
+const saveEdit = () => {
+  if (!isValidModalFields()) return;
+
+  const index = document.getElementById('modal-form').dataset.index;
+  const client = {
+    nome: document.getElementById('txtNome').value,
+    sobrenome: document.getElementById('txtSobrenome').value,
+    dtNasc: document.getElementById('dataNascimento').value,
+    email: document.getElementById('txtEmail').value,
+    endereco: document.getElementById('txtEndereco').value,
+    outrasInfos: document.getElementById('txtInfo').value,
+    interesses: document.getElementById('txtInteresse').value,
+    sentimentos: document.getElementById('txtSentimentos').value,
+    valores: document.getElementById('txtValores').value,
+  };
+
+  updateClient(index, client);
+  updateTable();
+  closeModal();
+};
 
 
