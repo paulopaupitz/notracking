@@ -14,7 +14,7 @@ html {
 
 /* Estilo dos campos de input */
 .form input {
-    background-color: rgb(237, 231, 231);
+    background-color: rgb(158, 227, 10);
     position: initial;
     width: 343px;
     height: 52px;
@@ -38,7 +38,7 @@ html {
 /* Estilo do botão genérico */
 .bottone5 {
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -151,7 +151,7 @@ main {
 .container>header {
     align-items: center;
     display: flex;
-    background-color: #2C3E50E1;
+    background-color: #cd6158e1;
     border-radius: 5px;
     padding: 0 5px;
     margin-right: 70px;
@@ -159,8 +159,9 @@ main {
 
 .container>header>img {
     margin-right: 8px;
-    height: 42px;
-    width: 42px;
+    height: 50px;
+    width: 50px;
+    font-weight: bolder;
 }
 
 .container>header>h4 {
@@ -169,7 +170,7 @@ main {
 }
 
 .pesquisar {
-    background-color: rgb(237, 231, 231);
+    background-color: rgb(137, 70, 70);
     flex-grow: 1;
     height: 40px;
     border: 5px solid transparent;
@@ -179,7 +180,7 @@ main {
     margin: 0 20px;
 }
 
-#sair {
+#sair, #perfil {
     color: #F5F5F5;
     text-decoration: none;
     display: flex;
@@ -190,6 +191,18 @@ main {
     transition: background-color 0.2s;
 }
 
+#perfil h4 {
+    color: #F5F5F5;
+    font-size: medium;
+}
+
+#perfil:hover {
+    background-color: rgba(206, 188, 188, 0.199);
+}
+
+
+
+
 #sair:hover {
     background-color: rgba(206, 188, 188, 0.199);
 }
@@ -199,22 +212,26 @@ main {
     font-size: medium;
 }
 
+
+
+
+
 /* Estilo da navegação */
 .container>nav {
     display: grid;
     width: 200px;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    background-color: #FFFFFF;
+    background-color: #02441b;
     box-sizing: border-box;
 }
 
 /* Estilo do logo */
-.container>nav .logo {
+/* .container>nav .logo {
     width: 50px;
     margin-top: 1px;
     height: 70px;
-}
+} */
 
 /* Estilo da barra lateral */
 .container>nav .sidebar {
@@ -250,7 +267,7 @@ main {
 .container>main {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
+    background-color: #3f0537;
     padding: 0 20px;
     border-radius: 5px;
     margin-right: 70px;

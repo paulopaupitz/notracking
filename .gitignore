@@ -1,3 +1,5 @@
 /.vscode
 .prettier
-*.txt
+registro-cliente.js
+auth.js
+script.js

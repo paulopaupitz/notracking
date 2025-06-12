@@ -9,6 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
   if (tabela) {
     updateTable();
   }
+
+  
+  const editDeletView = document.querySelector("#dados-tabela");
+  if (editDeletView) {
+    editDeletView.addEventListener("click",editDeleteView);
+  }
+
+
+  // const abrirModal = document.getElementById("btnEditar")
+  // if(abrirModal){
+  //   abrirModal.addEventListener("click", openModal);
+  // }
+
+
+
 });
 
 const getLocalStorage = () =>
@@ -57,7 +72,7 @@ const clearFields = () => {
 };
 
 //colocar dados na tabela
-const createRow = (client) => {
+const createRow = (client, index) => {
   const newRow = document.createElement("tr");
   newRow.innerHTML = `
             <td>${client.nome}</td>
@@ -67,13 +82,10 @@ const createRow = (client) => {
             <td>${client.valores}</td>
             <td>
             <div class="botoes-acoes">
-                <button class="btnView">
-                    <span class="material-symbols-outlined">visibility</span>
-                </button>
-                <button class="btnEditar">
+                <button class="button btnEditar" id="edit-${index}">
                     <span class="material-symbols-outlined">edit</span>
                 </button>
-                <button class="btnExcluir">
+                <button class="button btnExcluir" id="delete-${index}">
                     <span class="material-symbols-outlined">delete</span>
                 </button>
             </div>
@@ -118,3 +130,24 @@ const deleteClient = (index) => {
   dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
+
+//BOTÕES DE EDITAR E DELETAR E VIEW
+// const editDeleteView = (event) => {
+//   if (event.target.id)
+//     console.log(event.target.id);
+// }
+const editDelete = (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+    
+  if (button.classList.contains("btnEditar")) {
+    console.log("Editar");
+  } else if (button.classList.contains("btnExcluir")) {
+    console.log("Excluir");
+  }
+};
+
+const openModal = () => document.getElementById('modal').classList.add('active')
+const closeModal = () => document.getElementById('modal').classList.remove('active')
+
+

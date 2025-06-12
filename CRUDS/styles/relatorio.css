@@ -1,9 +1,9 @@
 #dados-tabela>tr:hover {
-    background-color: #d1d4d63b;
+    background-color: #499cd33b;
 }
 
 #thead {
-    background-color: #99b4ce;
+    background-color: #ca1e5d;
 }
 
 #thead>tr>th {
@@ -33,7 +33,7 @@
 }
 
 .btnCadastrar:hover {
-    background-color: #34495F;
+    background-color: #d17717;
     transform: translateY(-3px);
     box-shadow: 0 6px #1A252F;
 }
@@ -46,7 +46,7 @@
 
 
 .btnImprimir {
-    background-color: #89AEC8;
+    background-color: #080e12;
     margin-top: auto;
     width: 150px;
     height: 50px;
