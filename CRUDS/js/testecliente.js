@@ -5,15 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     cadastroButton.addEventListener("click", saveClient);
   }
 
+  // carrega dados existentes e adiciona listeners para os botões da tabela
   const tabela = document.querySelector("#dados-tabela");
   if (tabela) {
     updateTable();
+    // delega clicks nos botões Editar e Excluir da tabela
+    tabela.addEventListener("click", editDeleteView);
   }
 
-  
-  const editDeletView = document.querySelector("#dados-tabela");
-  if (editDeletView) {
-    editDeletView.addEventListener("click",editDeleteView);
+  // botão que salva as edições do modal
+  const btnSalvarEdicao = document.getElementById('btnSalvarEdicao');
+  if (btnSalvarEdicao) {
+    btnSalvarEdicao.addEventListener('click', saveEdit);
+  }
+
+  // botão responsável por fechar o modal sem salvar alterações
+  const btnFecharModal = document.getElementById('btnFecharModal');
+  if (btnFecharModal) {
+    btnFecharModal.addEventListener('click', closeModal);
   }
 
 
@@ -39,7 +48,7 @@ function inverterData(isoDate) {
   
 
 //salvando clientes
-const saveClient = () => {
+function saveClient() {
   if (isValidFields()) {
     const client = {
       nome: document.getElementById("txtNome").value,
@@ -65,10 +74,16 @@ const isValidFields = () => {
   return document.getElementById("form-register").reportValidity();
 };
 
-//limpa os campos
 const clearFields = () => {
-  const fields = document.querySelectorAll(".input");
-  fields.forEach((field) => (field.value = ""));
+  document.getElementById("txtNome").value = "";
+  document.getElementById("txtSobrenome").value = "";
+  document.getElementById("dataNascimento").value = "";
+  document.getElementById("txtEmail").value = "";
+  document.getElementById("txtEndereco").value = "";
+  document.getElementById("txtInfo").value = "";
+  document.getElementById("txtInteresse").value = "";
+  document.getElementById("txtSentimentos").value = "";
+  document.getElementById("txtValores").value = "";
 };
 
 //colocar dados na tabela
@@ -95,7 +110,7 @@ const createRow = (client, index) => {
 };
 
 //atualizando a tabela
-const updateTable = () => {
+function updateTable() {
   clearTable();
   const dbClient = readClient();
   dbClient.forEach(createRow);
@@ -124,30 +139,76 @@ const updateClient = (index, client) => {
 //ler cliente
 const readClient = () => getLocalStorage();
 
-//DELETAR CLIENT
+// remove um cliente do localStorage pelo índice
 const deleteClient = (index) => {
   const dbClient = readClient();
   dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
 
-//BOTÕES DE EDITAR E DELETAR E VIEW
-// const editDeleteView = (event) => {
-//   if (event.target.id)
-//     console.log(event.target.id);
-// }
-const editDelete = (event) => {
-  const button = event.target.closest("button");
+// trata os cliques nos botões de editar ou excluir da tabela
+function editDeleteView(event) {
+  const button = event.target.closest('button');
   if (!button) return;
-    
-  if (button.classList.contains("btnEditar")) {
-    console.log("Editar");
-  } else if (button.classList.contains("btnExcluir")) {
-    console.log("Excluir");
+
+  const [action, index] = button.id.split('-');
+
+  if (action === 'edit') {
+    // popula o modal com os dados e abre para edição
+    const client = readClient()[index];
+    document.getElementById('modal-form').dataset.index = index;
+    fillModal(client);
+    openModal();
+  } else if (action === 'delete') {
+    // remove o registro e atualiza a listagem
+    deleteClient(index);
+    updateTable();
   }
 };
 
-const openModal = () => document.getElementById('modal').classList.add('active')
-const closeModal = () => document.getElementById('modal').classList.remove('active')
+// exibe o modal de edição
+const openModal = () => {
+  document.getElementById('modal').classList.add('active');
+};
+// esconde o modal
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
 
+// preenche os inputs do modal com os dados do cliente
+const fillModal = (client) => {
+  document.getElementById('modal-txtNome').value = client.nome;
+  document.getElementById('modal-txtSobrenome').value = client.sobrenome;
+  document.getElementById('modal-dataNascimento').value = client.dtNasc;
+  document.getElementById('modal-txtEmail').value = client.email;
+  document.getElementById('modal-txtEndereco').value = client.endereco;
+  document.getElementById('modal-txtInfo').value = client.outrasInfos;
+  document.getElementById('modal-txtInteresse').value = client.interesses;
+  document.getElementById('modal-txtSentimentos').value = client.sentimentos;
+  document.getElementById('modal-txtValores').value = client.valores;
+};
 
+// valida os campos do modal antes de salvar
+const isValidModalFields = () => document.getElementById('modal-form').reportValidity();
+
+// aplica as alterações feitas no modal ao cliente correspondente
+function saveEdit() {
+  if (!isValidModalFields()) return;
+
+  const index = document.getElementById('modal-form').dataset.index;
+  const client = {
+    nome: document.getElementById('modal-txtNome').value,
+    sobrenome: document.getElementById('modal-txtSobrenome').value,
+    dtNasc: document.getElementById('modal-dataNascimento').value,
+    email: document.getElementById('modal-txtEmail').value,
+    endereco: document.getElementById('modal-txtEndereco').value,
+    outrasInfos: document.getElementById('modal-txtInfo').value,
+    interesses: document.getElementById('modal-txtInteresse').value,
+    sentimentos: document.getElementById('modal-txtSentimentos').value,
+    valores: document.getElementById('modal-txtValores').value,
+  };
+
+  updateClient(index, client);
+  updateTable();
+  closeModal();
+};

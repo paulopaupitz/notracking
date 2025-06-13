@@ -110,69 +110,63 @@
     </div>
     <!-- fim container -->
      <!-- ------------------------ começo modal ------------------------- -->
-     <div class="modal">
+     <div class="modal" id="modal">
       <div class="modal-content">
         <form id="modal-form">
           <div class="form-row">
             <div class="form-input">
-              <label for="txtNome">Nome:</label>
+              <label for="modal-txtNome">Nome:</label>
               <input
                 class="input"
-                id="txtNome"
+                id="modal-txtNome"
                 type="text"
                 name="nome"
-                placeholder="Nome"
                 required
               />
             </div>
 
             <div class="form-input">
-              <label for="txtSobrenome">Sobrenome:</label>
+              <label for="modal-txtSobrenome">Sobrenome:</label>
               <input
                 class="input"
-                id="txtSobrenome"
+                id="modal-txtSobrenome"
                 type="text"
                 name="sobrenome"
-                placeholder="Sobrenome"
                 required
               />
             </div>
-            <!-- ESPAÇO DA DATA NASCIMENTO AJUSTAR ISSO POSTERIORMENTE-->
+
             <div class="form-input">
-              <label for="dataNascimento">Data de Nascimento:</label>
+              <label for="modal-dataNascimento">Data de Nascimento:</label>
               <input
                 class="input"
-                id="dataNascimento"
+                id="modal-dataNascimento"
                 type="date"
                 name="dataNascimento"
                 required
-                min="1900-01-01"
-                max="2025-06-04"
               />
             </div>
           </div>
-          
+
           <div class="form-row">
             <div class="form-input">
-              <label for="txtEmail">E-mail:</label>
+              <label for="modal-txtEmail">E-mail:</label>
               <input
                 class="input"
-                id="txtEmail"
+                id="modal-txtEmail"
                 type="email"
                 name="email"
-                placeholder="Insira um E-mail válido"
                 required
               />
             </div>
 
             <div class="form-input">
-              <label for="txtEndereco">Endereço:</label>
+              <label for="modal-txtEndereco">Endereço:</label>
               <input
                 class="input"
-                id="txtEndereco"
+                id="modal-txtEndereco"
                 type="text"
                 name="endereco"
-                placeholder="Endereço"
                 required
               />
             </div>
@@ -180,25 +174,22 @@
 
           <div class="form-row">
             <div class="form-input">
-              <label for="txtInfo">Outras Infos:</label>
+              <label for="modal-txtInfo">Outras Infos:</label>
               <textarea
-                id="txtInfo"
+                id="modal-txtInfo"
                 class="input"
                 name="outrasInfos"
-                placeholder="Ex: Necessidades especiais (opcional)"
                 rows="3"
                 required
               ></textarea>
             </div>
 
             <div class="form-input">
-              <label for="txtInteresse">Interesses:</label>
+              <label for="modal-txtInteresse">Interesses:</label>
               <textarea
-                id="txtInteresse"
+                id="modal-txtInteresse"
                 class="input"
-                name="interesses"
-                placeholder="Ex: Ler, filmes, esportes"
-                required
+                name="interesse"
                 rows="3"
                 required
               ></textarea>
@@ -207,42 +198,36 @@
 
           <div class="form-row">
             <div class="form-input">
-              <label for="txtSentimentos">Sentimentos:</label>
+              <label for="modal-txtSentimentos">Sentimentos:</label>
               <textarea
-                id="txtSentimentos"
+                id="modal-txtSentimentos"
                 class="input"
                 name="sentimentos"
-                placeholder="Ex: Woe, Frolic, Dread, Malice"
-                required
                 rows="3"
+                required
               ></textarea>
             </div>
 
             <div class="form-input">
-              <label for="txtValores">Valores:</label>
+              <label for="modal-txtValores">Valores:</label>
               <textarea
-                id="txtValores"
+                id="modal-txtValores"
                 class="input"
                 name="valores"
-                placeholder="Ex: Protagonismo, Determinação, Prosperidade, Cuidado, Assertividade"
-                required
                 rows="3"
+                required
               ></textarea>
             </div>
           </div>
 
           <div class="form-buttons">
-            <button type="submit" id="button">EDITAR</button>
-            <button type="reset" id="button">LIMPAR</button>
+            <button type="button" id="btnSalvarEdicao">SALVAR</button>
+            <button type="button" id="btnFecharModal">CANCELAR</button>
           </div>
-
- <!-- ------------------------ fim modal ------------------------- -->
-
-
-
         </form>
       </div>
     </div>
+    <!-- ------------------------ fim modal ------------------------- -->
     <script src="/CRUDS/js/testecliente.js"></script>
   </body>
 </html>
