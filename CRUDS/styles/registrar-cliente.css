@@ -1,15 +1,15 @@
 /* FORMULÁRIOS REGISTRO */
 .container-register {
-    display: flex;
-    align-items: center;
-    width: auto;
-    padding: 20px;
-    background-color: #c54646;
-    border: 10px solid transparent;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 20px;
+  background-color: #FAFAFA;
+  border: 10px solid transparent;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 
@@ -29,102 +29,102 @@
 } */
 
 #form-register {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .form-row {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .form-input {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form-input label {
-    margin-bottom: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #4A5568;
-    text-align: start;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4A5568;
+  text-align: start;
 }
 
 
 .form-input .input,
 .form-input textarea {
-    background-color: rgb(237, 231, 231);
-    padding: 10px;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 6px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    font-size: 16px;
+  background-color: rgb(237, 231, 231);
+  padding: 10px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 /* Estilo para os Textareas do formulário */
 .form-input textarea {
-    min-height: 120px;
-    resize: none;
+  min-height: 120px;
+  resize: none;
 }
 
 .form-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 10px;
-    /* justify-content: space-evenly; Discutir se isso seria boas práticas*/
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  /* justify-content: space-evenly; Discutir se isso seria boas práticas*/
 }
 
 .form-buttons button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 #buttonCadastrar {
-    background-color: #2C3E50;
-    color: #F0F6F7;
+  background-color: #2C3E50;
+  color: #F0F6F7;
 }
 
 #buttonCadastrar:hover {
-    background-color: #34495F;
-    transform: translateY(-2px);
+  background-color: #34495F;
+  transform: translateY(-2px);
 }
 
 #buttonCadastrar:active {
-    background-color: #1A252F;
-    border-color: #1A252F;
-    transform: translateY(0px);
+  background-color: #1A252F;
+  border-color: #1A252F;
+  transform: translateY(0px);
 }
 
 #buttonLimpar {
-    background-color: #E9ECEF;
-    border-color: #d5dadf;
-    color: #162739;
+  background-color: #E9ECEF;
+  border-color: #d5dadf;
+  color: #162739;
 }
 
 #buttonLimpar:hover {
-    background-color: #d3d9df;
-    border-color: #b6bfc8;
-    color: #000000;
-    transform: translateY(-2px);
+  background-color: #d3d9df;
+  border-color: #b6bfc8;
+  color: #000000;
+  transform: translateY(-2px);
 }
 
 #buttonLimpar:active {
-    background-color: #c0c7cf;
-    border-color: #a9b1b9;
-    transform: translateY(0px);
+  background-color: #c0c7cf;
+  border-color: #a9b1b9;
+  transform: translateY(0px);
 }
 
 /* Estilos do Modal */
@@ -146,7 +146,7 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #FAFAFA;
   padding: 20px;
   border-radius: 8px;
   width: 90%;

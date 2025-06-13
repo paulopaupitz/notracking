@@ -1,6 +1,6 @@
 .lista-cadastros-container {
     overflow-y: auto;
-    background-color: #be7d7d;
+    background-color: #FAFAFA;
     flex-grow: 1;
     border: 10px solid transparent;
     border-radius: 8px;
@@ -16,7 +16,7 @@
 }
 
 .body-padrao {
-    background-color: #198a39;
+    background-color: #E0E0E0;
     text-align: center;
     min-height: 100vh;
     margin: 0;
@@ -37,14 +37,14 @@
 /* Estilo dos cards */
 .card {
     height: 150px;
-    background-color: #942587;
+    background-color: #F5F5F5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.85);
     overflow: hidden;
-    font-family:Helvetica;
+    font-family: Helvetica;
     padding: 32px 24px;
     margin: 0;
     display: flex;
@@ -55,7 +55,7 @@
 }
 
 .container .lista-cadastros-container {
-    background-color: #c4f901;
+    background-color: #FAFAFA;
 }
 
 #tabela-cadastros {
