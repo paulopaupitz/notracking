@@ -129,4 +129,22 @@
 
 
 
-/* @media print */
+@media print {
+
+
+    body * {
+        visibility: hidden;
+    }
+
+    #imprimir,
+    #imprimir * {
+        visibility: visible;
+    }
+
+    #imprimir {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+}

@@ -1,0 +1,39 @@
+import { createClient } from "./storage.js";
+import { updateTable } from "./table.js";
+
+export function isValidFields() {
+  return document.getElementById("form-register").reportValidity();
+}
+
+export function clearFields() {
+  document.getElementById("txtNome").value = "";
+  document.getElementById("txtSobrenome").value = "";
+  document.getElementById("dataNascimento").value = "";
+  document.getElementById("txtEmail").value = "";
+  document.getElementById("txtEndereco").value = "";
+  document.getElementById("txtInfo").value = "";
+  document.getElementById("txtInteresse").value = "";
+  document.getElementById("txtSentimentos").value = "";
+  document.getElementById("txtValores").value = "";
+}
+
+export function saveClient() {
+  if (isValidFields()) {
+    const client = {
+      nome: document.getElementById("txtNome").value,
+      sobrenome: document.getElementById("txtSobrenome").value,
+      dtNasc: document.getElementById("dataNascimento").value,
+      email: document.getElementById("txtEmail").value,
+      endereco: document.getElementById("txtEndereco").value,
+      outrasInfos: document.getElementById("txtInfo").value,
+      interesses: document.getElementById("txtInteresse").value,
+      sentimentos: document.getElementById("txtSentimentos").value,
+      valores: document.getElementById("txtValores").value,
+    };
+    createClient(client);
+    alert("Cliente cadastrado com sucesso!");
+    updateTable();
+    clearFields();
+    console.log("Cadastrando Cliente");
+  }
+}

@@ -5,7 +5,20 @@
     justify-content: center;
     align-items: center;
     background-color: #E0E0E0;
+    flex-direction: column;
 }
+
+/* .switch-container {
+
+    
+    display: flex;
+    height: 30px;
+    width: 50px;
+    justify-content: flex-end;
+}
+.switch-container > label {}
+ */
+
 
 .container-login {
     display: flex;

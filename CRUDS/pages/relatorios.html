@@ -66,15 +66,17 @@
           </a>
         </div>
       </nav>
-
       <!-- COMEÇO DA MAIN -->
       <main>
         <div class="btn-container">
-          <button onclick="location.href='cadastro-cliente.html'" class="bottone5 btnCadastrar">Cadastrar</button>
-          <button class="bottone5 btnImprimir"><span class="material-symbols-outlined">print</span>Imprimir</button>   
+          <button onclick="location.href='cadastro-cliente.html'" class="button btnCadastrar">Cadastrar</button>
+
+          <button class="button btnImprimir" id="btnImprimir"><span class="material-symbols-outlined">print</span>Imprimir</button>   
         </div>
-        <div class="lista-cadastros-container">
-          <table id="tabela-cadastros">
+
+        <div id="imprimir">
+          <div class="lista-cadastros-container">
+            <table id="tabela-cadastros">
             <thead id="thead">
               <tr>
                 <th>NOME</th>
@@ -82,7 +84,7 @@
                 <th>E-MAIL</th>
                 <th>DATA NASC.</th>
                 <th>STATUS</th>
-                <th>EDIÇÃO</th>
+                <th id="edicao">EDIÇÃO</th>
               </tr>
             </thead>
             <tbody id="dados-tabela">
@@ -103,8 +105,8 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        
+        </div> 
+      </div>
       </main>
       <!-- FIM main -->
     </div>
@@ -228,6 +230,6 @@
       </div>
     </div>
     <!-- ------------------------ fim modal ------------------------- -->
-    <script src="/CRUDS/js/testecliente.js"></script>
+    <script type="module" src="/CRUDS/js/main.js"></script>
   </body>
 </html>
