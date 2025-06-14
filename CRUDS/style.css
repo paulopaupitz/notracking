@@ -117,9 +117,6 @@ html {
     transform: translateY(0px);
 }
 
-
-
-
 /* Container principal com grid */
 .container {
     height: 100vh;
@@ -149,19 +146,21 @@ main {
 
 /* Estilo do cabeçalho */
 .container>header {
-    align-items: center;
     display: flex;
+    align-items: center;
     background-color: #2C3E50E1;
     border-radius: 5px;
-    padding: 0 5px;
+    padding: 0 15px; /* Adicionado padding para espaçamento nas bordas */
     margin-right: 70px;
+    gap: 16px;
 }
 
-.container>header>img {
-    margin-right: 8px;
-    height: 50px;
-    width: 50px;
-    font-weight: bolder;
+#icone-pesquisa {
+    height: 50px; /* Altura ajustada para igualar a barra de pesquisa */
+    width: 50px;  /* Largura ajustada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container>header>h4 {
@@ -171,17 +170,28 @@ main {
 
 .pesquisar {
     background-color: rgb(237, 231, 231);
-    flex-grow: 1;
+    width: 350px; /* Largura ajustada conforme a caixa azul */
     height: 40px;
     border: 5px solid transparent;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    margin: 0 20px;
+    margin: 0; /* Margem removida para usar o 'gap' do header */
 }
 
-#sair,
 #perfil {
+    margin-left: auto; /* Empurra os itens seguintes para a direita */
+    color: #F5F5F5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#sair {
     color: #F5F5F5;
     text-decoration: none;
     display: flex;
@@ -201,9 +211,6 @@ main {
     background-color: rgba(206, 188, 188, 0.199);
 }
 
-
-
-
 #sair:hover {
     background-color: rgba(206, 188, 188, 0.199);
 }
@@ -212,9 +219,6 @@ main {
     color: #F5F5F5;
     font-size: medium;
 }
-
-
-
 
 
 /* Estilo da navegação */
@@ -247,11 +251,12 @@ main {
 /* Estilo dos links da navegação */
 .container>nav .sidebar a {
     color: #333;
+    font-size: 18px;
     text-decoration: none;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 10px;
     padding: 3px;
     width: 98%;
     box-sizing: border-box;
@@ -272,6 +277,7 @@ main {
     padding: 0 20px;
     border-radius: 5px;
     margin-right: 70px;
+    margin-bottom: 20px;
     /* overflow-y: auto; se precisar colocar barra de rolagem no formulário */
 }
 
