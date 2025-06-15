@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InsightBridge</title>
     <link rel="stylesheet" href="/CRUDS/styles/cadastro-adm.css" />
+    <link rel="stylesheet" href="/CRUDS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,23 +18,25 @@
       type="image-favicon"
     />
   </head>
+
   <body id="body-terminal">
+
     <div class="container-terminal">
       <form id="form-register-adm">
-        <div class="form-input">
-          <input class="input" id="txtNome" type="text" name="nome" required />
-        </div>
-        <div class="form-input">
-          <input
-            class="input"
-            id="txtAdminPWD"
-            type="password"
-            name="txtAdminPWD"
-            required
-          />
-        </div>
-        <button type="submit" id="buttonCadastrar">CADASTRAR</button>
+        <input class="input" id="txtNomeAdmin" type="text" name="nome" placeholder="Nome" required />
+        <input class="input" id="txtEmailAdmin" type="email" name="email" placeholder="Email" required />
+        <input class="input" id="txtPWDAdmin" type="password" name="txtPWDAdmin" placeholder="Senha" required />
       </form>
+      
+      <div class="button-container">
+        <button type="submit" class="bottone5 btnCadAdmin" id="btnCadAdmin">CADASTRAR</button>
+        <button type="submit" class="bottone5 btnVoltar" id="btnVoltar">VOLTAR</button>
+      </div>
+
     </div>
+
+    <script type="module" src="/CRUDS/js/main.js"></script>
+
   </body>
+
 </html>

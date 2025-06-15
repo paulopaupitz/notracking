@@ -23,3 +23,23 @@ export const deleteClient = (index) => {
   dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
+
+
+
+
+// < ------------------------ADMIN ------------------------>
+
+export const getLocalStorageAdmin = () =>
+  JSON.parse(localStorage.getItem("dbAdmin")) ?? [];
+
+export const setLocalStorageAdmin = (dbAdmin) =>
+  localStorage.setItem("dbAdmin", JSON.stringify(dbAdmin));
+
+export const createAdmin = (admin) => {
+  const dbAdmin = getLocalStorageAdmin();
+  dbAdmin.push(admin);
+  setLocalStorageAdmin(dbAdmin);
+};
+
+
+

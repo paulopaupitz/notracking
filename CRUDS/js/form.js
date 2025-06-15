@@ -1,8 +1,13 @@
 import { createClient } from "./storage.js";
 import { updateTable } from "./table.js";
+import { createAdmin } from "./storage.js";
+
 
 export function isValidFields() {
   return document.getElementById("form-register").reportValidity();
+}
+export function isValidFieldsAdmin() {
+  return document.getElementById("form-register-adm").reportValidity();
 }
 
 export function clearFields() {
@@ -15,6 +20,12 @@ export function clearFields() {
   document.getElementById("txtInteresse").value = "";
   document.getElementById("txtSentimentos").value = "";
   document.getElementById("txtValores").value = "";
+}
+
+export function clearFieldsAdmin() {
+  document.getElementById("txtNomeAdmin").value = "";
+  document.getElementById("txtEmailAdmin").value = "";
+  document.getElementById("txtPWDAdmin").value = "";
 }
 
 export function saveClient() {
@@ -37,3 +48,23 @@ export function saveClient() {
     console.log("Cadastrando Cliente");
   }
 }
+
+export function saveAdmin() {
+  if (isValidFieldsAdmin()) {
+    const admin = {
+      nome: document.getElementById("txtNomeAdmin").value,
+      email: document.getElementById("txtEmailAdmin").value,
+      senha: document.getElementById("txtPWDAdmin").value,
+    };
+    createAdmin(admin);
+    alert("Administrador cadastrado com sucesso!");
+    clearFieldsAdmin();
+    window.location.href = "/CRUDS/pages/login.html";
+    console.log("Cadastrando Administrador");
+  }
+}
+
+
+
+
+

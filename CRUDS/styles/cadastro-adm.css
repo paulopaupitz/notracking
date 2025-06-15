@@ -1,18 +1,114 @@
 #body-terminal {
     background-color: #1A252F;
     display: grid;
-    height: 100vh; /* pega toda altura da tela */
+    height: 100vh; 
     place-items: center;
-}
+}    
 
 .container-terminal {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
-    width: 350px;
-    background-color: #111921;
+    height: 320px;
+    width: 320px;
+    background-color: #F5F5F5;
+    border: 10px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    gap: 15px;
+}    
+
+#form-register-adm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}    
+
+
+#form-register-adm .input::placeholder{
+        font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #00000080;
+} 
+
+
+#form-register-adm .input {
+    background-color: rgb(237, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 8px solid transparent;
+    border-radius: 8px;
+    border-image-slice: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}    
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
-.form-register-adm {}
+#btnCadAdmin {
+    width: 250px;
+    height: 50px;
+    background-color: #2C3E50;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    border-color: #2C3E50;
+    font-size: 18px;
+    gap: 10px;
+}    
+
+#btnCadAdmin:hover {
+    background-color: #34495E;
+    border-color: #34495E;
+    transform: translateY(-2px);
+}    
+
+#btnCadAdmin:active {
+    background-color: #1A252F;
+    border-color: #1A252F;
+    transform: translateY(0px);
+}    
+
+#btnVoltar {
+    width: 250px;
+    height: 50px;
+    background-color: #e9ecef;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    border-color: #ced4da;
+    font-size: 18px;
+    gap: 10px;
+}    
+
+#btnVoltar:hover {
+    background-color: #d3d9df;
+    border-color: #b6bfc8;
+    transform: translateY(-2px);
+}    
+
+#btnVoltar:active {
+    background-color: #c0c7cf;
+    border-color: #a9b1b9;
+    transform: translateY(0px);
+}    
 
