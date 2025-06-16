@@ -9,7 +9,7 @@ export function createRow(client, index) {
             <td>${client.sobrenome}</td>
             <td>${client.email}</td>
             <td>${inverterData(client.dtNasc)}</td>
-            <td>${client.valores}</td>
+            <td>${client.status}</td>
             <td>
             <div class="botoes-acoes">
                 <button class="button btnEditar" id="edit-${index}">

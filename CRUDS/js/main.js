@@ -48,5 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnVoltar) {
     btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/login.html");
   }
+
+  
+  const checkbox = document.getElementById("status");
+  const label = document.getElementById("statusLabel");
+
+  // inicializa
+  // label.textContent = checkbox.checked ? "Status: Ativo" : "Status: Inativo";
+
+  // atualiza ao mudar
+  // checkbox.addEventListener("change", () => {
+  //   label.textContent = checkbox.checked ? "Status: Ativo" : "Status: Inativo";
+  // });
+
   
 });

@@ -14,6 +14,7 @@ export function clearFields() {
   document.getElementById("txtNome").value = "";
   document.getElementById("txtSobrenome").value = "";
   document.getElementById("dataNascimento").value = "";
+  document.getElementById("status").checked = false;
   document.getElementById("txtEmail").value = "";
   document.getElementById("txtEndereco").value = "";
   document.getElementById("txtInfo").value = "";
@@ -34,6 +35,7 @@ export function saveClient() {
       nome: document.getElementById("txtNome").value,
       sobrenome: document.getElementById("txtSobrenome").value,
       dtNasc: document.getElementById("dataNascimento").value,
+      status: document.getElementById("status").checked ? "Ativo" : "Inativo",
       email: document.getElementById("txtEmail").value,
       endereco: document.getElementById("txtEndereco").value,
       outrasInfos: document.getElementById("txtInfo").value,

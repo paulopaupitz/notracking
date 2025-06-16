@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    justify-content: space-between;
+    justify-content: end;
+    gap: 10px;
 }
 
 .btnCadastrar {
@@ -46,16 +47,16 @@
 
 
 .btnImprimir {
-    background-color: #89AEC8;
+    background-color: #436278;
     margin-top: auto;
     width: 150px;
     height: 50px;
     color: #F0F6F7;
-    border: 2px solid #7099b6;
+    border: 2px solid rgb(63, 121, 169);
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px #7a9eb7;
+    box-shadow: 0 4px #436278;
     /* Suaviza todas as transições de efeito */
     transition: all 0.15s ease-out;
     display: flex;
@@ -113,6 +114,7 @@
 
 .btnEditar {
     background-color: #337ab7;
+    border-color: #1a7796;
 }
 
 .btnExcluir {
@@ -136,18 +138,19 @@
 @media print {
 
 
-body * {        
-visibility: hidden;
-}
+    body * {
+        visibility: hidden;
+    }
 
-#imprimir, #imprimir * {
-    visibility: visible;
-}
+    #imprimir,
+    #imprimir * {
+        visibility: visible;
+    }
 
-#imprimir {
-    position: fixed;
-    left: 0;
-    top: 0;
-}
+    #imprimir {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
 
 }

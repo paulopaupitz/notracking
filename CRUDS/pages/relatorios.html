@@ -27,6 +27,7 @@
       <header>
         <span class="material-symbols-outlined" id="icone-pesquisa">search</span>
         <input
+          id ="pesquisar"
           class="pesquisar"
           type="search"
           name="search"
@@ -90,7 +91,7 @@
               </tr>
             </thead>
             <tbody id="dados-tabela">
-              <tr>
+              <tr >
                 <!-- CONTEÚDO -->
               </tr>
               <tr>
@@ -150,6 +151,11 @@
                 required
               />
             </div>
+            <div class="form-input">
+              <label for="modal-status">Status:</label>
+              <input id="modal-status" type="checkbox" />
+            </div>
+          
           </div>
 
           <div class="form-row">
@@ -233,5 +239,6 @@
     </div>
     <!-- ------------------------ fim modal ------------------------- -->
     <script type="module" src="/CRUDS/js/main.js"></script>
+    <script type="module" src="/CRUDS/js/search.js"></script>
   </body>
 </html>

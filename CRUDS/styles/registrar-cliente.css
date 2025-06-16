@@ -44,7 +44,38 @@
 .form-input {
   display: flex;
   flex-direction: column;
+  align-items: start;
   width: 100%;
+}
+
+/* foco da borda dos inputs */
+.form-input>input:focus {
+  outline: none;
+}
+
+.form-input>textarea:focus {
+  outline: none;
+}
+
+/* fim foco  */
+
+#statusContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+}
+
+#statusContainer label {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+
+#statusContainer input[type="checkbox"] {
+  /* tamanho natural do checkbox */
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 .form-input label {
@@ -57,7 +88,7 @@
 
 
 #dataNascimento {
-    width: 150px;
+  width: 150px;
 }
 
 

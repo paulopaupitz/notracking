@@ -13,6 +13,7 @@ export function fillModal(client) {
   document.getElementById("modal-txtNome").value = client.nome;
   document.getElementById("modal-txtSobrenome").value = client.sobrenome;
   document.getElementById("modal-dataNascimento").value = client.dtNasc;
+  document.getElementById("modal-status").checked = client.status === "Ativo";
   document.getElementById("modal-txtEmail").value = client.email;
   document.getElementById("modal-txtEndereco").value = client.endereco;
   document.getElementById("modal-txtInfo").value = client.outrasInfos;
@@ -33,6 +34,7 @@ export function saveEdit() {
     nome: document.getElementById("modal-txtNome").value,
     sobrenome: document.getElementById("modal-txtSobrenome").value,
     dtNasc: document.getElementById("modal-dataNascimento").value,
+    status: document.getElementById("modal-status").checked ? "Ativo" : "Inativo",
     email: document.getElementById("modal-txtEmail").value,
     endereco: document.getElementById("modal-txtEndereco").value,
     outrasInfos: document.getElementById("modal-txtInfo").value,
