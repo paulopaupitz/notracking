@@ -2,16 +2,17 @@ import { saveClient, saveAdmin } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
 import { printDiv, loginAdmin } from "./utils.js";
+import { autenticarAdmin } from "./auth.js";
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
+// Função para inicializar os event listeners
+function initEventListeners() {
   const enterButton = document.getElementById("enterButton");
   if (enterButton) {
-    enterButton.addEventListener("click", loginAdmin);
+    enterButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      autenticarAdmin();
+    });
   }
-
 
   const cadastroButton = document.getElementById("buttonCadastrar");
   if (cadastroButton) {
@@ -48,5 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnVoltar) {
     btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/login.html");
   }
-  
-});
+}
+
+// Inicializa os event listeners quando o DOM estiver carregado
+document.addEventListener("DOMContentLoaded", initEventListeners);
