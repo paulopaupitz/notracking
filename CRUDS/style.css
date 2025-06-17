@@ -1,3 +1,11 @@
+:root {
+
+
+}
+
+
+/* Azul marinho ou azul escuro (por exemplo, #002b4f, #1a3a5e) para o fundo, trocar depois */
+
 html {
     height: 100%;
 }
@@ -79,7 +87,8 @@ html {
         "nav header  "
         "nav main    ";
     gap: 32px 0;
-    background: #FAFAFA;
+    background: #6d3a3a;
+    /* background: #FAFAFA; */
 }
 
 /* Áreas do grid */
@@ -223,9 +232,7 @@ main {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.container>nav .sidebar a   {
-
-}
+/* .container>nav .sidebar a {} */
 
 
 
@@ -245,7 +252,7 @@ main {
     border-radius: 5px;
     margin-right: 70px;
     margin-bottom: 20px;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 /* .container,
@@ -253,3 +260,47 @@ main {
 .lista-cadastros-container {
     background: #FAFAFA;
 } */
+
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color:#E8E9ED ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+#theme-switch svg{
+    fill: #3A435D;  
+}
+#theme-switch sgv:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+
+
+/* <------------DARK MODE --------------> */
+
+
+
+.body-padrao.dark-mode {}
+
+.body-padrao.dark-mode .container {}
+
+.body-padrao.dark-mode .container>header {}
+
+.body-padrao.dark-mode .container>nav {}
+
+.body-padrao.dark-mode .container>main {}

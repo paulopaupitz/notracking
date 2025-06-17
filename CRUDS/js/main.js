@@ -1,7 +1,7 @@
 import { saveClient, saveAdmin } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
-import { printDiv, loginAdmin } from "./utils.js";
+import { printDiv} from "./utils.js";
 
 
 
@@ -49,17 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
     btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/login.html");
   }
 
-  
-  const checkbox = document.getElementById("status");
-  const label = document.getElementById("statusLabel");
+  const themeSwitch = document.getElementById("theme-switch");
 
-  // inicializa
-  // label.textContent = checkbox.checked ? "Status: Ativo" : "Status: Inativo";
-
-  // atualiza ao mudar
-  // checkbox.addEventListener("change", () => {
-  //   label.textContent = checkbox.checked ? "Status: Ativo" : "Status: Inativo";
-  // });
-
-  
+  if (themeSwitch) {
+    themeSwitch.addEventListener("change", function () {
+      if (this.checked) {
+        console.log("Modo escuro ativado");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        console.log("Modo escuro desativado");
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  }
 });

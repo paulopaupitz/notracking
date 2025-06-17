@@ -8,17 +8,19 @@
     flex-direction: column;
 }
 
-.form-input > input::placeholder{
-        font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        vertical-align: middle;
-        color: #00000080; 
+.form-input>input::placeholder {
+    font-family: system-ui, -apple-system, system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #00000080;
 }
-.form-input > input:focus {
-    outline:none;
+
+.form-input>input:focus {
+    outline: none;
 }
 
 .container-login {
@@ -35,7 +37,6 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* .dark-mode {} */
 
 .button-container {
     display: flex;
@@ -83,19 +84,11 @@
     transform: translateY(0px);
 }
 
-/* .switch-container {
 
-    
-    display: flex;
-    height: 30px;
-    width: 50px;
-    justify-content: flex-end;
-}
-.switch-container > label {}
- */
-.switch-container {
-    display: flex;
-    align-items: end;
+/* .switch-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 .switch-input {
@@ -131,4 +124,4 @@
 
 .switch-input:checked+.switch-label::before {
     transform: translateX(30px);
-}
+} */

@@ -62,7 +62,7 @@
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow:0 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     transition: all 0.15s ease-out;
     display: flex;
     align-items: center;
@@ -88,10 +88,6 @@
     font-size: 20px;
 }
 
-
-
-
-
 /* ------------------- BOTÃO DE AÇÕES ------------------------- */
 .botoes-acoes {
     display: flex;
@@ -115,12 +111,12 @@
 
 
 .btnEditar {
-    background-color: #0D6EFD;
+    background-color: #70C930;
     border-color: #031125;
 }
 
 .btnExcluir {
-    background-color: #ff0019;
+    background-color: #FF3B2D;
 }
 
 
@@ -128,7 +124,7 @@
 /* --------- HOVERS DAS AÇÕES ------------ */
 
 .btnEditar:hover {
-    background-color: #0062f5;
+    background-color: #54AC23;
 }
 
 .btnExcluir:hover {
@@ -143,9 +139,11 @@
     body * {
         visibility: hidden;
     }
-    #edicaoRow {   
+
+    #edicaoRow {
         display: none;
     }
+
     #edicao {
         display: none;
     }
@@ -156,8 +154,8 @@
     }
 
     #imprimir {
-        position: fixed;
-        left: 0;
+        position:absolute;
+        left: 5px;
         top: 0;
     }
 
