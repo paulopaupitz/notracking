@@ -21,9 +21,6 @@
     outline:none;
 }
 
-
-
-
 .container-login {
     display: flex;
     flex-direction: column;
@@ -85,7 +82,6 @@
     border-color: #a9b1b9;
     transform: translateY(0px);
 }
-
 
 /* .switch-container {
 

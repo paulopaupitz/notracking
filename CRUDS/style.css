@@ -245,7 +245,7 @@ main {
     border-radius: 5px;
     margin-right: 70px;
     margin-bottom: 20px;
-    /* overflow-y: auto; se precisar colocar barra de rolagem no formulário */
+    overflow-y: auto; 
 }
 
 /* .container,
