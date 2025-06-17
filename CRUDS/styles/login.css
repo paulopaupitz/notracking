@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E0E0E0;
+    background-color: var(--backgroundLogin-color);
     flex-direction: column;
 }
 
@@ -30,7 +30,7 @@
     width: auto;
     max-width: 400px;
     padding: 30px;
-    background-color: #F5F5F5;
+    background-color: var(--backgroundContainerLogin-color);
     border: 10px solid transparent;
     text-align: center;
     border-radius: 8px;
@@ -47,81 +47,39 @@
 }
 
 #enterButton {
-    background-color: #2C3E50;
-    color: white;
+    background-color: var(--btnAzul-color);
+    color: var(--btnTxtClaro-color);
     border-color: #2C3E50;
 }
 
 #enterButton:hover {
-    background-color: #34495E;
+    background-color: var(--btnAzul-hover);
     border-color: #34495E;
     transform: translateY(-2px);
 }
 
 #enterButton:active {
-    background-color: #1A252F;
+    background-color: var(--btnAzul-pressed);
     border-color: #1A252F;
     transform: translateY(0px);
 }
 
 #cadastroButton {
-    background-color: #e9ecef;
-    color: #212529;
+    background-color: var(--bntBranco-color);
+    color: var(--btnTxtEscuro-color);
     border-color: #ced4da;
 }
 
 #cadastroButton:hover {
-    background-color: #d3d9df;
+    background-color: var(--bntBranco-hover);
     border-color: #b6bfc8;
-    color: #000000;
+    color: var(--btnTxtEscuro-color);
     transform: translateY(-2px);
 }
 
 /* Efeito active do botão cadastro */
 #cadastroButton:active {
-    background-color: #c0c7cf;
+    background-color: var(--bntBranco-pressed);
     border-color: #a9b1b9;
     transform: translateY(0px);
 }
-
-
-/* .switch-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.switch-input {
-    display: none;
-}
-
-.switch-label {
-    display: block;
-    width: 60px;
-    height: 30px;
-    background-color: #b3b3b3;
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.switch-label::before {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: white;
-    top: 3px;
-    left: 3px;
-    transition: transform 0.3s ease;
-}
-
-.switch-input:checked+.switch-label {
-    background-color: #34495E;
-}
-
-.switch-input:checked+.switch-label::before {
-    transform: translateX(30px);
-} */

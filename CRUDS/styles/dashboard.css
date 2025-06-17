@@ -16,7 +16,7 @@
 }
 
 .body-padrao {
-    background-color: #E0E0E0;
+    background-color: var(--backgroundPadraoDash-color);
     text-align: center;
     min-height: 100vh;
     margin: 0;
@@ -38,7 +38,7 @@
 /* Estilo dos cards */
 .card {
     height: 150px;
-    background-color: #F5F5F5;
+    background-color: var(--cards-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -87,9 +87,9 @@
 }
 
 .status-ativo {
-    color: #444;
+    color: #b55a5a;
 }
 
 .status-inativo {
-    color: #bbb;
+    color: #12a415;
 }
