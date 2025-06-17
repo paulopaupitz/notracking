@@ -6,6 +6,7 @@
     background-color: #99b4ce;
 }
 
+
 #thead>tr>th {
     color: #001428;
 }
@@ -13,7 +14,7 @@
 .btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin: 20px 0 10px 0;
     justify-content: end;
     gap: 10px;
 }
@@ -23,41 +24,45 @@
     width: 150px;
     height: 50px;
     background-color: #2C3E50;
-    color: #F0F6F7;
+    color: #FFFFFF;
     border: 2px solid #202e3d;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px #1A252F;
-    /* Suaviza todas as transições de efeito */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     transition: all 0.15s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 20px;
 }
+
 
 .btnCadastrar:hover {
     background-color: #34495F;
     transform: translateY(-3px);
-    box-shadow: 0 6px #1A252F;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btnCadastrar:active {
     background-color: #1A252F;
     border-color: #1A252F;
     transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 
 .btnImprimir {
-    background-color: #436278;
+    background-color: #D35400;
     margin-top: auto;
     width: 150px;
     height: 50px;
-    color: #F0F6F7;
-    border: 2px solid rgb(63, 121, 169);
+    color: #FFFFFF;
+    border: 2px solid #A04000;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px #436278;
-    /* Suaviza todas as transições de efeito */
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.25);
     transition: all 0.15s ease-out;
     display: flex;
     align-items: center;
@@ -65,17 +70,15 @@
 }
 
 .btnImprimir:hover {
-    background-color: #7099b6;
-    /* Um tom abaixo do original */
+    background-color: #E67E22;
     transform: translateY(-3px);
-    box-shadow: 0 6px #5c7f99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btnImprimir:active {
-    background-color: #5c7f99;
-    /* Um tom ainda mais escuro */
-    border-color: #5c7f99;
+    background-color: #A04000;
     transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .btnImprimir span {
@@ -100,7 +103,6 @@
 .botoes-acoes button {
     height: 36px;
     padding: 0 12px;
-    /* deixa retangular: mais alto, mais estreito */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,12 +115,12 @@
 
 
 .btnEditar {
-    background-color: #337ab7;
-    border-color: #1a7796;
+    background-color: #0D6EFD;
+    border-color: #031125;
 }
 
 .btnExcluir {
-    background-color: #dc3545;
+    background-color: #ff0019;
 }
 
 
@@ -126,11 +128,11 @@
 /* --------- HOVERS DAS AÇÕES ------------ */
 
 .btnEditar:hover {
-    background-color: #0f7cd6;
+    background-color: #0062f5;
 }
 
 .btnExcluir:hover {
-    background-color: #ed0920;
+    background-color: #f10a21;
 }
 
 
@@ -140,6 +142,12 @@
 
     body * {
         visibility: hidden;
+    }
+    #edicaoRow {   
+        display: none;
+    }
+    #edicao {
+        display: none;
     }
 
     #imprimir,
