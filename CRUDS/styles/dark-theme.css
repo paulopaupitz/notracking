@@ -1,0 +1,50 @@
+.darkmode {
+    --header-color: #1A252F;
+    --main-color: transparent;
+    --nav-color: #2C3E50;
+    --backgroundBodyPadrao-color: #1A252F;
+    --backgroundPadraoDash-color: #1A252F;
+    --backgroundContainerLogin-color: #2C3E50;
+    --cards-color: #2C3E50;
+    --btnAzul-color: #3498DB;
+    --btnAzul-hover: #5DADE2;
+    --btnAzul-pressed: #2E86C1;
+    --bntBranco-color: #34495E;
+    --bntBranco-hover: #4A6572;
+    --bntBranco-pressed: #2C3E50;
+    --bntBranco-borda: #4A6572;
+    --btnImprimir-color: #F39C12;
+    --btnImprimir-hover: #F5B041;
+    --btnImprimir-pressed: #D68910;
+    --btnImprimir-borda: #F39C12;
+    --btnExcluir-color: #E74C3C;
+    --btnExcluir-hover: #EC7063;
+    --btnEditar-color: #2ECC71;
+    --btnEditar-hover: #58D68D;
+    --bordaEscura-color: #34495E;
+    --bordaClara-color: #34495E;
+    --placeholder-text: #8A9BA8;
+    --btnLimpar-hover: #4A6572;
+    --btnLimpar-pressed: #2C3E50;
+    --btnTxtEscuro-color: #EAECEE;
+    --btnTxtClaro-color: #1A252F;
+    --TextoClaro-color: #000000;
+    --TextoEscuro-color: #EAECEE;
+    --Input-color: #1A252F;
+}
+
+#logo-dark {
+    display: none;
+}
+
+.darkmode #logo-dark {
+    display: block;
+}
+
+.darkmode #logo-light {
+    display: none;
+}
+
+.darkmode .form input {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}

@@ -1,6 +1,5 @@
 .lista-cadastros-container {
     overflow-y: auto;
-    background-color: #FAFAFA;
     flex-grow: 1;
     border: 10px solid transparent;
     border-radius: 8px;
@@ -56,7 +55,7 @@
 }
 
 .container .lista-cadastros-container {
-    background-color: #FAFAFA;
+    background-color: #6f6f6f;
 }
 
 #tabela-cadastros {

@@ -1,4 +1,4 @@
-import { getLocalStorageAdmin } from "./storage.js";
+// import { getLocalStorageAdmin } from "./storage.js";
 
 export function inverterData(isoDate) {
   const [ano, mes, dia] = isoDate.split('-');
@@ -7,6 +7,31 @@ export function inverterData(isoDate) {
 export function printDiv() {
   window.print();
 }
+
+
+// FUNÇÃO DARKMODE FUNCIONANDO VIVA!
+export function loadTheme() {
+  const theme = localStorage.getItem("theme");
+  const interruptor = document.getElementById("interruptor");
+  if (theme === "dark") {
+    document.body.classList.add("darkmode");
+    if (interruptor) interruptor.checked = true;
+  }
+}
+
+export function toggleDarkMode() {
+  document.body.classList.toggle("darkmode");
+  if (document.body.classList.contains("darkmode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+    localStorage.removeItem("theme"); 
+  }
+}
+
+
+
+
 
 // export function loginAdmin() {
 //   const email = document.getElementById("txtEmail").value;
@@ -19,24 +44,6 @@ export function printDiv() {
 //     alert("Email ou senha incorretos");
 //   }
 // }
-// let darkmode = localStorage.getItem('darkmode')
-
-// const enableDarkmode = () => {
-//   document.body.classList.add('darkmode')
-//   localStorage.setItem('darkmode', 'active')
-// }
-// const disableDarkmode = () => {
-//   document.body.classList.remove('darkmode')
-//   localStorage.setItem('darkmode', null)
-// }
-
-// if(darkmode === "active") enableDarkmode()
-
-// const themeSwitch = document.getElementById('theme-switch')
-//   themeSwitch.addEventListener("click", () => {
-//     darkmode = localStorage.getItem('darkmode')
-//     darkmode !== "ativo" ? enableDarkmode() : disableDarkmode()
-//   })
 
 
 

@@ -1,6 +1,5 @@
-import { createClient } from "./storage.js";
+import { createClient, createAdmin, readClient } from "./storage.js";
 import { updateTable } from "./table.js";
-import { createAdmin } from "./storage.js";
 
 
 export function isValidFields() {
@@ -43,6 +42,13 @@ export function saveClient() {
       sentimentos: document.getElementById("txtSentimentos").value,
       valores: document.getElementById("txtValores").value,
     };
+
+    const dbClient = readClient();
+    const emailExiste = dbClient.some((c) => c.email === client.email)
+    if (emailExiste) {
+      alert("Erro: O e-mail informado já está em uso!");
+      return;
+    }
     createClient(client);
     alert("Cliente cadastrado com sucesso!");
     updateTable();

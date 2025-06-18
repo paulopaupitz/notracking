@@ -1,4 +1,4 @@
-.body-layout-centralizado {
+#body-layout-centralizado {
     display: flex;
     justify-content: center;
     align-items: center;

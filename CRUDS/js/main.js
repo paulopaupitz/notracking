@@ -1,16 +1,18 @@
 import { saveClient, saveAdmin } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
-import { printDiv} from "./utils.js";
+import { printDiv, toggleDarkMode, loadTheme } from "./utils.js";
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const enterButton = document.getElementById("enterButton");
-  if (enterButton) {
-    enterButton.addEventListener("click", loginAdmin);
-  }
+  loadTheme();
+
+  // const enterButton = document.getElementById("enterButton");
+  // if (enterButton) {
+  //   enterButton.addEventListener("click", loginAdmin);
+  // }
 
 
   const cadastroButton = document.getElementById("buttonCadastrar");
@@ -49,19 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/login.html");
   }
 
-  const themeSwitch = document.getElementById("theme-switch");
-
-  if (themeSwitch) {
-    themeSwitch.addEventListener("change", function () {
-      if (this.checked) {
-        console.log("Modo escuro ativado");
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-      } else {
-        console.log("Modo escuro desativado");
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-      }
-    });
+  const interruptor = document.getElementById("interruptor");
+  if (interruptor) {
+    interruptor.addEventListener("click", toggleDarkMode); 
   }
+  
 });

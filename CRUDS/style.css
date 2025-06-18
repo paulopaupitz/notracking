@@ -1,11 +1,49 @@
 :root {
 
-    --backgroundBodyPadrao-color: #B0B8C1;
-    --backgroundPadraoDash-color: #E0E0E0;
-    --backgroundContainerLogin-color: #F5F5F5;
+    /*primarias*/
+    --cor-azulEscuro-100: #F7FAFC;
+    --cor-azulEscuro-200: #EDF2F7;
+    --cor-azulEscuro-400: #A0AEC0;
+    --cor-azulEscuro-700: #2D3748;
+    --cor-azulEscuro-900: #1A202C;
+    --cor-azulMarinho-100: #E6E7F2;
+    --cor-azulMarinho-200: #C0C4E4;
+    --cor-azulMarinho-300: #98A0D6;
+    --cor-azulMarinho-400: #6D7BC6;
+    --cor-azulMarinho-500: #4255B6;
+    --cor-azulMarinho-600: #354492;
+    --cor-azulMarinho-700: #26316D;
+    --cor-azulMarinho-800: #192049;
+    --cor-azulMarinho-900: #0B0E29;
+
+    --cor-azul-cinza-100: #F1F3F5;/* Mais claro, para fundos de página */
+    --cor-azul-cinza-200: #DEE2E6;
+    --cor-azul-cinza-300: #C9CFD7;
+    --cor-azul-cinza-400: #B0B8C1; /* <<< Sua cor original */
+    --cor-azul-cinza-500: #949DA8;
+    --cor-azul-cinza-600: #778390;/* Bom para textos secundários */
+    --cor-azul-cinza-700: #5C6877;
+    --cor-azul-cinza-800: #404D5C;
+    --cor-azul-cinza-900: #263240;/* Mais escuro, para textos principais */
+
+
+
+    --cor-fundo-body: ;
+    --cor-fundo-modal: ;
+    --cor-fundo-nav: ;
+    --cor-fundo-superficie: ;
+    --cor-fundo-pagina: ;
+    --cor-fundo-pagina: ;
+
+    --cor-texto-principal: ;
+    --cor-texto-secundario: ;
+
     --header-color: #2C3E50E1;
     --main-color: #F0F0F0;
     --nav-color: #FFF;
+    --backgroundBodyPadrao-color: #B0B8C1;
+    --backgroundPadraoDash-color: #E0E0E0;
+    --backgroundContainerLogin-color: #F5F5F5;
     --cards-Branco-color: #F5F5F5;
     --btnAzul-color: #2C3E50;
     --btnAzul-hover: #34495E;
@@ -35,41 +73,11 @@
 
 }
 
-.darkmode {
-    --backgroundBodyPadrao-color: #1A252F;
-    --backgroundPadraoDash-color: #1A252F;
-    --backgroundContainerLogin-color: #2C3E50;
-    --header-color: #1A252F;
-    --main-color: transparent;
-    --nav-color: #2C3E50;
-    --cards-color: #2C3E50;
-    --btnAzul-color: #3498DB;
-    --btnAzul-hover: #5DADE2;
-    --btnAzul-pressed: #2E86C1;
-    --bntBranco-color: #34495E;
-    --bntBranco-hover: #4A6572;
-    --bntBranco-pressed: #2C3E50;
-    --bntBranco-borda: #4A6572;
-    --btnImprimir-color: #F39C12;
-    --btnImprimir-hover: #F5B041;
-    --btnImprimir-pressed: #D68910;
-    --btnImprimir-borda: #F39C12;
-    --btnExcluir-color: #E74C3C;
-    --btnExcluir-hover: #EC7063;
-    --btnEditar-color: #2ECC71;
-    --btnEditar-hover: #58D68D;
-    --bordaEscura-color: #34495E;
-    --bordaClara-color: #34495E;
-    --placeholder-text: #8A9BA8;
-    --btnLimpar-hover: #4A6572;
-    --btnLimpar-pressed: #2C3E50;
-    --btnTxtEscuro-color: #EAECEE;
-    --btnTxtClaro-color: #1A252F;
-    --TextoClaro-color: #EAECEE;
-    --TextoEscuro-color: #000000;
-    --Input-color: #1A252F;
 
-}
+
+
+
+
 
 
 
@@ -78,16 +86,31 @@
 html {
     height: 100%;
 }
+
+/* Container principal */
+.container {
+    display: contents;
+}
+
 body {
-    background-color: #F0F0F0;
-    color: #000;
+    background-color: var(--backgroundPadraoDash-color);
+    color: var(-TextoEscuro-color);
     font-family: sans-serif;
     margin: 0;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.body-layout-principal {
+/* body para login.html e cadastro-admin.html */
+#body-layout-centralizado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* body template padrao para paginas principais */
+#body-layout-principal {
     display: grid;
     grid-template-rows: 70px 1fr;
     grid-template-columns: 250px 1fr;
@@ -97,11 +120,20 @@ body {
     gap: 32px 0;
 }
 
-.body-layout-centralizado {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Áreas do grid */
+header {
+    grid-area: header;
+    background-color: var(--header-color);
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--nav-color);
+}
+
+main {
+    grid-area: main;
+    background-color: var(--main-color);
 }
 
 /* Estilo do formulário */
@@ -169,44 +201,38 @@ body {
 }
 
 
-
-/* Container principal com grid */
-.container {
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 70px 1fr;
-    grid-template-columns: 250px 1fr;
-    grid-template-areas:
-        "nav header  "
-        "nav main    ";
-    gap: 32px 0;
-    background: var(--backgroundPadrao-color);
-    /* background: #FAFAFA; */
-}
-
-/* Áreas do grid */
-header {
-    grid-area: header;
-}
-
-nav {
-    grid-area: nav;
-}
-
-main {
-    grid-area: main;
-}
-
 /* Estilo do cabeçalho */
 .container>header {
     display: flex;
     align-items: center;
-    background-color: var(--header-color);
-    border-radius: 5px;
+    border-radius: 1px;
     padding: 0 15px;
     /* margin-right: 70px; */
     gap: 16px 6px;
+}
+
+.container>main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+.container>nav {
+    display: grid;
+    width: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+
+.container>header>h4 {
+    display: flex;
+    color: var(--cards-Branco-color);
 }
 
 #icone-pesquisa {
@@ -215,11 +241,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.container>header>h4 {
-    display: flex;
-    color: var(--cards-Branco-color);
 }
 
 .pesquisar {
@@ -232,6 +253,11 @@ main {
     box-sizing: border-box;
     margin: 0;
     /* Margem removida para usar o 'gap' do header */
+}
+
+.pesquisar::placeholder {
+    color: var(--TextoEscuro-color);
+
 }
 
 .pesquisar:focus {
@@ -356,13 +382,13 @@ main {
 } */
 
 
-#theme-switch {
+#interruptor {
     height: 50px;
     width: 50px;
     padding: 0;
     border-radius: 50%;
-    border: none;
-    background-color: #E8E9ED;
+    border: 1px solid #858b93;
+    background-color: var(--backgroundBodyPadrao-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,23 +396,30 @@ main {
     bottom: 20px;
     right: 10px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-#theme-switch:hover {}
-
-#theme-switch svg {
-    fill: #3A435D;
+#interruptor:hover {
+    transform: scale(1.1);
 }
 
-#theme-switch svg:last-child {
+#interruptor:active {
+    background-color: #6c79a0;
+    transform: scale(1.05) translateY(2px);
+    filter: none;
+}
+
+#interruptor svg {}
+
+#interruptor svg:last-child {
     display: none;
 }
 
-.darkmode #theme-switch svg:first-child {
+.darkmode #interruptor svg:first-child {
     display: none;
 }
 
-.darkmode #theme-switch svg:last-child {
+.darkmode #interruptor svg:last-child {
     display: block;
 }
 
