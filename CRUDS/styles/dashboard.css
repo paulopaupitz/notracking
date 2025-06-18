@@ -15,7 +15,7 @@
     padding: 0;
 }
 
-.body-padrao {
+.body-layout-principal {
     background-color: var(--backgroundPadraoDash-color);
     text-align: center;
     min-height: 100vh;

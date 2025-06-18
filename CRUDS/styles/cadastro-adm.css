@@ -1,10 +1,9 @@
-#body-terminal {
-    background-color: #1A252F;
-    display: grid;
-    height: 100vh;
-    place-items: center;
+.body-layout-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-
 .container-terminal {
     display: flex;
     flex-direction: column;
