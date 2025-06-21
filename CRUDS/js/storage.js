@@ -4,28 +4,29 @@ export const getLocalStorage = () =>
 export const setLocalStorage = (dbClient) =>
   localStorage.setItem("dbClient", JSON.stringify(dbClient));
 
+
+//CREATE/CRIAR CLIENTE
 export const createClient = (client) => {
   const dbClient = getLocalStorage();
   dbClient.push(client);
   setLocalStorage(dbClient);
 };
 
+//READ/LER CLIENTE
 export const readClient = () => getLocalStorage();
 
+//UPDATE/ATUALIZAR CLIENTE
 export const updateClient = (index, client) => {
   const dbClient = readClient();
   dbClient[index] = client;
   setLocalStorage(dbClient);
 };
-
+//DELETE/DELETAR CLIENTE
 export const deleteClient = (index) => {
   const dbClient = readClient();
   dbClient.splice(index, 1);
   setLocalStorage(dbClient);
 };
-
-
-
 
 // < ------------------------ADMIN ------------------------>
 
@@ -40,6 +41,3 @@ export const createAdmin = (admin) => {
   dbAdmin.push(admin);
   setLocalStorageAdmin(dbAdmin);
 };
-
-
-

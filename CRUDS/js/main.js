@@ -1,11 +1,20 @@
 import { saveClient, saveAdmin } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
-import { printDiv, loginAdmin } from "./utils.js";
-import { autenticarAdmin } from "./auth.js";
+import { printDiv, toggleDarkMode, loadTheme, loginAdmin } from "./utils.js";
 
-// Função para inicializar os event listeners
-function initEventListeners() {
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadTheme();
+
+  const form = document.querySelector(".form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  }
+
   const enterButton = document.getElementById("enterButton");
   if (enterButton) {
     enterButton.addEventListener("click", (e) => {
@@ -36,7 +45,7 @@ function initEventListeners() {
   }
 
   const btnImprimir = document.getElementById("btnImprimir");
-  if(btnImprimir){
+  if (btnImprimir) {
     btnImprimir.addEventListener("click", printDiv);
   }
 
@@ -49,7 +58,10 @@ function initEventListeners() {
   if (btnVoltar) {
     btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/index.html");
   }
-}
 
-// Inicializa os event listeners quando o DOM estiver carregado
-document.addEventListener("DOMContentLoaded", initEventListeners);
+  const interruptor = document.getElementById("interruptor");
+  if (interruptor) {
+    interruptor.addEventListener("click", toggleDarkMode);
+  }
+
+});

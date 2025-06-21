@@ -1,32 +1,18 @@
 /* FORMULÁRIOS REGISTRO */
 .container-register {
+  height: 80%;
   display: flex;
   align-items: center;
   width: auto;
-  padding: 20px;
-  background-color: #FAFAFA;
-  border: 10px solid transparent;
+  padding: 15px;
+  background-color: var(--cor-CadModal);
+  border: 10px 0 10px 0 solid transparent;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  margin-top: 50px;
 }
-
-
-/*não sei o que esse tava fazendo aqui*/
-/* #body-register {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FAFAFA;
-} *
-/* #main-cadastro { esse era só pra testar
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-} */
 
 #form-register {
   width: 100%;
@@ -44,27 +30,63 @@
 .form-input {
   display: flex;
   flex-direction: column;
+  align-items: start;
   width: 100%;
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  color: var(--cor-texto-escuro);
+  font-size: 1.2em;
+  font-family: Helvetica;
+}
+
+/* foco da borda dos inputs */
+.form-input>input:focus {
+  outline: 1px solid var(--cor-azul-cinza-400);
+}
+
+.form-input>textarea:focus {
+  outline: 1px solid var(--cor-azul-cinza-400);
+}
+
+
+/* fim foco  */
+
+#statusContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+}
+
+#statusContainer label {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+
+#statusContainer input[type="checkbox"] {
+  color: var(--cor-CadModal-texto);
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 .form-input label {
   margin-bottom: 6px;
   font-weight: 600;
-  font-size: 14px;
-  color: #4A5568;
+  font-size: 1.1em;
+  color: var(--cor-CadModal-texto);
   text-align: start;
 }
 
-
 #dataNascimento {
-    width: 150px;
+  width: 180px;
 }
-
-
 
 .form-input .input,
 .form-input textarea {
-  background-color: rgb(237, 231, 231);
+  background-color: var(--cor-fundo-input);
   padding: 10px;
   width: 100%;
   border: 1px solid transparent;
@@ -72,9 +94,11 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'Helvetica';
+  color: var(--cor-texto-escuro);
+  caret-color: var(--cor-texto-escuro);
 }
 
-/* Estilo para os Textareas do formulário */
 .form-input textarea {
   min-height: 120px;
   resize: none;
@@ -89,49 +113,59 @@
 }
 
 .form-buttons button {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.15s ease-out;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#buttonCadastrar {
-  background-color: #2C3E50;
-  color: #F0F6F7;
+.btnCadastrar {
+  background-color: var(--btnAzul-color);
+  color: var(--btnTxtClaro-color);
+  border: 2px solid #202e3d;
+  padding: 12px 25px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25)
 }
 
-#buttonCadastrar:hover {
-  background-color: #34495F;
-  transform: translateY(-2px);
+.btnCadastrar:hover {
+  background-color: var(--btnAzul-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonCadastrar:active {
-  background-color: #1A252F;
+.btnCadastrar:active {
+  background-color: var(--btnAzul-pressed);
   border-color: #1A252F;
   transform: translateY(0px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25)
 }
 
-#buttonLimpar {
-  background-color: #E9ECEF;
-  border-color: #d5dadf;
-  color: #162739;
+.btnLimpar {
+  background-color: var(--bntBranco-color);
+  color: var(--btnTxtEscuro-color);
+  border: 2px solid var(--bntBranco-borda);
+  padding: 12px 25px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonLimpar:hover {
-  background-color: #d3d9df;
-  border-color: #b6bfc8;
-  color: #000000;
-  transform: translateY(-2px);
+.btnLimpar:hover {
+  background-color: var(--bntBranco-hover);
+  color: var(--btnTxtEscuro-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonLimpar:active {
-  background-color: #c0c7cf;
-  border-color: #a9b1b9;
+.btnLimpar:active {
+  background-color: var(--bntBranco-pressed);
   transform: translateY(0px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
+
 
 /* Estilos do Modal */
 .modal {
@@ -152,7 +186,7 @@
 }
 
 .modal-content {
-  background-color: #FAFAFA;
+  background-color: var(--cor-CadModal);
   padding: 20px;
   border-radius: 8px;
   width: 90%;
@@ -186,11 +220,21 @@
 }
 
 .modal .form-buttons button:first-child {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--btnEditar-color);
+  color: var(--btnTxtEscuro-color);
 }
 
 .modal .form-buttons button:last-child {
-  background-color: #f44336;
-  color: white;
+  background-color: var(--btnExcluir-color);
+  color: var(--cor-texto-escuro);
+}
+
+.modal .form-buttons button:first-child:hover {
+  background-color: var(--btnEditar-hover);
+  color: var(--cor-texto-escuro);
+}
+
+.modal .form-buttons button:last-child:hover {
+  background-color: var(--btnExcluir-hover);
+  color: var(--btnTxtClaro-color);
 }

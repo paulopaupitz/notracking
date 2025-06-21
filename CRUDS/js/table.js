@@ -4,13 +4,16 @@ import { inverterData } from "./utils.js";
 
 export function createRow(client, index) {
   const newRow = document.createElement("tr");
+  const statusColor = client.status === 'Ativo' ? 'status-ativo' : 'status-inativo';
   newRow.innerHTML = `
             <td>${client.nome}</td>
             <td>${client.sobrenome}</td>
             <td>${client.email}</td>
             <td>${inverterData(client.dtNasc)}</td>
-            <td>${client.valores}</td>
             <td>
+            <span class="${statusColor}">${client.status}</span>
+            </td>
+            <td id="edicaoRow">
             <div class="botoes-acoes">
                 <button class="button btnEditar" id="edit-${index}">
                     <span class="material-symbols-outlined">edit</span>

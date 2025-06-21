@@ -1,6 +1,5 @@
-import { createClient } from "./storage.js";
+import { createClient, createAdmin, readClient } from "./storage.js";
 import { updateTable } from "./table.js";
-import { createAdmin } from "./storage.js";
 
 
 export function isValidFields() {
@@ -14,6 +13,7 @@ export function clearFields() {
   document.getElementById("txtNome").value = "";
   document.getElementById("txtSobrenome").value = "";
   document.getElementById("dataNascimento").value = "";
+  document.getElementById("status").checked = false;
   document.getElementById("txtEmail").value = "";
   document.getElementById("txtEndereco").value = "";
   document.getElementById("txtInfo").value = "";
@@ -34,6 +34,7 @@ export function saveClient() {
       nome: document.getElementById("txtNome").value,
       sobrenome: document.getElementById("txtSobrenome").value,
       dtNasc: document.getElementById("dataNascimento").value,
+      status: document.getElementById("status").checked ? "Ativo" : "Inativo",
       email: document.getElementById("txtEmail").value,
       endereco: document.getElementById("txtEndereco").value,
       outrasInfos: document.getElementById("txtInfo").value,
@@ -41,6 +42,13 @@ export function saveClient() {
       sentimentos: document.getElementById("txtSentimentos").value,
       valores: document.getElementById("txtValores").value,
     };
+
+    const dbClient = readClient();
+    const emailExiste = dbClient.some((c) => c.email === client.email)
+    if (emailExiste) {
+      alert("Erro: O e-mail informado já está em uso!");
+      return;
+    }
     createClient(client);
     alert("Cliente cadastrado com sucesso!");
     updateTable();
@@ -63,8 +71,4 @@ export function saveAdmin() {
     console.log("Cadastrando Administrador");
   }
 }
-
-
-
-
 
