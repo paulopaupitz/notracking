@@ -92,8 +92,10 @@
     --btnImprimir-borda: #A04000;
     --btnExcluir-color: #FF3B2D;
     --btnExcluir-hover: #F10A21;
+    --btnExcluir-pressed: #F10A21;
     --btnEditar-color: #70C930;
     --btnEditar-hover: #54AC23;
+    --btnEditar-pressed: #388E3C;
     --bordaClara-color: #CED4DA;
     --btnLimpar-hover: #D3D9DF;
     --btnLimpar-pressed: #C0C7CF;

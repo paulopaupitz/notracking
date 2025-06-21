@@ -53,13 +53,26 @@
     font-size: 1.1em;
 }
 
-
-
+#titulo-relatorio {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--TextoEscuro-color);
+    margin-bottom: -5px;
+    margin-right: 1107px;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--cor-texto-principal);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5px;
+    
+}
 .btn-container {
     display: flex;
     justify-content: center;
     margin: 20px 0 10px 0;
-    justify-content: end;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -81,21 +94,6 @@
     padding-left: 20px;
 }
 
-#titulo-relatorio {
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--TextoEscuro-color);
-    margin-bottom: -5px;
-    margin-right: 1107px;
-    margin-top: 10px;
-    text-decoration: underline;
-    text-decoration-color: var(--cor-texto-principal);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    text-decoration-style: solid;
-    text-decoration-thickness: 5px;
-
-}
 
 .btnCadastrar:hover {
     background-color: var(--btnAzul-hover);
@@ -196,16 +194,30 @@
 
 .btnEditar:hover {
     background-color: var(--btnEditar-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btnExcluir:hover {
     background-color: var(--btnExcluir-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.btnEditar:active {
+    background-color: var(--btnEditar-pressed);
+    transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btnExcluir:active {
+    background-color: var(--btnExcluir-pressed);
+    transform: translateY(0px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 
-
 @media print {
-
 
     body * {
         visibility: hidden;

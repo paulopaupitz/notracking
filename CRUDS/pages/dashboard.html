@@ -13,9 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CRUDS/style.css" />
-    <link rel="stylesheet" href="/CRUDS/styles/dashboard.css" />
-    <link rel="stylesheet" href="/CRUDS/styles/dark-theme.css" />
+    <link rel="stylesheet" href="/CRUDS/styles/main.css" />
   </head>
 
   <body id="body-layout-principal">
@@ -36,9 +34,9 @@
           placeholder="Pesquisar.."
         /> -->
 
-        <a id="perfil" href="perfil-admin.html">
-          <span class="material-symbols-outlined">person</span>
-          <h4>Perfil</h4>
+        <a id="perfil" style="cursor: pointer;">
+          <img src="/CRUDS/Img/ImagemPerfil.png" alt="perfil" style="width: 40px; height: 40px;"/>
+          <h4>Paulo Paupitz Neto</h4>
         </a>
         <a id="sair" href="login.html">
           <span class="material-symbols-outlined">logout</span>
@@ -138,7 +136,129 @@
       </main>
       <!-- FIM main -->
     </div>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <form id="modal-form">
+          <div class="form-row">
+            <div class="form-input">
+              <label for="modal-txtNome">Nome:</label>
+              <input
+                class="input"
+                id="modal-txtNome"
+                type="text"
+                name="nome"
+                required
+              />
+            </div>
+
+            <div class="form-input">
+              <label for="modal-txtSobrenome">Sobrenome:</label>
+              <input
+                class="input"
+                id="modal-txtSobrenome"
+                type="text"
+                name="sobrenome"
+                required
+              />
+            </div>
+
+            <div class="form-input">
+              <label for="modal-dataNascimento">Data de Nascimento:</label>
+              <input
+                class="input"
+                id="modal-dataNascimento"
+                type="date"
+                name="dataNascimento"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label for="modal-status">Status:</label>
+              <input id="modal-status" type="checkbox" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-input">
+              <label for="modal-txtEmail">E-mail:</label>
+              <input
+                class="input"
+                id="modal-txtEmail"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="form-input">
+              <label for="modal-txtEndereco">Endereço:</label>
+              <input
+                class="input"
+                id="modal-txtEndereco"
+                type="text"
+                name="endereco"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-input">
+              <label for="modal-txtInfo">Outras Infos:</label>
+              <textarea
+                id="modal-txtInfo"
+                class="input"
+                name="outrasInfos"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-input">
+              <label for="modal-txtInteresse">Interesses:</label>
+              <textarea
+                id="modal-txtInteresse"
+                class="input"
+                name="interesse"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-input">
+              <label for="modal-txtSentimentos">Sentimentos:</label>
+              <textarea
+                id="modal-txtSentimentos"
+                class="input"
+                name="sentimentos"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-input">
+              <label for="modal-txtValores">Valores:</label>
+              <textarea
+                id="modal-txtValores"
+                class="input"
+                name="valores"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" id="btnSalvarEdicao">SALVAR</button>
+            <button type="button" id="btnFecharModal">CANCELAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- fim container -->
     <script type="module" src="/CRUDS/js/main.js"></script>
+    <script type="module" src="/CRUDS/js/search.js"></script>
   </body>
 </html>

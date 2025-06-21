@@ -8,7 +8,7 @@ main {
 }
 
 .form-input>input {
-    background-color: var(--Input-color);
+    background-color: var(--cor-fundo-input);
     caret-color: var(--cor-texto-escuro);
     color: var(--cor-texto-escuro);
     font-family: Helvetica;

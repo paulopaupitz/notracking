@@ -92,13 +92,13 @@
 
 .card-azul p {
     color: var(--cor-cardP-azul); 
-    font-style: italic;
+    font-weight: bold;
     font-size: 20px;
 }
 
 .card-vermelho p {
     color: var(--cor-cardP-vermelho); 
-    text-decoration: underline;
+    font-weight: bold;
     font-size: 20px;
 }
 

@@ -20,7 +20,7 @@
     --cor-texto-escuro: #EAECEE;
     --cor-texto-claro: #000000;
 
-
+    --cor-fundo-input:#34495E;
 
     /* CONTAINER LISTA CADASTRO*/
     --cor-CadastrosContainer: #263240;
@@ -53,7 +53,7 @@
     --bntBranco-pressed: #2C3E50;
     --bntBranco-borda: #4A6572;
 
-    --btnImprimir-color: #F39C12;
+    --btnImprimir-color: #ffa71b;
     --btnImprimir-hover: #F5A623;
     --btnImprimir-pressed: #E18E0A;
     --btnImprimir-borda: #E18E0A;

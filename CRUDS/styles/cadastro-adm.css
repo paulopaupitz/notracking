@@ -71,8 +71,8 @@
 #btnCadAdmin {
     width: 250px;
     height: 50px;
-    background-color: #2C3E50;
-    color: #F5F5F5;
+    background-color: var(--btnAzul-color);
+    color: var(--btnTxtClaro-color);
     border: none;
     border-radius: 5px;
     border-color: #2C3E50;
@@ -95,8 +95,8 @@
 #btnVoltar {
     width: 250px;
     height: 50px;
-    background-color: #e9ecef;
-    color: #212529;
+    background-color: var(--bntBranco-color);
+    color: var(--btnTxtEscuro-color);
     border-radius: 5px;
     border-color: #ced4da;
     font-size: 18px;
@@ -117,7 +117,7 @@
 }
 
 .darkmode #form-register-adm .input {
-    background-color: var(--bntBranco-color);
+    background-color: var(--cor-fundo-input);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
     caret-color: var(--cor-texto-escuro);
 }
