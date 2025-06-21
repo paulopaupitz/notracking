@@ -1,18 +1,24 @@
 import { saveClient, saveAdmin } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
-import { printDiv, toggleDarkMode, loadTheme } from "./utils.js";
+import { printDiv, toggleDarkMode, loadTheme, loginAdmin } from "./utils.js";
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
   loadTheme();
 
-  // const enterButton = document.getElementById("enterButton");
-  // if (enterButton) {
-  //   enterButton.addEventListener("click", loginAdmin);
-  // }
+  const form = document.querySelector(".form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  }
+
+  const enterButton = document.getElementById("enterButton");
+  if (enterButton) {
+    enterButton.addEventListener("click", loginAdmin);
+  }
 
 
   const cadastroButton = document.getElementById("buttonCadastrar");
@@ -37,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const btnImprimir = document.getElementById("btnImprimir");
-  if(btnImprimir){
+  if (btnImprimir) {
     btnImprimir.addEventListener("click", printDiv);
   }
 
@@ -53,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const interruptor = document.getElementById("interruptor");
   if (interruptor) {
-    interruptor.addEventListener("click", toggleDarkMode); 
+    interruptor.addEventListener("click", toggleDarkMode);
   }
-  
+
 });

@@ -119,3 +119,37 @@ Documentação:
 Criar documentação técnica do projeto
 Adicionar comentários no código
 Criar manual do usuário
+
+
+--header-color: #2C3E50E1;
+    --main-color: #F0F0F0;
+    --nav-color: #FFF;
+    --backgroundBodyPadrao-color: #B0B8C1;
+    --backgroundPadraoDash-color: #E0E0E0;
+    --backgroundContainerLogin-color: #F5F5F5;
+    --cards-Branco-color: #F5F5F5;
+    --btnAzul-color: #2C3E50;
+    --btnAzul-hover: #34495E;
+    --btnAzul-pressed: #1A252F;
+    --bntBranco-color: #E9ECEF;
+    --bntBranco-hover: #D3D9DF;
+    --bntBranco-pressed: #C0C7CF;
+    --bntBranco-borda: #CED4DA;
+    --btnImprimir-color: #D35400;
+    --btnImprimir-hover: #E67E22;
+    --btnImprimir-pressed: #A04000;
+    --btnImprimir-borda: #A04000;
+    --btnExcluir-color: #FF3B2D;
+    --btnExcluir-hover: #F10A21;
+    --btnEditar-color: #70C930;
+    --btnEditar-hover: #54AC23;
+    --bordaEscura-color: ;
+    --bordaClara-color: #CED4DA;
+    --placeholder-text: ;
+    --btnLimpar-hover: #D3D9DF;
+    --btnLimpar-pressed: #C0C7CF;
+    --btnTxtEscuro-color: #212529;
+    --btnTxtClaro-color: #F0F6F7;
+    --TextoClaro-color: #F0F6F7;
+    --TextoEscuro-color: #000000;
+    --Input-color: #EDE7E7;

@@ -1,11 +1,50 @@
 .darkmode {
-    --header-color: #1A252F;
-    --main-color: transparent;
-    --nav-color: #2C3E50;
+
+    --cor-fundo-bodyLogin: #232A32;
+    --color-ContainerLogin: #2f3a48;
+
+    --cor-fundo-body: #121212;
+
+    --cor-fundo-main: #232A32;
+    --cor-fundo-header: #1A202C;
+    --cor-fundo-nav: #1A202C;
+
+    --backgroundPadraoDash-color: #242933;
     --backgroundBodyPadrao-color: #1A252F;
-    --backgroundPadraoDash-color: #1A252F;
-    --backgroundContainerLogin-color: #2C3E50;
-    --cards-color: #2C3E50;
+
+    --cor-texto-principal: #EAECEE;
+
+    --cor-borda-sidebar: #2D3748;
+    --cor-fundo-sidebar-hover: #2D3748;
+
+    --cor-texto-escuro: #EAECEE;
+    --cor-texto-claro: #000000;
+
+
+
+    /* CONTAINER LISTA CADASTRO*/
+    --cor-CadastrosContainer: #263240;
+    --cor-thead-table: #1A202C;
+    --cor-tabela-hover: #404D5C;
+
+
+    /*CARDS*/
+    --cor-fundo-cards: #2D3748;
+    --cor-cardH1-azul: #99BBEC;
+    --cor-cardH1-verde: #79D48A;
+    --cor-cardH1-vermelho: #F88080;
+
+    --cor-cardP-azul: #99BBEC;
+    --cor-cardP-verde: #79D48A;
+    --cor-cardP-vermelho: #F88080;
+
+
+    /*REGISTRO CLIENTE*/
+    --cor-CadModal: #2D3748;
+    --cor-CadModal-texto: #EAECEE;
+
+
+
     --btnAzul-color: #3498DB;
     --btnAzul-hover: #5DADE2;
     --btnAzul-pressed: #2E86C1;
@@ -13,10 +52,19 @@
     --bntBranco-hover: #4A6572;
     --bntBranco-pressed: #2C3E50;
     --bntBranco-borda: #4A6572;
+
     --btnImprimir-color: #F39C12;
-    --btnImprimir-hover: #F5B041;
-    --btnImprimir-pressed: #D68910;
-    --btnImprimir-borda: #F39C12;
+    --btnImprimir-hover: #F5A623;
+    --btnImprimir-pressed: #E18E0A;
+    --btnImprimir-borda: #E18E0A;
+    --btnImprimir-txt: #2D3748;
+
+    --btnExcluir-color: #E74C3C;
+    --btnExcluir-hover: #EC7063;
+    --btnExcluir-pressed: #C0392B;
+    --btnExcluir-borda: #C0392B;
+
+    --btnEditar-color: #70C930;
     --btnExcluir-color: #E74C3C;
     --btnExcluir-hover: #EC7063;
     --btnEditar-color: #2ECC71;
@@ -47,4 +95,22 @@
 
 .darkmode .form input {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    caret-color: var(--cor-texto-escuro);
+}
+
+.darkmode #form-register-adm .input {
+    /* ... outras propriedades ... */
+    caret-color: var(--cor-texto-escuro);
+}
+
+#logo-darkD {
+    display: none;
+}
+
+.darkmode #logo-darkD {
+    display: block;
+}
+
+.darkmode #logo-lightD {
+    display: none;
 }

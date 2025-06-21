@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="/CRUDS/style.css" />
     <link rel="stylesheet" href="/CRUDS/styles/dashboard.css" />
+    <link rel="stylesheet" href="/CRUDS/styles/dark-theme.css" />
   </head>
 
   <body id="body-layout-principal">
@@ -49,9 +50,15 @@
       <nav>
         <div class="logo">
           <img
-            id="logo"
+            id="logo-lightD"
             src="/CRUDS/Img/Logo_NomeDeLado_NAVBAR.PNG"
-            alt="logo"
+            alt="logo-darkD"
+            width="163px"
+          />
+          <img
+            id="logo-darkD"
+            src="/CRUDS/Img/LOGO_BRANCA_FUNDOBRANCO.png"
+            alt="logo-lightD"
             width="163px"
           />
         </div>
@@ -75,25 +82,28 @@
       <!-- COMEÇO DA MAIN -->
       <main>
         <div class="cards-container">
-          <div class="card">
-            <h1 style=" color:rgb(65, 117, 12); font-family: 'Poppins', sans-serif;" id="totalCadastros">100</h1>
+          <div class="card card-azul">
+            <h1>87</h1>
             <p>Total de cadastros</p>
           </div>
 
-          <div class="card">
-            <h1 style=" color:rgb(10, 99, 126); font-family: 'Poppins', sans-serif;">10</h1>
+          <div class="card card-verde">
+            <h1>15</h1>
             <p>Cadastros no último mês</p> 
           </div>
 
-          <div class="card">
-            <h1 style=" color:rgb(206, 43, 43); font-family: 'Poppins', sans-serif;">10</h1>
+          <div class="card card-vermelho">
+            <h1>7</h1>
             <p>Cadastros Inativos</p> 
           </div>
         </div>
 
         <!-- COMEÇO LISTA -->
         <div class="lista-cadastros-container">
-          <h2>Últimos cadastros</h2>
+          <div class="titulo-lista-container">
+            <h2>Últimos cadastros</h2>
+          </div>
+          <div class="tabela-container">
           <table id="tabela-cadastros">
             <thead>
               <tr>

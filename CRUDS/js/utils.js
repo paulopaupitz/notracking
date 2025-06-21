@@ -30,20 +30,33 @@ export function toggleDarkMode() {
 }
 
 
+export function loginAdmin() {
+  console.log("Função loginAdmin chamada");
+  
+  const email = document.getElementById("txtEmail").value;
+  const senha = document.getElementById("pwd").value;
+  
+  console.log("Email:", email);
+  console.log("Senha:", senha);
+  
+  if (email.trim() === "" || senha.trim() === "") {
+    console.log("I'm sorry, Dave. I'm afraid I can't do that")
+    alert("Por favor, preencha todos os campos!");
+    return;
+  }
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    console.log("I'm sorry, Dave. I'm afraid I can't do that")
+    alert("Por favor, insira um email válido!");
+    return;
+  }
+  alert("Login realizado com sucesso! Redirecionando...");
+  setTimeout(() => {
+    window.location.href = "dashboard.html";
+  }, 1500);
+}
 
-
-
-// export function loginAdmin() {
-//   const email = document.getElementById("txtEmail").value;
-//   const senha = document.getElementById("pwd").value;
-//   const admin = getLocalStorageAdmin();
-//   const adminEncontrado = admin.find(admin => admin.email === email && admin.senha === senha);
-//   if (adminEncontrado) {
-//     window.location.href = "/CRUDS/pages/login.html";
-//   } else {
-//     alert("Email ou senha incorretos");
-//   }
-// }
 
 
 

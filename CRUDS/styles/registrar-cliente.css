@@ -1,33 +1,18 @@
 /* FORMULÁRIOS REGISTRO */
 .container-register {
+  height: 80%;
   display: flex;
   align-items: center;
   width: auto;
   padding: 15px;
-  background-color: #FAFAFA;
+  background-color: var(--cor-CadModal);
   border: 10px 0 10px 0 solid transparent;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  margin-top: 7px;
+  margin-top: 50px;
 }
-
-
-/*não sei o que esse tava fazendo aqui*/
-/* #body-register {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FAFAFA;
-} *
-/* #main-cadastro { esse era só pra testar
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-} */
 
 #form-register {
   width: 100%;
@@ -49,14 +34,22 @@
   width: 100%;
 }
 
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  color: var(--cor-texto-escuro);
+  font-size: 1.2em;
+  font-family: Helvetica;
+}
+
 /* foco da borda dos inputs */
 .form-input>input:focus {
-  outline: none;
+  outline: 1px solid var(--cor-azul-cinza-400);
 }
 
 .form-input>textarea:focus {
-  outline: none;
+  outline: 1px solid var(--cor-azul-cinza-400);
 }
+
 
 /* fim foco  */
 
@@ -73,7 +66,7 @@
 }
 
 #statusContainer input[type="checkbox"] {
-  /* tamanho natural do checkbox */
+  color: var(--cor-CadModal-texto);
   width: auto;
   height: auto;
   margin: 0;
@@ -82,14 +75,13 @@
 .form-input label {
   margin-bottom: 6px;
   font-weight: 600;
-  font-size: 14px;
-  color: #4A5568;
+  font-size: 1.1em;
+  color: var(--cor-CadModal-texto);
   text-align: start;
 }
 
-
 #dataNascimento {
-  width: 150px;
+  width: 180px;
 }
 
 .form-input .input,
@@ -102,9 +94,11 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'Helvetica';
+  color: var(--cor-texto-escuro);
+  caret-color: var(--cor-texto-escuro);
 }
 
-/* Estilo para os Textareas do formulário */
 .form-input textarea {
   min-height: 120px;
   resize: none;
@@ -119,44 +113,57 @@
 }
 
 .form-buttons button {
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.15s ease-out;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#buttonCadastrar {
+.btnCadastrar {
   background-color: var(--btnAzul-color);
   color: var(--btnTxtClaro-color);
+  border: 2px solid #202e3d;
+  padding: 12px 25px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25)
 }
 
-#buttonCadastrar:hover {
+.btnCadastrar:hover {
   background-color: var(--btnAzul-hover);
-  /* transform: translateY(-2px); */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonCadastrar:active {
+.btnCadastrar:active {
   background-color: var(--btnAzul-pressed);
-
-  /* transform: translateY(0px); */
+  border-color: #1A252F;
+  transform: translateY(0px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25)
 }
 
-#buttonLimpar {
+.btnLimpar {
   background-color: var(--bntBranco-color);
   color: var(--btnTxtEscuro-color);
+  border: 2px solid var(--bntBranco-borda);
+  padding: 12px 25px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonLimpar:hover {
+.btnLimpar:hover {
   background-color: var(--bntBranco-hover);
   color: var(--btnTxtEscuro-color);
-  /* transform: translateY(-2px); */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
 }
 
-#buttonLimpar:active {
+.btnLimpar:active {
   background-color: var(--bntBranco-pressed);
-  /* transform: translateY(0px); */
+  transform: translateY(0px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -179,7 +186,7 @@
 }
 
 .modal-content {
-  background-color: var(--backgroundContainerLogin-color);
+  background-color: var(--cor-CadModal);
   padding: 20px;
   border-radius: 8px;
   width: 90%;

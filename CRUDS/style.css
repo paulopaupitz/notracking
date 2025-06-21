@@ -6,6 +6,7 @@
     --cor-azulEscuro-400: #A0AEC0;
     --cor-azulEscuro-700: #2D3748;
     --cor-azulEscuro-900: #1A202C;
+
     --cor-azulMarinho-100: #E6E7F2;
     --cor-azulMarinho-200: #C0C4E4;
     --cor-azulMarinho-300: #98A0D6;
@@ -16,35 +17,68 @@
     --cor-azulMarinho-800: #192049;
     --cor-azulMarinho-900: #0B0E29;
 
-    --cor-azul-cinza-100: #F1F3F5;/* Mais claro, para fundos de página */
+    --cor-azul-cinza-100: #F1F3F5;
+    /* Mais claro, para fundos de página */
     --cor-azul-cinza-200: #DEE2E6;
     --cor-azul-cinza-300: #C9CFD7;
-    --cor-azul-cinza-400: #B0B8C1; /* <<< Sua cor original */
+    --cor-azul-cinza-400: #B0B8C1;
+    /* <<< Sua cor original */
     --cor-azul-cinza-500: #949DA8;
-    --cor-azul-cinza-600: #778390;/* Bom para textos secundários */
+    --cor-azul-cinza-600: #778390;
+    /* Bom para textos secundários */
     --cor-azul-cinza-700: #5C6877;
     --cor-azul-cinza-800: #404D5C;
-    --cor-azul-cinza-900: #263240;/* Mais escuro, para textos principais */
+    /*cor header*/
+    --cor-azul-cinza-900: #263240;
+    /* Mais escuro, para textos principais */
+    --cor-Preto: #000000;
+
+    --cor-fundo-body: var(--cor-azul-cinza-300);
+    --cor-fundo-bodyLogin: var(--cor-azul-cinza-200);
+    --cor-fundo-nav: var(--cor-azul-cinza-100);
+    --cor-fundo-header: var(--cor-azul-cinza-800);
+    --cor-fundo-main: #F8FAFC;
+
+    --cor-fundo-input: var(--cor-azulEscuro-200);
+    --cor-CadastrosContainer: var(--cor-azul-cinza-200);
+    --cor-CadModal: var(--cor-azul-cinza-300);
+    --color-ContainerLogin: var(--cor-azulEscuro-400);
+
+    --cor-borda-sidebar: var(--cor-azul-cinza-400);
+    --cor-fundo-sidebar-hover: var(--cor-azul-cinza-300);
+
+
+    /* CONTAINER LISTA CADASTRO*/
+    --cor-linhas-tabela: #C9CFD7;
+    --cor-tabela-hover: var(--cor-azul-cinza-300);
+    --cor-thead-table: var(--cor-azul-cinza-300);
+    --cor-CadastrosContainer: var(--cor-azul-cinza-200);
 
 
 
-    --cor-fundo-body: ;
-    --cor-fundo-modal: ;
-    --cor-fundo-nav: ;
-    --cor-fundo-superficie: ;
-    --cor-fundo-pagina: ;
-    --cor-fundo-pagina: ;
+    /*CARDS*/
+    --cor-fundo-cards: var(--cor-azul-cinza-100);
+    --cor-cardH1-azul: #326ab2;
+    --cor-cardH1-verde: #2E942F;
+    --cor-cardH1-vermelho: #fb0b0bfb;
 
-    --cor-texto-principal: ;
-    --cor-texto-secundario: ;
+    --cor-cardP-azul: #326ab2;
+    --cor-cardP-verde: #267D28;
+    --cor-cardP-vermelho: #E00000;
 
-    --header-color: #2C3E50E1;
-    --main-color: #F0F0F0;
-    --nav-color: #FFF;
-    --backgroundBodyPadrao-color: #B0B8C1;
-    --backgroundPadraoDash-color: #E0E0E0;
-    --backgroundContainerLogin-color: #F5F5F5;
-    --cards-Branco-color: #F5F5F5;
+
+    /*REGISTRO CLIENTE*/
+    --cor-CadModal: var(--cor-azul-cinza-300);
+    --cor-CadModal-texto: var(--cor-azul-cinza-900);
+
+
+    --cor-textoPS-claro: #F0F6F7;
+    --cor-texto-secundario: #362b2b;
+    --cor-texto-claro: #F0F6F7;
+    --cor-texto-escuro: #000000;
+    --btnImprimir-txt: #F0F6F7;
+
+
     --btnAzul-color: #2C3E50;
     --btnAzul-hover: #34495E;
     --btnAzul-pressed: #1A252F;
@@ -60,28 +94,14 @@
     --btnExcluir-hover: #F10A21;
     --btnEditar-color: #70C930;
     --btnEditar-hover: #54AC23;
-    --bordaEscura-color: ;
     --bordaClara-color: #CED4DA;
-    --placeholder-text: ;
     --btnLimpar-hover: #D3D9DF;
     --btnLimpar-pressed: #C0C7CF;
     --btnTxtEscuro-color: #212529;
     --btnTxtClaro-color: #F0F6F7;
-    --TextoClaro-color: #F0F6F7;
-    --TextoEscuro-color: #000000;
     --Input-color: #EDE7E7;
 
 }
-
-
-
-
-
-
-
-
-
-/* Azul marinho ou azul escuro (por exemplo, #002b4f, #1a3a5e) para o fundo, trocar depois */
 
 html {
     height: 100%;
@@ -93,7 +113,7 @@ html {
 }
 
 body {
-    background-color: var(--backgroundPadraoDash-color);
+    background-color: var(--cor-fundo-body);
     color: var(-TextoEscuro-color);
     font-family: sans-serif;
     margin: 0;
@@ -117,25 +137,206 @@ body {
     grid-template-areas:
         "nav header"
         "nav main";
-    gap: 32px 0;
+    gap: 31px 0;
 }
 
 /* Áreas do grid */
 header {
     grid-area: header;
-    background-color: var(--header-color);
+    background-color: var(--cor-fundo-header);
 }
 
 nav {
     grid-area: nav;
-    background-color: var(--nav-color);
+    background-color: var(--cor-fundo-nav);
 }
 
 main {
     grid-area: main;
-    background-color: var(--main-color);
 }
 
+/* Estilo do cabeçalho */
+.container>header {
+    display: flex;
+    align-items: center;
+    border-radius: 1px;
+    padding: 0 15px 0 0;
+    /* margin-right: 70px; */
+    gap: 16px 0px;
+}
+
+.container>main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+.container>nav {
+    display: grid;
+    width: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+
+.container>header>h4 {
+    display: flex;
+    color: var(--TextoClaro-color);
+}
+
+#icone-pesquisa {
+    color: var(--cor-texto-escuro);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesquisar {
+    background-color: var(--Input-color);
+    width: 350px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    margin: 0;
+    /* Margem removida para usar o 'gap' do header */
+}
+
+.pesquisar::placeholder {
+    color: var(--cor-texto-escuro);
+    font-size: 1.3em;
+}
+
+.pesquisar:focus {
+    outline: 1px solid var(--cor-azul-cinza-400);
+}
+
+.darkmode .pesquisar:focus {
+    color: var(--cor-texto-principalBranco);
+}
+
+#perfil {
+    margin-left: auto;
+    color: var(--cor-textoPS-claro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#sair {
+    color: var(--cor-textoPS-claro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#perfil h4 {
+
+    font-size: medium;
+}
+
+#perfil:hover {
+    background-color: rgba(206, 188, 188, 0.199);
+    border-radius: 5px;
+}
+
+#sair:hover {
+    background-color: rgba(206, 188, 188, 0.199);
+    border-radius: 5px;
+}
+
+#sair h3 {
+    font-size: medium;
+}
+
+
+/* Estilo da navegação */
+.container>nav {
+    display: grid;
+    width: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}
+
+/* Estilo do logo */
+/* .container>nav .logo {
+    width: 50px;
+    margin-top: 1px;
+    height: 70px;
+} */
+
+/* Estilo da barra lateral */
+.container>nav .sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* Estilo dos links da navegação */
+.container>nav .sidebar a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--TextoEscuro-color);
+    padding: 0 25px;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--cor-borda-sidebar);
+    gap: 5px;
+}
+
+.container>nav .sidebar a:last-child {
+    border-bottom: 1px solid var(--cor-borda-sidebar);
+}
+
+.container>nav .sidebar a:hover {
+    background-color: var(--cor-fundo-sidebar-hover);
+}
+
+.container>nav .sidebar a h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+}
+
+
+/* Estilo da área principal */
+.container>main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-main);
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+}
+
+/* .container,
+.container-register,
+.lista-cadastros-container {
+    background: #FAFAFA;
+} */
 /* Estilo do formulário */
 .form {
     display: flex;
@@ -147,7 +348,7 @@ main {
 
 /* Estilo dos campos de input */
 .form input {
-    background-color: var(--Input-color);
+    background-color: var(--bntBranco-color);
     position: initial;
     width: 343px;
     height: 52px;
@@ -201,187 +402,6 @@ main {
 }
 
 
-/* Estilo do cabeçalho */
-.container>header {
-    display: flex;
-    align-items: center;
-    border-radius: 1px;
-    padding: 0 15px;
-    /* margin-right: 70px; */
-    gap: 16px 6px;
-}
-
-.container>main {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    border-radius: 5px;
-    margin-right: 70px;
-    margin-bottom: 20px;
-    overflow-y: auto;
-}
-
-.container>nav {
-    display: grid;
-    width: 200px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    box-sizing: border-box;
-}
-
-
-.container>header>h4 {
-    display: flex;
-    color: var(--cards-Branco-color);
-}
-
-#icone-pesquisa {
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pesquisar {
-    background-color: var(--Input-color);
-    width: 350px;
-    height: 40px;
-    border: 5px solid transparent;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    margin: 0;
-    /* Margem removida para usar o 'gap' do header */
-}
-
-.pesquisar::placeholder {
-    color: var(--TextoEscuro-color);
-
-}
-
-.pesquisar:focus {
-    outline: none;
-}
-
-#perfil {
-    margin-left: auto;
-    /* Empurra os itens seguintes para a direita */
-    color: var(--TextoClaro-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-#sair {
-    color: var(--TextoClaro-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-#perfil h4 {
-    color: var(--TextoClaro-color);
-    font-size: medium;
-}
-
-#perfil:hover {
-    background-color: rgba(206, 188, 188, 0.199);
-    border-radius: 5px;
-}
-
-#sair:hover {
-    background-color: rgba(206, 188, 188, 0.199);
-    border-radius: 5px;
-}
-
-#sair h3 {
-    color: var(--TextoClaro-color);
-    font-size: medium;
-}
-
-
-/* Estilo da navegação */
-.container>nav {
-    display: grid;
-    width: 200px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    background-color: var(--nav-color);
-    box-sizing: border-box;
-}
-
-/* Estilo do logo */
-/* .container>nav .logo {
-    width: 50px;
-    margin-top: 1px;
-    height: 70px;
-} */
-
-/* Estilo da barra lateral */
-.container>nav .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
-    padding: 5px 0;
-    color: #333;
-}
-
-
-/* Estilo dos links da navegação */
-.container>nav .sidebar a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-left: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* .container>nav .sidebar a {} */
-
-
-
-.container>nav .sidebar a:hover {
-    background-color: var(--cards-Branco-color);
-    color: #000;
-    border-radius: 5px;
-}
-
-
-/* Estilo da área principal */
-.container>main {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--main-color);
-    padding: 0 20px;
-    border-radius: 5px;
-    margin-right: 70px;
-    margin-bottom: 20px;
-    overflow-y: auto;
-}
-
-/* .container,
-.container-register,
-.lista-cadastros-container {
-    background: #FAFAFA;
-} */
-
-
 #interruptor {
     height: 50px;
     width: 50px;
@@ -408,8 +428,6 @@ main {
     transform: scale(1.05) translateY(2px);
     filter: none;
 }
-
-#interruptor svg {}
 
 #interruptor svg:last-child {
     display: none;
