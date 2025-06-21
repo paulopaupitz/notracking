@@ -67,7 +67,7 @@ export function saveAdmin() {
     createAdmin(admin);
     alert("Administrador cadastrado com sucesso!");
     clearFieldsAdmin();
-    window.location.href = "/CRUDS/pages/login.html";
+    window.location.href = "/CRUDS/pages/index.html";
     console.log("Cadastrando Administrador");
   }
 }

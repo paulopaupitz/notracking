@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnVoltar = document.getElementById("btnVoltar");
   if (btnVoltar) {
-    btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/login.html");
+    btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/index.html");
   }
 
   const interruptor = document.getElementById("interruptor");

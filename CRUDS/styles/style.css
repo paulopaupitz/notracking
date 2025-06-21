@@ -18,19 +18,15 @@
     --cor-azulMarinho-900: #0B0E29;
 
     --cor-azul-cinza-100: #F1F3F5;
-    /* Mais claro, para fundos de página */
     --cor-azul-cinza-200: #DEE2E6;
     --cor-azul-cinza-300: #C9CFD7;
     --cor-azul-cinza-400: #B0B8C1;
-    /* <<< Sua cor original */
+
     --cor-azul-cinza-500: #949DA8;
     --cor-azul-cinza-600: #778390;
-    /* Bom para textos secundários */
     --cor-azul-cinza-700: #5C6877;
     --cor-azul-cinza-800: #404D5C;
-    /*cor header*/
     --cor-azul-cinza-900: #263240;
-    /* Mais escuro, para textos principais */
     --cor-Preto: #000000;
 
     --cor-fundo-body: var(--cor-azul-cinza-300);
@@ -123,7 +119,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* body para login.html e cadastro-admin.html */
+/* body para index.html e cadastro-admin.html */
 #body-layout-centralizado {
     display: flex;
     flex-direction: column;
@@ -209,7 +205,6 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     margin: 0;
-    /* Margem removida para usar o 'gap' do header */
 }
 
 .pesquisar::placeholder {
@@ -277,13 +272,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Estilo do logo */
-/* .container>nav .logo {
-    width: 50px;
-    margin-top: 1px;
-    height: 70px;
-} */
-
 /* Estilo da barra lateral */
 .container>nav .sidebar {
     display: flex;
@@ -334,11 +322,7 @@ main {
     overflow-y: auto;
 }
 
-/* .container,
-.container-register,
-.lista-cadastros-container {
-    background: #FAFAFA;
-} */
+
 /* Estilo do formulário */
 .form {
     display: flex;
@@ -442,19 +426,3 @@ main {
 .darkmode #interruptor svg:last-child {
     display: block;
 }
-
-
-
-/* <------------DARK MODE --------------> */
-
-
-
-.body-padrao.dark-mode {}
-
-.body-padrao.dark-mode .container {}
-
-.body-padrao.dark-mode .container>header {}
-
-.body-padrao.dark-mode .container>nav {}
-
-.body-padrao.dark-mode .container>main {}

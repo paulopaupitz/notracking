@@ -99,7 +99,6 @@
 }
 
 .darkmode #form-register-adm .input {
-    /* ... outras propriedades ... */
     caret-color: var(--cor-texto-escuro);
 }
 
