@@ -1,24 +1,3 @@
-Exemplos baseados na sua situação:
-
-Se a mudança corrigiu um bug no login:
-
-fix(login): corrigir validação de e-mail ao submeter
-Ou, se a função era mais genérica dentro do login:
-
-fix(login): ajustar lógica da função handleApiResponse
-Se a mudança foi uma refatoração para melhorar o código da função sem alterar o que ela faz para o usuário:
-
-refactor(login): simplificar função de autenticação de usuário
-Ou:
-
-refactor(auth): otimizar processamento de dados na função de login
-Se a mudança adicionou uma pequena melhoria ou nova capacidade na função de login:
-
-feat(login): adicionar log detalhado para tentativas de login falhas
-
-
-
-        CORES
 
 ### Paleta Sugerida
 

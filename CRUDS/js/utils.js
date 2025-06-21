@@ -1,5 +1,3 @@
-import { getLocalStorageAdmin } from "./storage.js";
-
 export function inverterData(isoDate) {
   const [ano, mes, dia] = isoDate.split('-');
   return `${dia}/${mes}/${ano}`;
