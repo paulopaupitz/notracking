@@ -17,11 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const enterButton = document.getElementById("enterButton");
   if (enterButton) {
-    enterButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      autenticarAdmin();
-    });
+    enterButton.addEventListener("click", loginAdmin);
   }
+
 
   const cadastroButton = document.getElementById("buttonCadastrar");
   if (cadastroButton) {

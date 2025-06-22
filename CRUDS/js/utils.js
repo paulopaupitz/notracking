@@ -54,9 +54,3 @@ export function loginAdmin() {
     window.location.href = "dashboard.html";
   }, 1500);
 }
-
-
-
-
-
-
