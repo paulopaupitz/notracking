@@ -1,4 +1,4 @@
-import { saveClient, saveAdmin } from "./form.js";
+import { saveClient, saveAdmin, clearFields } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
 import { printDiv, toggleDarkMode, loadTheme, loginAdmin } from "./utils.js";
@@ -15,15 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const formRegister = document.getElementById("form-register");
+  if (formRegister) {
+    formRegister.addEventListener("submit", (e) => {
+      e.preventDefault();
+      saveClient();
+    });
+  }
+
   const enterButton = document.getElementById("enterButton");
   if (enterButton) {
     enterButton.addEventListener("click", loginAdmin);
   }
 
 
-  const cadastroButton = document.getElementById("buttonCadastrar");
+  const cadastroButton = document.getElementById("btnCadastrar");
   if (cadastroButton) {
     cadastroButton.addEventListener("click", saveClient);
+  }
+
+  const btnLimpar = document.getElementById("btnLimpar");
+  if (btnLimpar) {
+    btnLimpar.addEventListener("click", clearFields);
   }
 
   const tabela = document.querySelector("#dados-tabela");
@@ -54,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnVoltar = document.getElementById("btnVoltar");
   if (btnVoltar) {
-    btnVoltar.addEventListener("click", () => window.location.href = "/CRUDS/pages/index.html");
+    btnVoltar.addEventListener("click", () => window.location.href = "../index.html");
   }
 
   const interruptor = document.getElementById("interruptor");

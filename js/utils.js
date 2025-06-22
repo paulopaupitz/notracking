@@ -51,6 +51,6 @@ export function loginAdmin() {
   }
   alert("Login realizado com sucesso! Redirecionando...");
   setTimeout(() => {
-    window.location.href = "dashboard.html";
+    window.location.href = "pages/dashboard.html";
   }, 1500);
 }

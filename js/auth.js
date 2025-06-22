@@ -31,7 +31,7 @@ export function autenticarAdmin() {
 
   if (admin && admin.senha === senha) {
     // Autenticação bem-sucedida
-    window.location.href = "/CRUDS/pages/dashboard.html";
+    window.location.href = "pages/dashboard.html";
   } else {
     // Autenticação falhou
     alert("Email ou senha incorretos");
