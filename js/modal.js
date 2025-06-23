@@ -20,6 +20,7 @@ export function fillModal(client) {
   document.getElementById("modal-txtInteresse").value = client.interesses;
   document.getElementById("modal-txtSentimentos").value = client.sentimentos;
   document.getElementById("modal-txtValores").value = client.valores;
+  
 }
 
 export function isValidModalFields() {

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM carregado, inicializando pesquisa...');
+ 
   
   const searchInput = document.getElementById("txtBusca");
   

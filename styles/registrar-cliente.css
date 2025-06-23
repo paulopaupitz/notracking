@@ -1,17 +1,17 @@
 /* FORMULÁRIOS REGISTRO */
 .container-register {
-  height: 80%;
+  height: 88%;
   display: flex;
   align-items: center;
   width: auto;
-  padding: 15px;
+  padding: 45px;
   background-color: var(--cor-CadModal);
   border: 10px 0 10px 0 solid transparent;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 19px;
 }
 
 #form-register {
@@ -19,6 +19,25 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+#titulo-registro {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 1px;
+  margin-top: 1px;
+  color: var(--cor-texto-escuro);
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-color: var(--cor-texto-escuro);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  flex-shrink: 0;
+  margin-top: 10px;
 }
 
 .form-row {
@@ -108,7 +127,8 @@
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: -13px;
   /* justify-content: space-evenly; Discutir se isso seria boas práticas*/
 }
 

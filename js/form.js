@@ -51,7 +51,7 @@ export function saveClient() {
     }
     createClient(client);
     alert("Cliente cadastrado com sucesso!");
-    updateTable();
+    // updateTable();
     clearFields();
     console.log("Cadastrando Cliente");
   }
@@ -68,6 +68,5 @@ export function saveAdmin() {
     alert("Administrador cadastrado com sucesso!");
     clearFieldsAdmin();
     window.location.href = "index.html";
-    console.log("Cadastrando Administrador");
   }
 }

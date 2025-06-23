@@ -17,10 +17,12 @@
     --cor-borda-sidebar: #2D3748;
     --cor-fundo-sidebar-hover: #2D3748;
 
+    --cor-placeholders: #EAECEE;
+    --cor-activeHover: var(--cor-azul-cinza-200);
     --cor-texto-escuro: #EAECEE;
     --cor-texto-claro: #000000;
 
-    --cor-fundo-input:#34495E;
+    --cor-fundo-input: #34495E;
 
     /* CONTAINER LISTA CADASTRO*/
     --cor-CadastrosContainer: #263240;
@@ -112,4 +114,15 @@
 
 .darkmode #logo-lightD {
     display: none;
+}
+
+.darkmode .container>nav .sidebar a:hover {
+
+    background-color: transparent;
+    border-left: 4px solid var(--cor-activeHover);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+    /* text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7); */
+    border-radius: 5%;
+    transition: background-color 0.3s ease, color 0.3s ease, border-left 0.3s ease, text-shadow 0.3s ease;
+    
 }

@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  const cadastroButton = document.getElementById("btnCadastrar");
-  if (cadastroButton) {
-    cadastroButton.addEventListener("click", saveClient);
-  }
+   const cadastroButton = document.getElementById("btnCadastrar");
+   if (cadastroButton) {
+     cadastroButton.addEventListener("click", saveClient);
+   }
 
   const btnLimpar = document.getElementById("btnLimpar");
   if (btnLimpar) {
