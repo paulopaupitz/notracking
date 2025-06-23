@@ -59,7 +59,7 @@
     --btnImprimir-hover: #F5A623;
     --btnImprimir-pressed: #E18E0A;
     --btnImprimir-borda: #E18E0A;
-    --btnImprimir-txt: #2D3748;
+    --btnImprimir-txt: #252D3C;
 
     --btnExcluir-color: #E74C3C;
     --btnExcluir-hover: #EC7063;
@@ -124,5 +124,5 @@
     /* text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7); */
     border-radius: 5%;
     transition: background-color 0.3s ease, color 0.3s ease, border-left 0.3s ease, text-shadow 0.3s ease;
-    
+
 }

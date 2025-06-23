@@ -1,6 +1,5 @@
-import { createClient, createAdmin, readClient } from "./storage.js";
-import { updateTable } from "./table.js";
-
+import { createClient, createAdmin, readClient, getLocalStorageAdmin} from "./storage.js";
+// import { updateTable } from "./table.js"; pensar nisso depois
 
 export function isValidFields() {
   return document.getElementById("form-register").reportValidity();
@@ -44,7 +43,7 @@ export function saveClient() {
     };
 
     const dbClient = readClient();
-    const emailExiste = dbClient.some((c) => c.email === client.email)
+    const emailExiste = dbClient.some((c) => c.email === client.email);
     if (emailExiste) {
       alert("Erro: O e-mail informado já está em uso!");
       return;

@@ -247,8 +247,6 @@ main {
 #sair h3 {
     font-size: medium;
 }
-
-
 /* Estilo da navegação */
 .container>nav {
     display: grid;
