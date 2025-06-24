@@ -414,15 +414,12 @@ main {
   transform: scale(1.05) translateY(2px);
   filter: none;
 }
-
 #interruptor svg:last-child {
   display: none;
 }
-
 .darkmode #interruptor svg:first-child {
   display: none;
 }
-
 .darkmode #interruptor svg:last-child {
   display: block;
 }
