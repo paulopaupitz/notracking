@@ -8,17 +8,18 @@
 .container-terminal {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 320px;
+  padding: 10px 15px; 
+  min-height: 450px;  
   width: 320px;
   background-color: var(--color-ContainerLogin);
   border: 10px solid transparent;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  gap: 15px;
+  gap: 25px;
+  box-sizing: border-box; 
 }
-
 #form-register-adm {
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--cor-texto-escuro);
+  align-items: center;
 }
 
 #form-register-adm .input:focus {
@@ -80,13 +82,13 @@
 }
 
 #btnCadAdmin:hover {
-  background-color: #34495e;
+  background-color: var(--btnAzul-hover);
   border-color: #34495e;
   transform: translateY(-2px);
 }
 
 #btnCadAdmin:active {
-  background-color: #1a252f;
+  background-color: var(--btnAzul-pressed);
   border-color: #1a252f;
   transform: translateY(0px);
 }
@@ -103,14 +105,14 @@
 }
 
 #btnVoltar:hover {
-  background-color: #d3d9df;
+  background-color: var(--bntBranco-hover);;
   border-color: #b6bfc8;
-  color: #000000;
+  color: var(--btnTxtEscuro-color);;
   transform: translateY(-2px);
 }
 
 #btnVoltar:active {
-  background-color: #c0c7cf;
+  background-color: var(--bntBranco-pressed);
   border-color: #a9b1b9;
   transform: translateY(0px);
 }

@@ -1,6 +1,13 @@
-.lista-cadastros-container {
-  max-height: 700px;
+#imprimir {
   flex-grow: 1;
+  display: flex;
+  min-height: 0;
+  box-sizing: border-box;
+  background-color: var(--cor-CadastrosContainer);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 20px;
 }
 
 .tabela-container {
@@ -231,7 +238,7 @@
 
   #imprimir {
     position: absolute;
-    left: 5px;
+    left: 10px;
     top: 0;
   }
 }
