@@ -1,127 +1,126 @@
 #body-layout-centralizado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--cor-fundo-bodyLogin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--cor-fundo-bodyLogin);
 }
 .container-terminal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 320px;
-    width: 320px;
-    background-color: var(--color-ContainerLogin);
-    border: 10px solid transparent;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  width: 320px;
+  background-color: var(--color-ContainerLogin);
+  border: 10px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  gap: 15px;
 }
 
 #form-register-adm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 #form-register-adm .input::placeholder {
-    font-family: Helvetica;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: var(--cor-texto-escuro);
+  font-family: Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--cor-texto-escuro);
 }
 
 #form-register-adm .input:focus {
-    outline: 1px solid var(--bntBranco-color);
+  outline: 1px solid var(--bntBranco-color);
 }
 
 #form-register-adm .input {
-    background-color: var(--cor-fundo-input);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 250px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    border: 8px solid transparent;
-    border-radius: 8px;
-    border-image-slice: 1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+  background-color: var(--cor-fundo-input);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 8px solid transparent;
+  border-radius: 8px;
+  border-image-slice: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
-
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 #btnCadAdmin {
-    width: 250px;
-    height: 50px;
-    background-color: var(--btnAzul-color);
-    color: var(--btnTxtClaro-color);
-    border: none;
-    border-radius: 5px;
-    border-color: #2C3E50;
-    font-size: 18px;
-    gap: 10px;
+  width: 250px;
+  height: 50px;
+  background-color: var(--btnAzul-color);
+  color: var(--btnTxtClaro-color);
+  border: none;
+  border-radius: 5px;
+  border-color: #2c3e50;
+  font-size: 18px;
+  gap: 10px;
 }
 
 #btnCadAdmin:hover {
-    background-color: #34495E;
-    border-color: #34495E;
-    transform: translateY(-2px);
+  background-color: #34495e;
+  border-color: #34495e;
+  transform: translateY(-2px);
 }
 
 #btnCadAdmin:active {
-    background-color: #1A252F;
-    border-color: #1A252F;
-    transform: translateY(0px);
+  background-color: #1a252f;
+  border-color: #1a252f;
+  transform: translateY(0px);
 }
 
 #btnVoltar {
-    width: 250px;
-    height: 50px;
-    background-color: var(--bntBranco-color);
-    color: var(--btnTxtEscuro-color);
-    border-radius: 5px;
-    border-color: #ced4da;
-    font-size: 18px;
-    gap: 10px;
+  width: 250px;
+  height: 50px;
+  background-color: var(--bntBranco-color);
+  color: var(--btnTxtEscuro-color);
+  border-radius: 5px;
+  border-color: #ced4da;
+  font-size: 18px;
+  gap: 10px;
 }
 
 #btnVoltar:hover {
-    background-color: #d3d9df;
-    border-color: #b6bfc8;
-    color: #000000;
-    transform: translateY(-2px);
+  background-color: #d3d9df;
+  border-color: #b6bfc8;
+  color: #000000;
+  transform: translateY(-2px);
 }
 
 #btnVoltar:active {
-    background-color: #c0c7cf;
-    border-color: #a9b1b9;
-    transform: translateY(0px);
+  background-color: #c0c7cf;
+  border-color: #a9b1b9;
+  transform: translateY(0px);
 }
 
 .darkmode #form-register-adm .input {
-    background-color: var(--cor-fundo-input);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
-    caret-color: var(--cor-texto-escuro);
+  background-color: var(--cor-fundo-input);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+  caret-color: var(--cor-texto-escuro);
 }
 
 .darkmode #form-register-adm .input:focus {
-    outline: 1px solid var(--bntBranco-hover);
+  outline: 1px solid var(--bntBranco-hover);
 }

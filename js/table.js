@@ -4,7 +4,8 @@ import { inverterData } from "./utils.js";
 
 export function createRow(client, index) {
   const newRow = document.createElement("tr");
-  const statusColor = client.status === 'Ativo' ? 'status-ativo' : 'status-inativo';
+  const statusColor =
+    client.status === "Ativo" ? "status-ativo" : "status-inativo";
   newRow.innerHTML = `
             <td>${client.nome}</td>
             <td>${client.sobrenome}</td>

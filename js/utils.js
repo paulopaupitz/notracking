@@ -1,6 +1,5 @@
 import { getLocalStorageAdmin } from "./storage.js";
 
-
 export function inverterData(isoDate) {
   const [ano, mes, dia] = isoDate.split("-");
   return `${dia}/${mes}/${ano}`;
@@ -30,7 +29,6 @@ export function toggleDarkMode() {
 }
 
 // export function loginAdmin() {
-  
 
 //   const email = document.getElementById("txtEmail").value;
 //   const senha = document.getElementById("pwd").value;
@@ -56,11 +54,10 @@ export function toggleDarkMode() {
 //   }, 1500);
 // }
 export function loginAdmin() {
+  const emailInput = document.getElementById("txtEmail").value;
+  const senhaInput = document.getElementById("pwd").value;
 
-  const emailInput = document.getElementById('txtEmail').value;
-  const senhaInput = document.getElementById('pwd').value;
-
-  if(emailInput.trim() === "" || senhaInput.trim() === ""){
+  if (emailInput.trim() === "" || senhaInput.trim() === "") {
     alert("Por favor, preencha todos os campos!");
     return;
   }
@@ -72,21 +69,18 @@ export function loginAdmin() {
   }
 
   const dbAdmin = getLocalStorageAdmin();
-  
-  const adminEncontrado = dbAdmin.find((admin) => admin.email.toLowerCase() === emailInput.toLowerCase());
 
-  if(adminEncontrado && adminEncontrado.senha === senhaInput){
+  const adminEncontrado = dbAdmin.find(
+    (admin) => admin.email.toLowerCase() === emailInput.toLowerCase()
+  );
+
+  if (adminEncontrado && adminEncontrado.senha === senhaInput) {
     alert("Login realizado com sucesso! Redirecionando...");
     setTimeout(() => {
-    window.location.href = "pages/dashboard.html";
+      window.location.href = "pages/dashboard.html";
     }, 1500);
-  }else{
+  } else {
     console.log("I'm sorry, Dave. I'm afraid I can't do that");
     alert("E-mail ou senha incorretos.");
-    
   }
-
-
-
-
 }

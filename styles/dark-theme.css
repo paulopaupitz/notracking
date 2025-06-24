@@ -1,128 +1,122 @@
 .darkmode {
+  --cor-fundo-bodyLogin: #232a32;
+  --color-ContainerLogin: #2f3a48;
 
-    --cor-fundo-bodyLogin: #232A32;
-    --color-ContainerLogin: #2f3a48;
+  --cor-fundo-body: #121212;
 
-    --cor-fundo-body: #121212;
+  --cor-fundo-main: #232a32;
+  --cor-fundo-header: #1a202c;
+  --cor-fundo-nav: #1a202c;
 
-    --cor-fundo-main: #232A32;
-    --cor-fundo-header: #1A202C;
-    --cor-fundo-nav: #1A202C;
+  --backgroundPadraoDash-color: #242933;
+  --backgroundBodyPadrao-color: #1a252f;
 
-    --backgroundPadraoDash-color: #242933;
-    --backgroundBodyPadrao-color: #1A252F;
+  --cor-texto-principal: #eaecee;
 
-    --cor-texto-principal: #EAECEE;
+  --cor-borda-sidebar: #2d3748;
+  --cor-fundo-sidebar-hover: #2d3748;
 
-    --cor-borda-sidebar: #2D3748;
-    --cor-fundo-sidebar-hover: #2D3748;
+  --cor-placeholders: #eaecee;
+  --cor-activeHover: var(--cor-azul-cinza-200);
+  --cor-texto-escuro: #eaecee;
+  --cor-texto-claro: #000000;
 
-    --cor-placeholders: #EAECEE;
-    --cor-activeHover: var(--cor-azul-cinza-200);
-    --cor-texto-escuro: #EAECEE;
-    --cor-texto-claro: #000000;
+  --cor-fundo-input: #34495e;
 
-    --cor-fundo-input: #34495E;
+  /* CONTAINER LISTA CADASTRO*/
+  --cor-CadastrosContainer: #263240;
+  --cor-thead-table: #1a202c;
+  --cor-tabela-hover: #404d5c;
 
-    /* CONTAINER LISTA CADASTRO*/
-    --cor-CadastrosContainer: #263240;
-    --cor-thead-table: #1A202C;
-    --cor-tabela-hover: #404D5C;
+  /*CARDS*/
+  --cor-fundo-cards: #2d3748;
+  --cor-cardH1-azul: #99bbec;
+  --cor-cardH1-verde: #79d48a;
+  --cor-cardH1-vermelho: #f88080;
 
+  --cor-cardP-azul: #99bbec;
+  --cor-cardP-verde: #79d48a;
+  --cor-cardP-vermelho: #f88080;
 
-    /*CARDS*/
-    --cor-fundo-cards: #2D3748;
-    --cor-cardH1-azul: #99BBEC;
-    --cor-cardH1-verde: #79D48A;
-    --cor-cardH1-vermelho: #F88080;
+  /*REGISTRO CLIENTE*/
+  --cor-CadModal: #2d3748;
+  --cor-CadModal-texto: #eaecee;
 
-    --cor-cardP-azul: #99BBEC;
-    --cor-cardP-verde: #79D48A;
-    --cor-cardP-vermelho: #F88080;
+  --btnAzul-color: #3498db;
+  --btnAzul-hover: #5dade2;
+  --btnAzul-pressed: #2e86c1;
+  --bntBranco-color: #34495e;
+  --bntBranco-hover: #4a6572;
+  --bntBranco-pressed: #2c3e50;
+  --bntBranco-borda: #4a6572;
 
+  --btnImprimir-color: #ffa71b;
+  --btnImprimir-hover: #f5a623;
+  --btnImprimir-pressed: #e18e0a;
+  --btnImprimir-borda: #e18e0a;
+  --btnImprimir-txt: #252d3c;
 
-    /*REGISTRO CLIENTE*/
-    --cor-CadModal: #2D3748;
-    --cor-CadModal-texto: #EAECEE;
+  --btnExcluir-color: #e74c3c;
+  --btnExcluir-hover: #ec7063;
+  --btnExcluir-pressed: #c0392b;
+  --btnExcluir-borda: #c0392b;
 
-
-
-    --btnAzul-color: #3498DB;
-    --btnAzul-hover: #5DADE2;
-    --btnAzul-pressed: #2E86C1;
-    --bntBranco-color: #34495E;
-    --bntBranco-hover: #4A6572;
-    --bntBranco-pressed: #2C3E50;
-    --bntBranco-borda: #4A6572;
-
-    --btnImprimir-color: #ffa71b;
-    --btnImprimir-hover: #F5A623;
-    --btnImprimir-pressed: #E18E0A;
-    --btnImprimir-borda: #E18E0A;
-    --btnImprimir-txt: #252D3C;
-
-    --btnExcluir-color: #E74C3C;
-    --btnExcluir-hover: #EC7063;
-    --btnExcluir-pressed: #C0392B;
-    --btnExcluir-borda: #C0392B;
-
-    --btnEditar-color: #70C930;
-    --btnExcluir-color: #E74C3C;
-    --btnExcluir-hover: #EC7063;
-    --btnEditar-color: #2ECC71;
-    --btnEditar-hover: #58D68D;
-    --bordaEscura-color: #34495E;
-    --bordaClara-color: #34495E;
-    --placeholder-text: #8A9BA8;
-    --btnLimpar-hover: #4A6572;
-    --btnLimpar-pressed: #2C3E50;
-    --btnTxtEscuro-color: #EAECEE;
-    --btnTxtClaro-color: #1A252F;
-    --TextoClaro-color: #000000;
-    --TextoEscuro-color: #EAECEE;
-    --Input-color: #1A252F;
+  --btnEditar-color: #70c930;
+  --btnExcluir-color: #e74c3c;
+  --btnExcluir-hover: #ec7063;
+  --btnEditar-color: #2ecc71;
+  --btnEditar-hover: #58d68d;
+  --bordaEscura-color: #34495e;
+  --bordaClara-color: #34495e;
+  --placeholder-text: #8a9ba8;
+  --btnLimpar-hover: #4a6572;
+  --btnLimpar-pressed: #2c3e50;
+  --btnTxtEscuro-color: #eaecee;
+  --btnTxtClaro-color: #1a252f;
+  --TextoClaro-color: #000000;
+  --TextoEscuro-color: #eaecee;
+  --Input-color: #1a252f;
 }
 
 #logo-dark {
-    display: none;
+  display: none;
 }
 
 .darkmode #logo-dark {
-    display: block;
+  display: block;
 }
 
 .darkmode #logo-light {
-    display: none;
+  display: none;
 }
 
 .darkmode .form input {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
-    caret-color: var(--cor-texto-escuro);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  caret-color: var(--cor-texto-escuro);
 }
 
 .darkmode #form-register-adm .input {
-    caret-color: var(--cor-texto-escuro);
+  caret-color: var(--cor-texto-escuro);
 }
 
 #logo-darkD {
-    display: none;
+  display: none;
 }
 
 .darkmode #logo-darkD {
-    display: block;
+  display: block;
 }
 
 .darkmode #logo-lightD {
-    display: none;
+  display: none;
 }
 
-.darkmode .container>nav .sidebar a:hover {
-
-    background-color: transparent;
-    border-left: 4px solid var(--cor-activeHover);
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
-    /* text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7); */
-    border-radius: 5%;
-    transition: background-color 0.3s ease, color 0.3s ease, border-left 0.3s ease, text-shadow 0.3s ease;
-
+.darkmode .container > nav .sidebar a:hover {
+  background-color: transparent;
+  border-left: 4px solid var(--cor-activeHover);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+  /* text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7); */
+  border-radius: 5%;
+  transition: background-color 0.3s ease, color 0.3s ease, border-left 0.3s ease,
+    text-shadow 0.3s ease;
 }

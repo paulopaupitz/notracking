@@ -3,8 +3,6 @@ import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
 import { printDiv, toggleDarkMode, loadTheme, loginAdmin } from "./utils.js";
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   loadTheme();
 
@@ -28,11 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     enterButton.addEventListener("click", loginAdmin);
   }
 
-
-   const cadastroButton = document.getElementById("btnCadastrar");
-   if (cadastroButton) {
-     cadastroButton.addEventListener("click", saveClient);
-   }
+  const cadastroButton = document.getElementById("btnCadastrar");
+  if (cadastroButton) {
+    cadastroButton.addEventListener("click", saveClient);
+  }
 
   const btnLimpar = document.getElementById("btnLimpar");
   if (btnLimpar) {
@@ -67,12 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnVoltar = document.getElementById("btnVoltar");
   if (btnVoltar) {
-    btnVoltar.addEventListener("click", () => window.location.href = "../index.html");
+    btnVoltar.addEventListener(
+      "click",
+      () => (window.location.href = "../index.html")
+    );
   }
 
   const interruptor = document.getElementById("interruptor");
   if (interruptor) {
     interruptor.addEventListener("click", toggleDarkMode);
   }
-
 });

@@ -1,4 +1,9 @@
-import { createClient, createAdmin, readClient, getLocalStorageAdmin} from "./storage.js";
+import {
+  createClient,
+  createAdmin,
+  readClient,
+  getLocalStorageAdmin,
+} from "./storage.js";
 // import { updateTable } from "./table.js"; pensar nisso depois
 
 export function isValidFields() {
@@ -43,7 +48,9 @@ export function saveClient() {
     };
 
     const dbClient = readClient();
-    const emailExiste = dbClient.some((c) => c.email === client.email);
+    const emailExiste = dbClient.some(
+      (c) => c.email.toLowerCase() === client.email.toLowerCase()
+    );
     if (emailExiste) {
       alert("Erro: O e-mail informado já está em uso!");
       return;
@@ -58,14 +65,31 @@ export function saveClient() {
 
 export function saveAdmin() {
   if (isValidFieldsAdmin()) {
+    const emailAdmin = document.getElementById("txtEmailAdmin").value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailAdmin)) {
+      alert("Por favor, insira um email válido!");
+      return;
+    }
+
+    const dbAdmin = getLocalStorageAdmin();
+    const emailExiste = dbAdmin.some(
+      (a) => a.email.toLowerCase() === emailAdmin.toLowerCase()
+    );
+    if (emailExiste) {
+      alert("Erro: O e-mail do administrador já está em uso!");
+      return;
+    }
+
     const admin = {
       nome: document.getElementById("txtNomeAdmin").value,
-      email: document.getElementById("txtEmailAdmin").value,
+      email: emailAdmin,
       senha: document.getElementById("txtPWDAdmin").value,
     };
     createAdmin(admin);
     alert("Administrador cadastrado com sucesso!");
     clearFieldsAdmin();
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   }
 }

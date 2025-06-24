@@ -4,7 +4,6 @@ export const getLocalStorage = () =>
 export const setLocalStorage = (dbClient) =>
   localStorage.setItem("dbClient", JSON.stringify(dbClient));
 
-
 //CREATE/CRIAR CLIENTE
 export const createClient = (client) => {
   const dbClient = getLocalStorage();

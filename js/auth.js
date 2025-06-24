@@ -16,7 +16,7 @@ function validarCampos() {
 
 export function autenticarAdmin() {
   const dados = validarCampos();
-  
+
   if (!dados) {
     return false;
   }
@@ -27,7 +27,9 @@ export function autenticarAdmin() {
   const adminsCadastrados = getLocalStorageAdmin();
 
   // Busca o administrador pelo email
-  const admin = adminsCadastrados.find(a => a.email.toLowerCase() === email.toLowerCase());
+  const admin = adminsCadastrados.find(
+    (a) => a.email.toLowerCase() === email.toLowerCase()
+  );
 
   if (admin && admin.senha === senha) {
     // Autenticação bem-sucedida

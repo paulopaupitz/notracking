@@ -20,7 +20,6 @@ export function fillModal(client) {
   document.getElementById("modal-txtInteresse").value = client.interesses;
   document.getElementById("modal-txtSentimentos").value = client.sentimentos;
   document.getElementById("modal-txtValores").value = client.valores;
-  
 }
 
 export function isValidModalFields() {
@@ -35,7 +34,9 @@ export function saveEdit() {
     nome: document.getElementById("modal-txtNome").value,
     sobrenome: document.getElementById("modal-txtSobrenome").value,
     dtNasc: document.getElementById("modal-dataNascimento").value,
-    status: document.getElementById("modal-status").checked ? "Ativo" : "Inativo",
+    status: document.getElementById("modal-status").checked
+      ? "Ativo"
+      : "Inativo",
     email: document.getElementById("modal-txtEmail").value,
     endereco: document.getElementById("modal-txtEndereco").value,
     outrasInfos: document.getElementById("modal-txtInfo").value,

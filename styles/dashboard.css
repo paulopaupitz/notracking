@@ -1,164 +1,161 @@
 .lista-cadastros-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border: 10px solid transparent;
-    border-radius: 8px;
-    border-image-slice: 1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    margin-bottom: 32px;
-    margin-top: 13px;
-    background-color: var(--cor-CadastrosContainer);
-    box-shadow: none;
-    padding: 32px;
-    max-height: 570px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 10px solid transparent;
+  border-radius: 8px;
+  border-image-slice: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  margin-top: 13px;
+  background-color: var(--cor-CadastrosContainer);
+  box-shadow: none;
+  padding: 32px;
+  max-height: 570px;
 }
 
 .titulo-lista-container {
-    text-align: left;
-    padding-left: 10px;  
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--cor-texto-escuro);
-    margin-bottom: 6px;
-    margin-top: -41px;
-    text-decoration: underline;
-    text-decoration-color: var(--cor-texto-escuro);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    text-decoration-style: solid;
-    text-decoration-thickness: 2px;
-    flex-shrink: 0;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--cor-texto-escuro);
+  margin-bottom: 6px;
+  margin-top: -41px;
+  text-decoration: underline;
+  text-decoration-color: var(--cor-texto-escuro);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  flex-shrink: 0;
 }
 
-
-
 .body-layout-principal {
-    background-color: var(--bodyPadrao-color);
-    text-align: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  background-color: var(--bodyPadrao-color);
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Container dos cards */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-bottom: 32px;
-    margin-top: 32px;
-    padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  padding: 0 32px;
 }
 
 /* Estilo dos cards */
 .card {
-    height: 150px;
-    background-color: var(--cor-fundo-cards);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: var(--cor-texto-escuro);
-    overflow: hidden;
-    font-family: Helvetica;
-    padding: 32px 24px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  height: 150px;
+  background-color: var(--cor-fundo-cards);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: var(--cor-texto-escuro);
+  overflow: hidden;
+  font-family: Helvetica;
+  padding: 32px 24px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.card-azul>h1 {
-    color: var(--cor-cardH1-azul);
-    font-size: 40px;
-}   
-.card-verde>h1 {
-    color: var(--cor-cardH1-verde);
-    font-size: 40px;
+.card-azul > h1 {
+  color: var(--cor-cardH1-azul);
+  font-size: 40px;
 }
-.card-vermelho>h1 {
-    color: var(--cor-cardH1-vermelho);
-    font-size: 40px;
+.card-verde > h1 {
+  color: var(--cor-cardH1-verde);
+  font-size: 40px;
+}
+.card-vermelho > h1 {
+  color: var(--cor-cardH1-vermelho);
+  font-size: 40px;
 }
 .card-verde p {
-    color: var(--cor-cardP-verde); 
-    font-weight: bold;
-    font-size: 20px;
+  color: var(--cor-cardP-verde);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .card-azul p {
-    color: var(--cor-cardP-azul); 
-    font-weight: bold;
-    font-size: 20px;
+  color: var(--cor-cardP-azul);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .card-vermelho p {
-    color: var(--cor-cardP-vermelho); 
-    font-weight: bold;
-    font-size: 20px;
+  color: var(--cor-cardP-vermelho);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .tabela-container {
-    overflow-y: auto;
-    flex-grow: 1;
+  overflow-y: auto;
+  flex-grow: 1;
 }
-
 
 #tabela-cadastros {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Helvetica;
-    font-size: 17px;
-    color: #444;    
-    background-color: var(--cor-CadastrosContainer);
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Helvetica;
+  font-size: 17px;
+  color: #444;
+  background-color: var(--cor-CadastrosContainer);
 }
 #tabela-cadastros thead {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: var(--cor-thead-table);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--cor-thead-table);
 }
 #tabela-cadastros thead th {
-    text-align: center;
-    font-weight: 600;
-    color: var(--cor-texto-escuro);
-    font-weight: bold;
-    border-bottom: 1px solid var(--cor-azul-cinza-900);
-    padding: 12px 8px;
-    letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--cor-texto-escuro);
+  font-weight: bold;
+  border-bottom: 1px solid var(--cor-azul-cinza-900);
+  padding: 12px 8px;
+  letter-spacing: 1px;
 }
 
 #tabela-cadastros tbody tr {
-    border-bottom: 1px solid var(--cor-linhas-tabela);
+  border-bottom: 1px solid var(--cor-linhas-tabela);
 }
 #tabela-cadastros tbody tr:hover {
-    background-color: var(--cor-tabela-hover);
+  background-color: var(--cor-tabela-hover);
 }
 
 #tabela-cadastros tbody td {
-    padding: 12px 8px;
-    font-weight: 400;
-    text-align: center;
-    color: var(--cor-texto-escuro);
-    font-family: Helvetica;
-    font-size: 1.1em;
+  padding: 12px 8px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--cor-texto-escuro);
+  font-family: Helvetica;
+  font-size: 1.1em;
 }
 
 .status-ativo {
-    color: #4dc84f;
+  color: #4dc84f;
 }
 
 .status-inativo {
-    color: #ff1f1f;
+  color: #ff1f1f;
 }
 .darkmode .status-ativo {
-    color: #14ff18c9;
+  color: #14ff18c9;
 }
 
 .darkmode .status-inativo {
-    color: #ff1f1fac;
+  color: #ff1f1fac;
 }
