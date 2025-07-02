@@ -8,13 +8,16 @@ main {
 }
 
 .form-input > input {
+  position: relative;
   background-color: var(--cor-fundo-input);
   caret-color: var(--cor-texto-escuro);
   color: var(--cor-texto-escuro);
   font-family: Helvetica;
   font-size: 20px;
+  padding: 10px 40px 10px 10px; 
+  border: 1px solid transparent; 
+  transition: border-color 0.3s; 
 }
-
 .form-input > input::placeholder {
   font-family: Helvetica;
   font-weight: 500;
@@ -27,7 +30,27 @@ main {
 
 .form-input > input:focus {
   outline: 1px solid var(--bntBranco-color);
+  border-color: var(--bntBranco-color);
 }
+.form-input > input.error {
+  border-color: #ff0000; /* Vermelho */
+}
+.form-input > input.error::after {
+  content: "!";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: #ff0000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  pointer-events: none; 
+}
+
 
 .container-login {
   background-color: var(--color-ContainerLogin);
@@ -47,8 +70,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   width: 100%;
+  margin-top: 5px;
 }
 
 #enterButton {
@@ -87,4 +111,10 @@ main {
   background-color: var(--bntBranco-pressed);
   border-color: #a9b1b9;
   transform: translateY(0px);
+}
+#logo-light {
+  width: 160px;
+}
+#logo-dark {
+  width: 160px;
 }

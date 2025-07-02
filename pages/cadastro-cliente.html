@@ -78,12 +78,14 @@
             src="../assets/img/Logo_NomeDeLado_NAVBAR.PNG"
             alt="logo-darkD"
             width="163px"
+            style="margin-top: 10px"
           />
           <img
             id="logo-darkD"
             src="../assets/img/LOGO_BRANCA_FUNDOBRANCO.png"
             alt="logo-lightD"
             width="163px"
+            style="margin-top: 10px"
           />
         </div>
 
@@ -110,7 +112,7 @@
       <main>
         <h2 id="titulo-registro">Registro de Clientes</h2>
         <div class="container-register">
-          <form id="form-register">
+          <form id="form-register" novalidate>
             <div class="form-row">
               <div class="form-input">
                 <label for="txtNome">Nome:</label>
@@ -120,7 +122,6 @@
                   type="text"
                   name="nome"
                   placeholder="Nome"
-                  required
                 />
               </div>
 
@@ -132,7 +133,6 @@
                   type="text"
                   name="sobrenome"
                   placeholder="Sobrenome"
-                  required
                 />
               </div>
               <div class="form-input">
@@ -142,7 +142,6 @@
                   id="dataNascimento"
                   type="date"
                   name="dataNascimento"
-                  required
                   min="1900-01-01"
                   max="2025-06-04"
                 />
@@ -162,7 +161,6 @@
                   type="email"
                   name="email"
                   placeholder="Insira um E-mail válido"
-                  required
                 />
               </div>
 
@@ -174,7 +172,6 @@
                   type="text"
                   name="endereco"
                   placeholder="Endereço"
-                  required
                 />
               </div>
             </div>
@@ -188,7 +185,6 @@
                   name="outrasInfos"
                   placeholder="Ex: Necessidades especiais (opcional)"
                   rows="3"
-                  required
                 ></textarea>
               </div>
 
@@ -199,9 +195,7 @@
                   class="input"
                   name="interesses"
                   placeholder="Ex: Ler, filmes, esportes"
-                  required
                   rows="3"
-                  required
                 ></textarea>
               </div>
             </div>
@@ -214,7 +208,6 @@
                   class="input"
                   name="sentimentos"
                   placeholder="Ex: Woe, Frolic, Dread, Malice"
-                  required
                   rows="3"
                 ></textarea>
               </div>
@@ -226,7 +219,6 @@
                   class="input"
                   name="valores"
                   placeholder="Ex: Protagonismo, Determinação, Prosperidade, Cuidado, Assertividade"
-                  required
                   rows="3"
                 ></textarea>
               </div>
@@ -244,7 +236,10 @@
       <!-- FIM main -->
     </div>
     <!-- fim container -->
-
+    <div id="snackbar" class="snackbar">
+      <span class="snackbar-icon"></span>
+      <span class="snackbar-text"></span>
+    </div>
     <script type="module" src="../js/main.js"></script>
   </body>
 </html>

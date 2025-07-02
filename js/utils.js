@@ -1,5 +1,4 @@
-import { getLocalStorageAdmin } from "./storage.js";
-
+const activeInvalidListeners = new Map();
 export function inverterData(isoDate) {
   const [ano, mes, dia] = isoDate.split("-");
   return `${dia}/${mes}/${ano}`;
@@ -17,7 +16,6 @@ export function loadTheme() {
     if (interruptor) interruptor.checked = true;
   }
 }
-
 export function toggleDarkMode() {
   document.body.classList.toggle("darkmode");
   if (document.body.classList.contains("darkmode")) {
@@ -28,59 +26,43 @@ export function toggleDarkMode() {
   }
 }
 
-// export function loginAdmin() {
-
-//   const email = document.getElementById("txtEmail").value;
-//   const senha = document.getElementById("pwd").value;
-
-//   console.log("Email:", email);
-//   console.log("Senha:", senha);
-
-//   if (email.trim() === "" || senha.trim() === "") {
-//     console.log("I'm sorry, Dave. I'm afraid I can't do that");
-//     alert("Por favor, preencha todos os campos!");
-//     return;
-//   }
-
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!emailRegex.test(email)) {
-//     console.log("I'm sorry, Dave. I'm afraid I can't do that");
-//     alert("Por favor, insira um email válido!");
-//     return;
-//   }
-//   alert("Login realizado com sucesso! Redirecionando...");
-//   setTimeout(() => {
-//     window.location.href = "pages/dashboard.html";
-//   }, 1500);
-// }
-export function loginAdmin() {
-  const emailInput = document.getElementById("txtEmail").value;
-  const senhaInput = document.getElementById("pwd").value;
-
-  if (emailInput.trim() === "" || senhaInput.trim() === "") {
-    alert("Por favor, preencha todos os campos!");
-    return;
+export function showError(errorElementClass, errorMessage){
+  const errorField = document.querySelector("."+errorElementClass);
+  if(errorField){
+    errorField.classList.add("display-error");
+    errorField.innerHTML = errorMessage;
   }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(emailInput)) {
-    console.log("I'm sorry, Dave. I'm afraid I can't do that");
-    alert("Por favor, insira um email válido!");
-    return;
+}
+
+export function clearError() {
+  let errors = document.querySelectorAll(".error");
+  for(let error of errors){
+    error.classList.remove("display-error");
   }
+}
 
-  const dbAdmin = getLocalStorageAdmin();
 
-  const adminEncontrado = dbAdmin.find(
-    (admin) => admin.email.toLowerCase() === emailInput.toLowerCase()
-  );
+export function highlightInvalidField(fieldId) {
+  const field = document.getElementById(fieldId);
+  if (!field) return;
 
-  if (adminEncontrado && adminEncontrado.senha === senhaInput) {
-    alert("Login realizado com sucesso! Redirecionando...");
-    setTimeout(() => {
-      window.location.href = "pages/dashboard.html";
-    }, 1500);
-  } else {
-    console.log("I'm sorry, Dave. I'm afraid I can't do that");
-    alert("E-mail ou senha incorretos.");
+  // *REMOVENDO EVENTLISTENER SE JÁ TIVER UM ATIVO PARA NÃO FICAR DUPLICADO
+  if (activeInvalidListeners.has(fieldId)) {
+    const existingListener = activeInvalidListeners.get(fieldId);
+    field.removeEventListener("focus", existingListener);
+    activeInvalidListeners.delete(fieldId);
   }
+  // *DEIXANDO O CAMPO EM VERMELHO
+  field.classList.add("input-invalid");
+  const removeInvalidClassOnFocus = () => {
+    field.classList.remove("input-invalid");
+    field.removeEventListener("focus", removeInvalidClassOnFocus);
+    activeInvalidListeners.delete(fieldId);
+  };
+  field.addEventListener("focus", removeInvalidClassOnFocus);
+  activeInvalidListeners.set(fieldId, removeInvalidClassOnFocus);
+
+  setTimeout(() => {
+    field.classList.remove("input-invalid");
+  }, 3000);
 }

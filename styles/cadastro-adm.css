@@ -6,19 +6,23 @@
   background-color: var(--cor-fundo-bodyLogin);
 }
 .container-terminal {
+  background-color: var(--color-ContainerLogin);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 15px; 
-  min-height: 450px;  
-  width: 320px;
-  background-color: var(--color-ContainerLogin);
+  min-height: 450px;
+  width: auto;
+  /* max-width: 400px; */
+  padding: 30px;
   border: 10px solid transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  gap: 25px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+.form-input-container {
+  position: relative; 
+  width: 100%;       
 }
 #form-register-adm {
   display: flex;
@@ -26,34 +30,33 @@
   align-items: center;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  width: 100%;
+  gap: 15px;
 }
 
-#form-register-adm .input::placeholder {
+#form-register-adm > input::placeholder {
   font-family: Helvetica;
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
+  vertical-align: middle;
   color: var(--cor-texto-escuro);
-  align-items: center;
 }
 
-#form-register-adm .input:focus {
+#form-register-adm > input:focus {
   outline: 1px solid var(--bntBranco-color);
 }
 
-#form-register-adm .input {
+#form-register-adm > input {
   background-color: var(--cor-fundo-input);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  width: 250px;
+  gap: 10px;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
   border: 8px solid transparent;
   border-radius: 8px;
   border-image-slice: 1;
@@ -61,24 +64,25 @@
   box-sizing: border-box;
 }
 
-.button-container {
+#container-button-adm  {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 #btnCadAdmin {
-  width: 250px;
-  height: 50px;
+  /* width: 250px;
+  height: 50px; */
   background-color: var(--btnAzul-color);
   color: var(--btnTxtClaro-color);
   border: none;
   border-radius: 5px;
   border-color: #2c3e50;
-  font-size: 18px;
-  gap: 10px;
+  /* font-size: 18px; */
+  /* gap: 5px; */
 }
 
 #btnCadAdmin:hover {
@@ -94,20 +98,20 @@
 }
 
 #btnVoltar {
-  width: 250px;
-  height: 50px;
+  /* width: 250px;
+  height: 50px; */
   background-color: var(--bntBranco-color);
   color: var(--btnTxtEscuro-color);
   border-radius: 5px;
   border-color: #ced4da;
-  font-size: 18px;
-  gap: 10px;
+  /* font-size: 18px; */
+  /* gap: 10px; */
 }
 
 #btnVoltar:hover {
-  background-color: var(--bntBranco-hover);;
+  background-color: var(--bntBranco-hover);
   border-color: #b6bfc8;
-  color: var(--btnTxtEscuro-color);;
+  color: var(--btnTxtEscuro-color);
   transform: translateY(-2px);
 }
 
@@ -121,8 +125,21 @@
   background-color: var(--cor-fundo-input);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
   caret-color: var(--cor-texto-escuro);
+  color: var(--cor-texto-escuro);
 }
 
 .darkmode #form-register-adm .input:focus {
   outline: 1px solid var(--bntBranco-hover);
+}
+
+.input-erro {
+  border: 2px solid #ff0000; /* Borda mais grossa e vermelha */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+#logo-light {
+  width: 160px;
+}
+#logo-dark {
+  width: 160px;
 }

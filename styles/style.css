@@ -65,6 +65,15 @@
 
   --cor-placeholders: #00000081;
 
+  --cor-borda-invalida: rgb(89, 5, 5);
+  --cor-fundo-invalido: rgba(149, 12, 12, 0.42);
+  --cor-sombra-invalida: rgba(255, 68, 68, 0.2);
+  --cor-placeholder-invalido: rgb(89, 5, 5);
+
+  /* --cor-borda-valida:#1a951e;
+  --cor-fundo-valido:rgba(26, 149, 30, 0.63);
+  --cor-sombra-valido: rgba(26, 149, 30, 0.63); */
+
   --btnAzul-color: #2c3e50;
   --btnAzul-hover: #34495e;
   --btnAzul-pressed: #1a252f;
@@ -389,6 +398,29 @@ main {
     border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
   box-sizing: border-box;
   border: 2px solid transparent;
+}
+
+.error {
+  display: none; /* A mensagem começa escondida */
+  position: absolute; /* Remove a mensagem do fluxo normal do layout */
+  /* Posiciona a mensagem logo abaixo do input. 
+     O valor (62px) pode precisar de um pequeno ajuste dependendo da altura final do seu input. */
+  top: 62px;
+  left: 0;
+  width: 100%;
+  background-color: #af4242; /* Cor de fundo avermelhada */
+  color: white; /* Texto branco para melhor contraste */
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  z-index: 10; /* Garante que a mensagem apareça sobre outros elementos */
+}
+
+.error.display-error {
+  display: block;
+  transform: translateY(-20px);
 }
 
 #interruptor {

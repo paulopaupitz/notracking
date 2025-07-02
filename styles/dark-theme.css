@@ -38,6 +38,13 @@
   --cor-cardP-verde: #79d48a;
   --cor-cardP-vermelho: #f88080;
 
+
+  /* INVALDS */
+  --cor-borda-invalida: rgb(255, 128, 128); /* Uma cor mais clara para borda */
+  --cor-fundo-invalido: rgba(255, 128, 128, 0.2); /* Fundo correspondente */
+  --cor-sombra-invalida: rgba(255, 128, 128, 0.1); /* Sombra mais suave */
+  --cor-placeholder-invalido: rgb(255, 128, 128);
+
   /*REGISTRO CLIENTE*/
   --cor-CadModal: #2d3748;
   --cor-CadModal-texto: #eaecee;

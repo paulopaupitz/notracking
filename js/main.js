@@ -1,7 +1,9 @@
-import { saveClient, saveAdmin, clearFields } from "./form.js";
+import { saveClient, clearFields } from "./form.js";
 import { updateTable, editDeleteView } from "./table.js";
 import { saveEdit, closeModal } from "./modal.js";
-import { printDiv, toggleDarkMode, loadTheme, loginAdmin } from "./utils.js";
+import { printDiv, toggleDarkMode, loadTheme } from "./utils.js";
+import { handleCadastroAdmin, autenticarAdmin } from "./admin.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   loadTheme();
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const enterButton = document.getElementById("enterButton");
   if (enterButton) {
-    enterButton.addEventListener("click", loginAdmin);
+    enterButton.addEventListener("click", autenticarAdmin);
   }
 
   const cadastroButton = document.getElementById("btnCadastrar");
@@ -59,15 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnCadAdmin = document.getElementById("btnCadAdmin");
   if (btnCadAdmin) {
-    btnCadAdmin.addEventListener("click", saveAdmin);
+    btnCadAdmin.addEventListener("click", handleCadastroAdmin);
   }
 
   const btnVoltar = document.getElementById("btnVoltar");
   if (btnVoltar) {
-    btnVoltar.addEventListener(
-      "click",
-      () => (window.location.href = "../index.html")
-    );
+    btnVoltar.addEventListener("click",() => (window.location.href = "../index.html"));
   }
 
   const interruptor = document.getElementById("interruptor");

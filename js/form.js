@@ -1,17 +1,7 @@
-import {
-  createClient,
-  createAdmin,
-  readClient,
-  getLocalStorageAdmin,
-} from "./storage.js";
-// import { updateTable } from "./table.js"; pensar nisso depois
+import { createClient, readClient } from "./storage.js";
+import { highlightInvalidField } from "./utils.js";
+import { showSnackbar } from "../UI/snackbar.js";
 
-export function isValidFields() {
-  return document.getElementById("form-register").reportValidity();
-}
-export function isValidFieldsAdmin() {
-  return document.getElementById("form-register-adm").reportValidity();
-}
 
 export function clearFields() {
   document.getElementById("txtNome").value = "";
@@ -26,70 +16,83 @@ export function clearFields() {
   document.getElementById("txtValores").value = "";
 }
 
-export function clearFieldsAdmin() {
-  document.getElementById("txtNomeAdmin").value = "";
-  document.getElementById("txtEmailAdmin").value = "";
-  document.getElementById("txtPWDAdmin").value = "";
-}
 
 export function saveClient() {
-  if (isValidFields()) {
-    const client = {
-      nome: document.getElementById("txtNome").value,
-      sobrenome: document.getElementById("txtSobrenome").value,
-      dtNasc: document.getElementById("dataNascimento").value,
-      status: document.getElementById("status").checked ? "Ativo" : "Inativo",
-      email: document.getElementById("txtEmail").value,
-      endereco: document.getElementById("txtEndereco").value,
-      outrasInfos: document.getElementById("txtInfo").value,
-      interesses: document.getElementById("txtInteresse").value,
-      sentimentos: document.getElementById("txtSentimentos").value,
-      valores: document.getElementById("txtValores").value,
-    };
 
-    const dbClient = readClient();
-    const emailExiste = dbClient.some(
-      (c) => c.email.toLowerCase() === client.email.toLowerCase()
-    );
-    if (emailExiste) {
-      alert("Erro: O e-mail informado já está em uso!");
-      return;
-    }
-    createClient(client);
-    alert("Cliente cadastrado com sucesso!");
-    // updateTable();
+  let camposInvalidos = [];
+  
+  const nome = document.getElementById("txtNome").value.trim();
+  const sobrenome = document.getElementById("txtSobrenome").value.trim();
+  const dtNasc = document.getElementById("dataNascimento").value.trim();
+  const email = document.getElementById("txtEmail").value.trim();
+
+  if (!nome) {
+
+    camposInvalidos.push("txtNome");
+    // showSnackbar("O campo 'Nome' é obrigatório.", "warning");
+    // highlightInvalidField("txtNome");
+    // return;
+  }
+  if (!sobrenome) {
+    
+    camposInvalidos.push("txtSobrenome");
+    // showSnackbar("O campo 'Sobrenome' é obrigatório.", "warning");
+    // highlightInvalidField("txtSobrenome");
+    // return;
+  }
+  if (!dtNasc) {
+    camposInvalidos.push("dataNascimento");
+    // showSnackbar("O campo 'Data de Nascimento' é obrigatório.", "warning");
+    // highlightInvalidField("dataNascimento");
+    // return;
+  }
+  if (!email) {
+    camposInvalidos.push("txtEmail");
+    // showSnackbar("O campo 'E-mail' é obrigatório.", "warning");
+    // highlightInvalidField("txtEmail");
+    // return;
+  }
+
+if(camposInvalidos.length > 0){
+  camposInvalidos.forEach(idDoCampo=> {
+    highlightInvalidField(idDoCampo);
+  });
+  showSnackbar("Por favor, preencha todos os campos destacados", "warning");
+} 
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    showSnackbar("Insira um e-mail válido.", "warning");
+    highlightInvalidField("txtEmail");
+    return;
+  }
+
+  const client = {
+    nome: document.getElementById("txtNome").value,
+    sobrenome: document.getElementById("txtSobrenome").value,
+    dtNasc: document.getElementById("dataNascimento").value,
+    status: document.getElementById("status").checked ? "Ativo" : "Inativo",
+    email: document.getElementById("txtEmail").value,
+    endereco: document.getElementById("txtEndereco").value,
+    outrasInfos: document.getElementById("txtInfo").value,
+    interesses: document.getElementById("txtInteresse").value,
+    sentimentos: document.getElementById("txtSentimentos").value,
+    valores: document.getElementById("txtValores").value,
+  };
+
+  const dbClient = readClient();
+  const emailExiste = dbClient.some(
+    (c) => c.email.toLowerCase() === client.email.toLowerCase()
+  );
+  if (emailExiste) {
+    showSnackbar("O E-mail informado já está em uso", "warning");
+    highlightInvalidField("txtEmail");
+    return;
+  }
+  createClient(client);
+  showSnackbar("Cliente cadastrado com sucesso!", "success");
+  setTimeout(() => {
     clearFields();
-    console.log("Cadastrando Cliente");
-  }
-}
-
-export function saveAdmin() {
-  if (isValidFieldsAdmin()) {
-    const emailAdmin = document.getElementById("txtEmailAdmin").value;
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailAdmin)) {
-      alert("Por favor, insira um email válido!");
-      return;
-    }
-
-    const dbAdmin = getLocalStorageAdmin();
-    const emailExiste = dbAdmin.some(
-      (a) => a.email.toLowerCase() === emailAdmin.toLowerCase()
-    );
-    if (emailExiste) {
-      alert("Erro: O e-mail do administrador já está em uso!");
-      return;
-    }
-
-    const admin = {
-      nome: document.getElementById("txtNomeAdmin").value,
-      email: emailAdmin,
-      senha: document.getElementById("txtPWDAdmin").value,
-    };
-    createAdmin(admin);
-    alert("Administrador cadastrado com sucesso!");
-    clearFieldsAdmin();
-    window.location.href = "../index.html";
-  }
+  }, 1500);
+  console.log("Cadastrando Cliente");
 }
