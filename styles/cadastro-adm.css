@@ -21,8 +21,9 @@
   box-sizing: border-box;
 }
 .form-input-container {
-  position: relative; 
-  width: 100%;       
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
 }
 #form-register-adm {
   display: flex;
@@ -64,13 +65,13 @@
   box-sizing: border-box;
 }
 
-#container-button-adm  {
+#container-button-adm {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  width: 100%;
 }
 
 #btnCadAdmin {
@@ -142,4 +143,45 @@
 }
 #logo-dark {
   width: 160px;
+}
+
+.form-input-container .input {
+  background-color: var(--cor-fundo-input);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  border: 8px solid transparent;
+  border-image-slice: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.form-input-container .input:focus {
+  outline: 1px solid var(--bntBranco-color);
+}
+
+.form-input-container .input::placeholder {
+  font-family: Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: var(--cor-texto-escuro);
+}
+
+.darkmode .form-input-container .input {
+  background-color: var(--cor-fundo-input);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+  caret-color: var(--cor-texto-escuro);
+  color: var(--cor-texto-escuro);
+}
+
+.darkmode .form-input-container .input:focus {
+  outline: 1px solid var(--bntBranco-hover);
 }

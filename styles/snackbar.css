@@ -107,17 +107,6 @@
   font-weight: 300 !important;
 }
 
-/* CAMPOS VÁLIDOS */
-.input-invalid {
-  border: 2px solid var(--cor-borda-invalida) !important;
-  background-color: var(--cor-fundo-invalido) !important;
-  box-shadow: 0 0 0 2px var(--cor-sombra-invalida) !important;
-  animation: shake 0.5s ease-in-out;
-}
-.input-invalid::placeholder {
-  color: var(--cor-placeholder-invalido) !important;
-  font-weight: 300 !important;
-}
 
 @keyframes shake {
   0%,
