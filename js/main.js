@@ -4,7 +4,6 @@ import { saveEdit, closeModal } from "./modal.js";
 import { printDiv, toggleDarkMode, loadTheme } from "./utils.js";
 import { handleCadastroAdmin, autenticarAdmin } from "./admin.js";
 
-
 document.addEventListener("DOMContentLoaded", () => {
   loadTheme();
 
@@ -66,7 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnVoltar = document.getElementById("btnVoltar");
   if (btnVoltar) {
-    btnVoltar.addEventListener("click",() => (window.location.href = "../index.html"));
+    btnVoltar.addEventListener(
+      "click",
+      () => (window.location.href = "../index.html")
+    );
+  }
+
+  const btnTeste = document.getElementById("btnTeste");
+  if (btnTeste) {
+    btnTeste.addEventListener("click", testErrorFunctions);
   }
 
   const interruptor = document.getElementById("interruptor");

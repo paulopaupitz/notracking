@@ -1,35 +1,62 @@
 /* ! borda dos inputs precisam ficar em vermelho também    "OPA! Parece que você está com problemas com a senha. Precisa de ajuda? recupere sua senha aqui ou entre em contato. Evite que sua conta seja bloqueada."*/
 
-
-#snackbar {
-  visibility: hidden;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  background-color: #333; 
-  color: white; 
-  min-width: 150px;
-  max-width: 450px;
-  transition: background-color 0.3s ease;
+/* CSS específico para garantir que o snackbar funcione corretamente */
+body #snackbar {
+  visibility: hidden !important;
+  position: fixed !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10000 !important;
+  padding: 15px 20px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  font-size: 18px !important;
+  font-family: sans-serif !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #333 !important;
+  color: white !important;
+  min-width: 150px !important;
+  max-width: 450px !important;
+  width: fit-content !important;
+  transition: background-color 0.3s ease !important;
 }
 
+body #snackbar.success {
+  background-color: #4caf50 !important;
+}
 
-#snackbar.success {
-  background-color: #4caf50;
+body #snackbar.error {
+  background-color: #ff4444 !important;
 }
-#snackbar.error {
-  background-color: #ff4444;
+
+body #snackbar.warning {
+  background-color: #ff9800 !important;
 }
-#snackbar.warning {
-  background-color: #ff9800;
+
+body #snackbar.show {
+  visibility: visible !important;
+  animation: slideIn 0.5s forwards, slideOut 0.5s 4.5s forwards !important;
+}
+
+/* Garantir que o snackbar não seja afetado por outros estilos */
+body #snackbar * {
+  box-sizing: border-box !important;
+}
+
+body #snackbar .snackbar-icon {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 10px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+body #snackbar .snackbar-text {
+  flex: 1 !important;
 }
 
 .snackbar.success .snackbar-icon::before,
@@ -37,20 +64,10 @@
 .snackbar.error .snackbar-icon::before {
   content: "";
   display: inline-block;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-}
-.snackbar-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  font-weight: bold;
-  font-size: 16px;
 }
 
 .snackbar.error .snackbar-icon::before {
@@ -66,11 +83,6 @@
 .snackbar.success .snackbar-icon::before {
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23FFFFFF'%3E%3Cpath d='m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z'/%3E%3C/svg%3E");
-}
-
-#snackbar.show {
-  visibility: visible;
-  animation: slideIn 0.5s forwards, slideOut 0.5s 4.5s forwards;
 }
 
 @keyframes slideIn {
@@ -106,7 +118,6 @@
   color: var(--cor-placeholder-invalido) !important;
   font-weight: 300 !important;
 }
-
 
 @keyframes shake {
   0%,

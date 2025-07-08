@@ -401,28 +401,6 @@ main {
   border: 2px solid transparent;
 }
 
-.error {
-  display: none; /* A mensagem começa escondida */
-  position: absolute; /* Remove a mensagem do fluxo normal do layout */
-  /* Posiciona a mensagem logo abaixo do input. 
-     O valor (62px) pode precisar de um pequeno ajuste dependendo da altura final do seu input. */
-  top: 62px;
-  left: 0;
-  width: 100%;
-  background-color: #af4242; /* Cor de fundo avermelhada */
-  color: white; /* Texto branco para melhor contraste */
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  text-align: center;
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
-  z-index: 10; /* Garante que a mensagem apareça sobre outros elementos */
-}
-
-.error.display-error {
-  display: block;
-  transform: translateY(-20px);
-}
 
 #interruptor {
   height: 50px;

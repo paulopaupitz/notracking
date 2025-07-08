@@ -1,8 +1,11 @@
 import { getLocalStorageAdmin, setLocalStorageAdmin } from "./storage.js";
 import { showSnackbar } from "../UI/snackbar.js";
-import { highlightInvalidField,showError, clearError } from "./utils.js";
+import { highlightInvalidField, showError, clearError } from "./utils.js";
 
 export function handleCadastroAdmin() {
+  // Limpar erros anteriores
+  clearError();
+
   const nome = document.getElementById("txtNomeAdmin")?.value.trim() || "";
   const email = document.getElementById("txtEmailAdmin")?.value.trim() || "";
   const senha = document.getElementById("pwdAdmin")?.value.trim() || "";
@@ -11,17 +14,18 @@ export function handleCadastroAdmin() {
   return cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha);
 }
 
-
-
-
-
 // Função para cadastrar novo administrador
 export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
   if (!nome || !email || !senha || !confirmacaoSenha) {
-    if (!nome) highlightInvalidField("txtNomeAdmin");
-    if (!email) highlightInvalidField("txtEmailAdmin");
-    if (!senha) highlightInvalidField("pwdAdmin");
-    if (!confirmacaoSenha) highlightInvalidField("confirmPwdAdmin");
+    if (!nome) highlightInvalidField("txtNomeAdmin", "O nome é obrigatório!");
+    if (!email)
+      highlightInvalidField("txtEmailAdmin", "O e-mail é obrigatório!");
+    if (!senha) highlightInvalidField("pwdAdmin", "A senha é obrigatória!");
+    if (!confirmacaoSenha)
+      highlightInvalidField(
+        "confirmPwdAdmin",
+        "A confirmação de senha é obrigatória!"
+      );
     showSnackbar("Por favor, preencha todos os campos", "error");
     return false;
   }
@@ -29,21 +33,24 @@ export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     showSnackbar("Insira um e-mail válido", "warning");
-    highlightInvalidField("txtEmailAdmin");
-    showError("email-error", "Você precisa inserir um email válido!");
+    highlightInvalidField(
+      "txtEmailAdmin",
+      "Você precisa inserir um email válido!"
+    );
     return false;
   }
 
   if (senha.length < 6) {
     showSnackbar("A senha deve ter no mínimo 6 caracteres", "warning");
-    showError("password-error", "A senha precisa ter no minimo 6 caracteres");
-    highlightInvalidField("pwdAdmin");
+    highlightInvalidField(
+      "pwdAdmin",
+      "A senha precisa ter no mínimo 6 caracteres"
+    );
     return false;
   }
   if (senha !== confirmacaoSenha) {
     showSnackbar("As senhas não batem!", "error");
-    highlightInvalidField("confirmPwdAdmin");
-    showError("password-error", "As senhas precisam ser a mesma");
+    highlightInvalidField("confirmPwdAdmin", "As senhas precisam ser iguais");
     return false;
   }
   const dbAdmin = getLocalStorageAdmin();
@@ -83,20 +90,23 @@ export function autenticarAdmin() {
   const email = document.getElementById("txtEmail")?.value.trim() || "";
   const senha = document.getElementById("pwd")?.value.trim() || "";
 
+  // Limpar erros anteriores
+  clearError();
+
   // Validações
   if (!email) {
     showSnackbar("O campo de e-mail é obrigatório.", "warning");
-    highlightInvalidField("txtEmail");
+    highlightInvalidField("txtEmail", "O campo de e-mail é obrigatório.");
     return false;
   } else if (!senha) {
     showSnackbar("O campo de senha é obrigatório.", "warning");
-    highlightInvalidField("pwd");
+    highlightInvalidField("pwd", "O campo de senha é obrigatório.");
     return false;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    highlightInvalidField("txtEmail");
+    highlightInvalidField("txtEmail", "Insira um e-mail válido.");
     showSnackbar("Insira um e-mail válido", "warning");
     return false;
   }
@@ -120,6 +130,8 @@ export function autenticarAdmin() {
     return true;
   } else {
     showSnackbar("E-mail ou senha incorretos!", "error");
+    highlightInvalidField("txtEmail", "E-mail ou senha incorretos!");
+    highlightInvalidField("pwd", "E-mail ou senha incorretos!");
     return false;
   }
 }
