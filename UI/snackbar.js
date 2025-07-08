@@ -30,8 +30,6 @@ export function showSnackbar(message, type = "") {
   // Mostrar o snackbar
   snackbar.classList.add("show");
 
-  console.log("Snackbar classes:", snackbar.className);
-
   // Esconder após 3 segundos
   setTimeout(() => {
     snackbar.classList.remove("show");

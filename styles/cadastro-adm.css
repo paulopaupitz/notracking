@@ -196,7 +196,7 @@
 
 .form-input-container .labelError.display-error {
   display: block !important;
-  animation: slideDown 0.3s ease-out !important;
+  animation: slideDown 0.5s linear !important;
 }
 
 @keyframes slideDown {

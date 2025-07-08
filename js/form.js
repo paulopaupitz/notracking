@@ -1,7 +1,6 @@
 import { createClient, readClient } from "./storage.js";
-import { highlightInvalidField } from "./utils.js";
+import { highlightInvalidField, clearError } from "./utils.js";
 import { showSnackbar } from "../UI/snackbar.js";
-
 
 export function clearFields() {
   document.getElementById("txtNome").value = "";
@@ -16,63 +15,54 @@ export function clearFields() {
   document.getElementById("txtValores").value = "";
 }
 
-
 export function saveClient() {
+  clearError();
 
-  let camposInvalidos = [];
-  
-  const nome = document.getElementById("txtNome").value.trim();
-  const sobrenome = document.getElementById("txtSobrenome").value.trim();
-  const dtNasc = document.getElementById("dataNascimento").value.trim();
-  const email = document.getElementById("txtEmail").value.trim();
+  const requiredFields = [
+    { id: "txtNome", message: "O campo 'Nome' é obrigatório." },
+    { id: "txtSobrenome", message: "O campo 'Sobrenome' é obrigatório." },
+    { id: "dataNascimento", message: "A data é obrigatória" },
+    { id: "txtEmail", message: "O campo 'E-mail' é obrigatório." },
+  ];
 
-  if (!nome) {
-
-    camposInvalidos.push("txtNome");
-    // showSnackbar("O campo 'Nome' é obrigatório.", "warning");
-    // highlightInvalidField("txtNome");
-    // return;
-  }
-  if (!sobrenome) {
-    
-    camposInvalidos.push("txtSobrenome");
-    // showSnackbar("O campo 'Sobrenome' é obrigatório.", "warning");
-    // highlightInvalidField("txtSobrenome");
-    // return;
-  }
-  if (!dtNasc) {
-    camposInvalidos.push("dataNascimento");
-    // showSnackbar("O campo 'Data de Nascimento' é obrigatório.", "warning");
-    // highlightInvalidField("dataNascimento");
-    // return;
-  }
-  if (!email) {
-    camposInvalidos.push("txtEmail");
-    // showSnackbar("O campo 'E-mail' é obrigatório.", "warning");
-    // highlightInvalidField("txtEmail");
-    // return;
-  }
-
-if(camposInvalidos.length > 0){
-  camposInvalidos.forEach(idDoCampo=> {
-    highlightInvalidField(idDoCampo);
+  let hasErrors = false;
+  requiredFields.forEach((fieldInfo) => {
+    const element = document.getElementById(fieldInfo.id);
+    if (!element.value.trim()) {
+      highlightInvalidField(fieldInfo.id, fieldInfo.message);
+      hasErrors = true;
+    }
   });
-  showSnackbar("Por favor, preencha todos os campos destacados", "warning");
-} 
 
+  if (hasErrors) {
+    showSnackbar("Por favor, preencha todos os campos destacados.", "warning");
+    return;
+  }
+
+  const email = document.getElementById("txtEmail").value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     showSnackbar("Insira um e-mail válido.", "warning");
-    highlightInvalidField("txtEmail");
+    highlightInvalidField("txtEmail", "Insira um e-mail válido.");
+    return;
+  }
+
+  const dbClient = readClient();
+  const emailExiste = dbClient.some(
+    (c) => c.email.toLowerCase() === email.toLowerCase()
+  );
+  if (emailExiste) {
+    showSnackbar("O E-mail informado já está em uso", "warning");
+    highlightInvalidField("txtEmail", "O e-mail informado já está em uso");
     return;
   }
 
   const client = {
-    nome: document.getElementById("txtNome").value,
-    sobrenome: document.getElementById("txtSobrenome").value,
+    nome: document.getElementById("txtNome").value.trim(),
+    sobrenome: document.getElementById("txtSobrenome").value.trim(),
     dtNasc: document.getElementById("dataNascimento").value,
     status: document.getElementById("status").checked ? "Ativo" : "Inativo",
-    email: document.getElementById("txtEmail").value,
+    email: email,
     endereco: document.getElementById("txtEndereco").value,
     outrasInfos: document.getElementById("txtInfo").value,
     interesses: document.getElementById("txtInteresse").value,
@@ -80,15 +70,6 @@ if(camposInvalidos.length > 0){
     valores: document.getElementById("txtValores").value,
   };
 
-  const dbClient = readClient();
-  const emailExiste = dbClient.some(
-    (c) => c.email.toLowerCase() === client.email.toLowerCase()
-  );
-  if (emailExiste) {
-    showSnackbar("O E-mail informado já está em uso", "warning");
-    highlightInvalidField("txtEmail");
-    return;
-  }
   createClient(client);
   showSnackbar("Cliente cadastrado com sucesso!", "success");
   setTimeout(() => {

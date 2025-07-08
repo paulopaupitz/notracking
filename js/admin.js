@@ -1,6 +1,6 @@
 import { getLocalStorageAdmin, setLocalStorageAdmin } from "./storage.js";
 import { showSnackbar } from "../UI/snackbar.js";
-import { highlightInvalidField, showError, clearError } from "./utils.js";
+import { highlightInvalidField, clearError } from "./utils.js";
 
 export function handleCadastroAdmin() {
   // Limpar erros anteriores
@@ -26,13 +26,13 @@ export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
         "confirmPwdAdmin",
         "A confirmação de senha é obrigatória!"
       );
-    showSnackbar("Por favor, preencha todos os campos", "error");
+    // showSnackbar("Por favor, preencha todos os campos", "error");
     return false;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    showSnackbar("Insira um e-mail válido", "warning");
+    // showSnackbar("Insira um e-mail válido", "warning");
     highlightInvalidField(
       "txtEmailAdmin",
       "Você precisa inserir um email válido!"
@@ -41,7 +41,7 @@ export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
   }
 
   if (senha.length < 6) {
-    showSnackbar("A senha deve ter no mínimo 6 caracteres", "warning");
+    // showSnackbar("A senha deve ter no mínimo 6 caracteres", "warning");
     highlightInvalidField(
       "pwdAdmin",
       "A senha precisa ter no mínimo 6 caracteres"
@@ -49,7 +49,7 @@ export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
     return false;
   }
   if (senha !== confirmacaoSenha) {
-    showSnackbar("As senhas não batem!", "error");
+    // showSnackbar("As senhas não batem!", "error");
     highlightInvalidField("confirmPwdAdmin", "As senhas precisam ser iguais");
     return false;
   }
@@ -61,7 +61,7 @@ export function cadastrarNovoAdmin(nome, email, senha, confirmacaoSenha) {
   );
 
   if (adminExistente) {
-    showSnackbar("Este e-mail já está cadastrado!", "warning");
+    // showSnackbar("Este e-mail já está cadastrado!", "warning");
     highlightInvalidField("txtEmailAdmin");
     return false;
   }
@@ -95,11 +95,11 @@ export function autenticarAdmin() {
 
   // Validações
   if (!email) {
-    showSnackbar("O campo de e-mail é obrigatório.", "warning");
+    // showSnackbar("O campo de e-mail é obrigatório.", "warning");
     highlightInvalidField("txtEmail", "O campo de e-mail é obrigatório.");
     return false;
   } else if (!senha) {
-    showSnackbar("O campo de senha é obrigatório.", "warning");
+    // showSnackbar("O campo de senha é obrigatório.", "warning");
     highlightInvalidField("pwd", "O campo de senha é obrigatório.");
     return false;
   }
@@ -107,7 +107,7 @@ export function autenticarAdmin() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     highlightInvalidField("txtEmail", "Insira um e-mail válido.");
-    showSnackbar("Insira um e-mail válido", "warning");
+    // showSnackbar("Insira um e-mail válido", "warning");
     return false;
   }
 
@@ -129,7 +129,7 @@ export function autenticarAdmin() {
     }, 1500);
     return true;
   } else {
-    showSnackbar("E-mail ou senha incorretos!", "error");
+    // showSnackbar("E-mail ou senha incorretos!", "error");
     highlightInvalidField("txtEmail", "E-mail ou senha incorretos!");
     highlightInvalidField("pwd", "E-mail ou senha incorretos!");
     return false;
