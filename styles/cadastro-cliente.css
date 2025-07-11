@@ -261,6 +261,7 @@
 
 /* mensagem de erro */
 .form-input .labelError {
+  width: auto;
   display: none !important;
   background-color: #af4242 !important;
   color: white !important;

@@ -21,7 +21,7 @@ export function saveClient() {
   const requiredFields = [
     { id: "txtNome", message: "O campo 'Nome' é obrigatório." },
     { id: "txtSobrenome", message: "O campo 'Sobrenome' é obrigatório." },
-    { id: "dataNascimento", message: "A data é obrigatória" },
+    { id: "dataNascimento", message: "Campo Obrigatório" },
     { id: "txtEmail", message: "O campo 'E-mail' é obrigatório." },
   ];
 
